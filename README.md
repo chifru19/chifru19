@@ -1,49 +1,48 @@
 # 👋 Hi, I'm Frank | Security & DevSecOps Engineer
 
-```mermaid
-graph TD
-    subgraph "Local Environment"
-        A[VS Code / Mac] -->|Git Push| B(GitHub Repository)
-    end
+I specialize in building **Hardened Infrastructure** and **Automated Security Pipelines**. I bridge the gap between development and operations by "Shifting Security Left"—integrating automated audits into the heart of the CI/CD cycle.
 
-    subgraph "CI/CD Security Gate (GitHub Actions)"
-        B --> C{Checkov Audit}
-        C -->|Fail: Red X| D[Block Deployment]
-        C -->|Pass: Green Check| E[Approve Build]
-    end
+---
 
-    subgraph "Hardened Infrastructure (Docker/K8s)"
-        E --> F[Honeypot: Public-Net]
-        E --> G[Secure Database: Private-Net]
-        F -.- G{Zero-Trust Gap}
-    end
- 1. [Network-Guard-Forensics](https://github.com/chifru19/Network-Guard-Forensics)
-**Focus:** Cloud Auditing & Container Hardening
-* **Key Achievement**: Successfully remediated `CKV_DOCKER_3` by implementing non-root user execution and established a "Stop-the-Line" CI/CD security gate.
-* **Tech Stack**: Python, Docker, Boto3, GitHub Actions, Checkov.
-[![Security Scan](https://github.com/chifru19/Network-Guard-Forensics/actions/workflows/main.yml/badge.svg)](https://github.com/chifru19/Network-Guard-Forensics/actions)
-### 2. [Project-Fortress](https://github.com/chifru19/Project-Fortress)
-**Focus:** Active Defense & Network Isolation
-* **Key Achievement**: Engineered a 3-tier secure network with internal database isolation and enforced **Resource Sandboxing** (128MB RAM limits) to mitigate DoS attacks.
-* **Tech Stack**: Docker Compose, Kubernetes, Alpine Linux, Shell Scripting.
-[![Security Scan](https://github.com/chifru19/Project-Fortress/actions/workflows/security-scan.yml/badge.svg)](https://github.com/chifru19/Project-Fortress/actions)
+## 🛡️ Featured Security Labs
 
+### 1. [Project-Fortress](https://github.com/chifru19/Project-Fortress) 
+**Automated IaC Security & CI/CD Hardening**
+* **The Goal**: Build a "Security Gate" that prevents vulnerable infrastructure from being deployed.
+* **The Tech**: GitHub Actions, Checkov, Docker, Kubernetes.
+* **Key Achievement**: Successfully engineered a pipeline that scans every commit for 50+ security policies, automatically blocking builds that violate "Least Privilege" standards.
+
+### 2. [Network-Guard-Forensics](https://github.com/chifru19/Network-Guard-Forensics)
+**Active Defense & Zero-Trust Networking**
+* **The Goal**: Create a decoy environment to log attacker behavior while isolating sensitive data.
+* **The Tech**: Cowrie Honeypot, Docker Internal Networks, Linux Forensics.
+* **Key Achievement**: Implemented a Zero-Trust network architecture where the public-facing honeypot has zero connectivity to the private database subnet.
+
+---
+
+## 🧠 Lessons Learned (The "Hardening" Journey)
+
+Building these labs wasn't just about writing code; it was about overcoming real-world security configuration challenges. Here are my key takeaways:
+
+### 1. Shifting Security Left is a Process
+Initially, my pipeline failed frequently due to **CKV_DOCKER_3** (Root user) and **CKV_DOCKER_2** (Healthcheck) violations. 
+* **The Fix**: I learned to rewrite Dockerfiles to create non-privileged users and implement granular resource limits.
+* **The Lesson**: Security isn't a "final step"—it must be baked into the initial configuration to avoid massive rework later.
+
+### 2. The Power of "Stop-the-Line" Automation
+I intentionally triggered pipeline failures to test my "Security Gate." 
+* **The Result**: I witnessed how **Checkov** caught a hardcoded secret before it could be pushed to the repository.
+* **The Lesson**: Automated enforcement is the only way to maintain a consistent security posture at scale.
+
+### 3. Architecture over Obscurity
+While working on network isolation, I realized that hidden ports aren't enough. 
+* **The Fix**: I moved to a **Zero-Trust model**, using Docker's `internal: true` flag to ensure the database layer is physically unreachable from the outside world.
+* **The Lesson**: Robust architecture (segmentation) is superior to simple perimeter defense.
+
+---
 
 ## 🛠️ Technical Toolkit
-* **Security Tools**: Checkov (IaC Scanning), Docker Scout, Nmap, Wireshark.
-* **Cloud & DevOps**: GitHub Actions (CI/CD), AWS S3, Terraform, Kubernetes.
-
-<!--
-**chifru19/chifru19** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+* **Security Tools**: Checkov, SAST, Honeypots (Cowrie)
+* **Orchestration**: Docker, Kubernetes (K8s)
+* **Automation**: GitHub Actions (CI/CD)
+* **Infrastructure**: Terraform, YAML, Linux Shell
