@@ -15,7 +15,7 @@ I specialize in building **Hardened Infrastructure** and **Automated Security Pi
 **Focus:** Active Defense & Network Isolation
 * **Key Achievement**: Engineered a 3-tier secure network with internal database isolation and enforced **Resource Sandboxing** (128MB RAM limits) to mitigate DoS attacks.
 * **Tech Stack**: Docker Compose, Kubernetes, Alpine Linux, Shell Scripting.
-
+[![Security Scan](https://github.com/chifru19/Project-Fortress/actions/workflows/security-scan.yml/badge.svg)](https://github.com/chifru19/Project-Fortress/actions)
 ---
 
 ## 🛠️ Technical Toolkit
