@@ -15,9 +15,6 @@ graph TD
         E --> G[Secure Database: Private-Net]
         F -.- G{Zero-Trust Gap}
     end
-I specialize in building **Hardened Infrastructure** and **Automated Security Pipelines**. Below are my featured security labs, both of which are fully compliant with **Checkov IaC standards**.
-
----
 
 ## 🛡️ Featured Projects
 
