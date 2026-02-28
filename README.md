@@ -15,7 +15,6 @@ graph TD
         E --> G[Secure Database: Private-Net]
         F -.- G{Zero-Trust Gap}
     end
-
 ## 🛡️ Featured Projects
 
 ### 1. [Network-Guard-Forensics](https://github.com/chifru19/Network-Guard-Forensics)
