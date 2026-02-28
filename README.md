@@ -10,7 +10,7 @@ I specialize in building **Hardened Infrastructure** and **Automated Security Pi
 **Focus:** Cloud Auditing & Container Hardening
 * **Key Achievement**: Successfully remediated `CKV_DOCKER_3` by implementing non-root user execution and established a "Stop-the-Line" CI/CD security gate.
 * **Tech Stack**: Python, Docker, Boto3, GitHub Actions, Checkov.
-
+[![Security Scan](https://github.com/chifru19/Network-Guard-Forensics/actions/workflows/main.yml/badge.svg)](https://github.com/chifru19/Network-Guard-Forensics/actions)
 ### 2. [Project-Fortress](https://github.com/chifru19/Project-Fortress)
 **Focus:** Active Defense & Network Isolation
 * **Key Achievement**: Engineered a 3-tier secure network with internal database isolation and enforced **Resource Sandboxing** (128MB RAM limits) to mitigate DoS attacks.
