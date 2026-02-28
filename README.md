@@ -1,5 +1,20 @@
 # 👋 Hi, I'm Frank | Security & DevSecOps Engineer
+graph TD
+    subgraph "Local Environment"
+        A[VS Code / Mac] -->|Git Push| B(GitHub Repository)
+    end
 
+    subgraph "CI/CD Security Gate (GitHub Actions)"
+        B --> C{Checkov Audit}
+        C -->|Fail: Red X| D[Block Deployment]
+        C -->|Pass: Green Check| E[Approve Build]
+    end
+
+    subgraph "Hardened Infrastructure (Docker/K8s)"
+        E --> F[Honeypot: Public-Net]
+        E --> G[Secure Database: Private-Net]
+        F -.- G{Zero-Trust Gap}
+    end
 I specialize in building **Hardened Infrastructure** and **Automated Security Pipelines**. Below are my featured security labs, both of which are fully compliant with **Checkov IaC standards**.
 
 ---
