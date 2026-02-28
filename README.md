@@ -1,4 +1,5 @@
 # 👋 Hi, I'm Frank | Security & DevSecOps Engineer
+```mermaid
 graph TD
     subgraph "Local Environment"
         A[VS Code / Mac] -->|Git Push| B(GitHub Repository)
@@ -14,8 +15,7 @@ graph TD
         E --> F[Honeypot: Public-Net]
         E --> G[Secure Database: Private-Net]
         F -.- G{Zero-Trust Gap}
-    end
-## 🛡️ Featured Projects
+    end## 🛡️ Featured Projects
 
 ### 1. [Network-Guard-Forensics](https://github.com/chifru19/Network-Guard-Forensics)
 **Focus:** Cloud Auditing & Container Hardening
