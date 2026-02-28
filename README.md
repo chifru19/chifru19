@@ -17,7 +17,7 @@ graph TD
         E --> G[Secure Database: Private-Net]
         F -.- G{Zero-Trust Gap}
     end
-### 1. [Network-Guard-Forensics](https://github.com/chifru19/Network-Guard-Forensics)
+ 1. [Network-Guard-Forensics](https://github.com/chifru19/Network-Guard-Forensics)
 **Focus:** Cloud Auditing & Container Hardening
 * **Key Achievement**: Successfully remediated `CKV_DOCKER_3` by implementing non-root user execution and established a "Stop-the-Line" CI/CD security gate.
 * **Tech Stack**: Python, Docker, Boto3, GitHub Actions, Checkov.
@@ -27,7 +27,7 @@ graph TD
 * **Key Achievement**: Engineered a 3-tier secure network with internal database isolation and enforced **Resource Sandboxing** (128MB RAM limits) to mitigate DoS attacks.
 * **Tech Stack**: Docker Compose, Kubernetes, Alpine Linux, Shell Scripting.
 [![Security Scan](https://github.com/chifru19/Project-Fortress/actions/workflows/security-scan.yml/badge.svg)](https://github.com/chifru19/Project-Fortress/actions)
----
+
 
 ## 🛠️ Technical Toolkit
 * **Security Tools**: Checkov (IaC Scanning), Docker Scout, Nmap, Wireshark.
