@@ -14,8 +14,7 @@ graph TD
     subgraph "Hardened Infrastructure (Docker/K8s)"
         E --> F[Honeypot: Public-Net]
         E --> G[Secure Database: Private-Net]
-        F -.- G{Zero-Trust Gap}
-    end
+        F -.- G{Zero-Trust Gap}end
 ### 1. [Network-Guard-Forensics](https://github.com/chifru19/Network-Guard-Forensics)
 **Focus:** Cloud Auditing & Container Hardening
 * **Key Achievement**: Successfully remediated `CKV_DOCKER_3` by implementing non-root user execution and established a "Stop-the-Line" CI/CD security gate.
