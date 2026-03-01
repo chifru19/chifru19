@@ -6,10 +6,10 @@ I specialize in building **Hardened Infrastructure** and **Automated Security Pi
 
 ## 🛡️ Automated Security Posture
 This repository is hardened using GitHub’s Advanced Security suite and industry-standard IaC auditing tools:
-* **SAST (Static Analysis)**: Continuous code auditing via **CodeQL** and **Checkov** to catch vulnerabilities and misconfigurations in real-time.
-* **SCA (Supply Chain)**: Dependency monitoring via **Dependabot** to proactively mitigate CVE risks in third-party libraries.
+* **SAST (Static Analysis)**: Continuous application auditing via **CodeQL** and infrastructure scanning via **Checkov**.
+* **SCA (Supply Chain)**: Proactive dependency monitoring via **Dependabot** to mitigate CVE risks.
 * **Secret Protection**: Native **Secret Scanning** with Push Protection enabled to prevent credential leakage.
-* **Vulnerability Disclosure**: Professional **Security Policy** implemented for responsible disclosure and private reporting.
+* **Vulnerability Disclosure**: Professional **Security Policy** implemented for private, responsible reporting.
 
 ---
 
@@ -17,27 +17,23 @@ This repository is hardened using GitHub’s Advanced Security suite and industr
 
 ### 1. [Project-Fortress](https://github.com/chifru19/Project-Fortress) 
 **Automated IaC Security & CI/CD Hardening**
-* **Goal**: Build an automated "Security Gate" to prevent insecure deployment.
-* **Tech**: GitHub Actions, Checkov, Docker, Kubernetes.
-* **Success**: Successfully engineered a pipeline that scans every commit for 50+ security policies, automatically blocking builds that violate "Least Privilege" or resource sandboxing standards.
+* **Success**: Engineered a pipeline that scans every commit for 50+ security policies, automatically blocking builds that violate "Least Privilege" or resource limits.
 
 ### 2. [Network-Guard-Forensics](https://github.com/chifru19/Network-Guard-Forensics)
 **Active Defense & Zero-Trust Networking**
-* **Goal**: Create a decoy environment to log attacker behavior while isolating sensitive data subnets.
-* **Tech**: Cowrie Honeypot, Docker Internal Networks, Linux Forensics.
-* **Success**: Implemented a Zero-Trust network architecture where public-facing honeypots are physically isolated from private database subnets via internal network flags.
+* **Success**: Implemented a Zero-Trust network architecture where public-facing honeypots are physically isolated from private database subnets.
 
 ---
 
 ## 🧠 Lessons Learned (The "Hardening" Journey)
 
 ### 1. The Reality of DevSecOps Integration
-Initially, my security workflows encountered failures (Red X) due to strict policy enforcement, such as **CKV_DOCKER_3** (Root user violations). 
-* **The Fix**: I learned to rewrite Dockerfiles to enforce non-root execution and established granular memory limits (128MB) to prevent DoS attacks.
-* **The Lesson**: Security is an iterative process; a "Failed" build is actually a success for the security gate.
+Initially, my security workflows encountered failures due to strict policy enforcement, such as **CKV_DOCKER_3** (Root user violations). 
+* **The Fix**: Rewrote Dockerfiles to enforce non-root execution and established granular memory limits (128MB) to prevent DoS attacks.
+* **The Lesson**: A "Failed" build is actually a success for the security gate—it proves the system is working.
 
 ### 2. Architecture over Obscurity
-While working on network isolation, I moved beyond simple firewalls to a **Zero-Trust model**.
+Moved beyond simple firewalls to a **Zero-Trust model**.
 * **The Fix**: Used Docker's `internal: true` network flag to ensure the database layer is physically unreachable from the public internet.
 * **The Lesson**: Robust network segmentation is the most effective way to prevent lateral movement after a breach.
 
