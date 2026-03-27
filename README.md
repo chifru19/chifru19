@@ -9,6 +9,10 @@ I specialize in engineering **Hardened Infrastructure** and **Automated Security
 
 ## 🏗️ Featured Security Labs & Project Links
 
+### 🎮 Featured Project: PIDGIN BUILDER PRO
+Celebrating Pan-African culture with a high-energy Word Scramble game.
+👉 **[PLAY LIVE ON REPLIT](https://replit.com/@chifru19/pidgin-jumble-game-5?v=1)** 👈
+*Built with Python, Tkinter, and Pygame.*
 ### 📂 [1. Project-Fortress (Automated IaC Security)](https://github.com/chifru19/chifru19/tree/main/.github/workflows)
 * **Objective**: Engineering a "Security Gate" that scans every commit for 50+ security policies.
 * **Verification**: Successfully implemented a hardened `deployment.yaml` that passed all **Checkov** gates for Kubernetes orchestration.
