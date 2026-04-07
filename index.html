@@ -4,40 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frank Fru | DevSecOps & Security Infrastructure</title>
+    <meta name="description" content="DevSecOps Engineer specializing in Hardened Infrastructure and Automated Security Pipelines.">
+    <meta property="og:title" content="Frank Fru | DevSecOps Portfolio">
+    <meta property="og:description" content="Shifting Security Left with automated audits and Zero-Trust architecture.">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <style>
-        body { background-color: #f9f9f9; padding-top: 50px; }
-        .container { max-width: 800px; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; display: inline-block; }
-        .tag { background: #3498db; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-right: 5px; }
-        .project-card { border: 1px solid #ddd; padding: 20px; border-radius: 5px; margin-bottom: 20px; }
+        body { background-color: #f4f7f6; padding-top: 50px; font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+        .container { max-width: 800px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        h1 { color: #2c3e50; border-bottom: 4px solid #3498db; display: inline-block; margin-bottom: 10px; font-weight: 700; }
+        .subtitle { font-size: 1.8rem; color: #7f8c8d; margin-bottom: 20px; }
+        .tag { background: #ebf5fb; color: #2980b9; padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 600; text-transform: uppercase; margin-right: 5px; border: 1px solid #d6eaf8; }
+        .project-card { border: 1px solid #eee; padding: 25px; border-radius: 8px; margin-bottom: 25px; transition: transform 0.2s ease; }
+        .project-card:hover { border-color: #3498db; transform: translateY(-2px); }
+        .badges { margin-bottom: 30px; }
+        .badges img { margin-right: 10px; height: 20px; }
+        hr { margin-top: 3rem; margin-bottom: 3.5rem; border-width: 2px; }
+        a { color: #3498db; text-decoration: none; font-weight: 600; }
+        a:hover { color: #2980b9; text-decoration: underline; }
+        h4 { font-weight: 700; color: #34495e; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Frank Fru</h1>
-        <p><strong>DevSecOps & Security Infrastructure Engineer</strong></p>
+        <p class="subtitle">DevSecOps & Security Infrastructure Engineer</p>
+        
+        <div class="badges">
+            <img src="https://img.shields.io/github/actions/workflow/status/chifru19/chifru19/codeql.yml?branch=main&label=Security%20Scan&logo=github" alt="Security Scan">
+            <img src="https://img.shields.io/badge/Dependabot-Active-brightgreen?logo=dependabot" alt="Dependabot">
+            <img src="https://img.shields.io/badge/Infrastructure-Hardened-blueviolet" alt="Infra Status">
+        </div>
+
+        <p>I specialize in engineering <strong>Hardened Infrastructure</strong> and <strong>Automated Security Pipelines</strong>. I bridge the gap between development and operations by "Shifting Security Left"—integrating automated audits into the heart of the CI/CD cycle.</p>
+        
         <p>📧 <a href="mailto:contact@frankfru.com">contact@frankfru.com</a> | 🛡️ Security+ certified</p>
         
         <hr>
 
-        <h4>🏗️ Featured Security Projects</h4>
+        <h4>🏗️ Featured Security Labs</h4>
         
         <div class="project-card">
             <h5>1. Project-Fortress (Automated IaC Security)</h5>
-            <p>Implementing a "Security Gate" that scans commits for 50+ policies using Checkov. Passed all gates for Kubernetes orchestration.</p>
-            <span class="tag">Kubernetes</span> <span class="tag">Checkov</span> <span class="tag">YAML</span>
+            <p>Engineering a "Security Gate" that scans every commit for 50+ security policies. Successfully implemented a hardened K8s deployment that passed all <strong>Checkov</strong> gates.</p>
+            <span class="tag">Kubernetes</span> <span class="tag">Checkov</span> <span class="tag">IaC Scan</span>
         </div>
 
         <div class="project-card">
             <h5>2. Network-Guard-Forensics (Zero-Trust)</h5>
-            <p>Active defense using Cowrie Honeypots isolated from private database subnets. Enforcing Non-Root execution and 128MB RAM limits.</p>
+            <p>Active defense using <strong>Cowrie Honeypots</strong> isolated from private subnets. Enforcing <strong>Non-Root</strong> execution and strict 128MB resource limits to mitigate lateral movement.</p>
             <span class="tag">Docker</span> <span class="tag">Zero-Trust</span> <span class="tag">Honeypots</span>
         </div>
 
         <h4>🛠️ Technical Toolkit</h4>
-        <p><strong>Security:</strong> CodeQL, Checkov, SAST, SCA, Cowrie Honeypots.</p>
-        <p><strong>Automation:</strong> GitHub Actions (CI/CD), YAML, Linux Shell.</p>
+        <p><strong>Security:</strong> CodeQL, Checkov, SAST/SCA, Secret Scanning, Cowrie.</p>
+        <p><strong>Automation:</strong> GitHub Actions (CI/CD), YAML, Docker, Kubernetes, Linux Shell.</p>
     </div>
 </body>
 </html>
