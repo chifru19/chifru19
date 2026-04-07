@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frank Fru | DevSecOps & Security Infrastructure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <style>
+        body { background-color: #f9f9f9; padding-top: 50px; }
+        .container { max-width: 800px; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; display: inline-block; }
+        .tag { background: #3498db; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-right: 5px; }
+        .project-card { border: 1px solid #ddd; padding: 20px; border-radius: 5px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Frank Fru</h1>
+        <p><strong>DevSecOps & Security Infrastructure Engineer</strong></p>
+        <p>📧 <a href="mailto:contact@frankfru.com">contact@frankfru.com</a> | 🛡️ Security+ certified</p>
+        
+        <hr>
+
+        <h4>🏗️ Featured Security Projects</h4>
+        
+        <div class="project-card">
+            <h5>1. Project-Fortress (Automated IaC Security)</h5>
+            <p>Implementing a "Security Gate" that scans commits for 50+ policies using Checkov. Passed all gates for Kubernetes orchestration.</p>
+            <span class="tag">Kubernetes</span> <span class="tag">Checkov</span> <span class="tag">YAML</span>
+        </div>
+
+        <div class="project-card">
+            <h5>2. Network-Guard-Forensics (Zero-Trust)</h5>
+            <p>Active defense using Cowrie Honeypots isolated from private database subnets. Enforcing Non-Root execution and 128MB RAM limits.</p>
+            <span class="tag">Docker</span> <span class="tag">Zero-Trust</span> <span class="tag">Honeypots</span>
+        </div>
+
+        <h4>🛠️ Technical Toolkit</h4>
+        <p><strong>Security:</strong> CodeQL, Checkov, SAST, SCA, Cowrie Honeypots.</p>
+        <p><strong>Automation:</strong> GitHub Actions (CI/CD), YAML, Linux Shell.</p>
+    </div>
+</body>
+</html>
