@@ -11,37 +11,36 @@
         .container { max-width: 900px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
         h1 { color: #2c3e50; border-bottom: 4px solid #3498db; display: inline-block; margin-bottom: 10px; font-weight: 700; }
         .subtitle { font-size: 1.8rem; color: #7f8c8d; margin-bottom: 20px; font-weight: 300; }
-        h4 { font-weight: 700; color: #34495e; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem; margin-top: 40px; display: flex; align-items: center; gap: 10px; }
+        
+        /* Live Status Badge Styling */
+        .live-status { display: inline-flex; align-items: center; background: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 20px; font-size: 1.1rem; font-weight: 700; border: 1px solid #c8e6c9; margin-bottom: 15px; }
+        .pulse { height: 8px; width: 8px; background-color: #2e7d32; border-radius: 50%; display: inline-block; margin-right: 8px; animation: pulse-animation 2s infinite; }
+        @keyframes pulse-animation { 0% { box-shadow: 0 0 0 0px rgba(46, 125, 50, 0.7); } 100% { box-shadow: 0 0 0 10px rgba(46, 125, 50, 0); } }
+
+        h4 { font-weight: 700; color: #34495e; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem; margin-top: 40px; }
         .badges { margin-bottom: 25px; }
         .badges img { height: 22px; margin-right: 8px; }
 
-        /* Service Cards */
         .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px; }
         .service-card { background: #f8fbfe; border: 1px solid #d6eaf8; padding: 25px; border-radius: 8px; text-align: center; }
         .service-card i { font-size: 2.5rem; color: #3498db; background: #fff; padding: 15px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 15px; display: inline-block; }
 
-        /* Security Guide Box */
         .security-guide { background: #2c3e50; color: #ecf0f1; padding: 35px; border-radius: 8px; border-left: 10px solid #e67e22; margin: 30px 0; }
         .security-guide h5 { color: #e67e22; font-weight: 700; text-transform: uppercase; margin-bottom: 20px; }
         .guide-item { margin-bottom: 20px; }
         .guide-item strong { color: #3498db; display: block; font-size: 1.5rem; margin-bottom: 5px; }
-        .guide-item p { font-size: 1.4rem; opacity: 0.9; }
 
-        /* Credential Boxes */
         .cred-flex { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
-        .cred-box { flex: 1; min-width: 280px; background: #fff; border: 1px solid #eee; border-left: 5px solid #3498db; padding: 20px; border-radius: 4px; transition: 0.3s; }
+        .cred-box { flex: 1; min-width: 280px; background: #fff; border: 1px solid #eee; border-left: 5px solid #3498db; padding: 20px; border-radius: 4px; }
         .cred-box.cyber { border-left-color: #e67e22; }
-        .cred-box:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
 
-        /* Project Cards */
         .project-card { border: 1px solid #eee; padding: 25px; border-radius: 8px; margin-bottom: 20px; }
         .tag { background: #ebf5fb; color: #2980b9; padding: 4px 10px; border-radius: 4px; font-size: 1.1rem; font-weight: 600; margin-right: 5px; }
         
-        .credly-btn { background: #e67e22; color: white !important; padding: 12px 25px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: 600; transition: 0.3s; }
-        .credly-btn:hover { background: #d35400; }
-        hr { margin: 40px 0; border: 0; border-top: 1px solid #eee; }
+        .credly-btn { background: #e67e22; color: white !important; padding: 12px 25px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: 600; }
+        .blog-link { color: #e67e22; font-weight: 700; text-decoration: underline; }
+        
         footer { text-align: center; color: #95a5a6; font-size: 1.3rem; margin-top: 50px; }
-
         @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -49,6 +48,10 @@
 
 <div class="container">
     <header>
+        <div class="live-status">
+            <span class="pulse"></span> CLOUDFLARE EDGE: SECURE & ACTIVE
+        </div>
+        
         <h1>Frank Fru</h1>
         <p class="subtitle">SOC Analyst & Cybersecurity Engineer</p>
         
@@ -89,7 +92,7 @@
         <h5>Layered Defense Strategy</h5>
         <div class="guide-item">
             <strong>1. The "Golden Rule" of Passwords:</strong>
-            <p>We enforce a minimum of 14 characters using complex passphrases. We strictly mandate Password Managers (Bitwarden/1Password) to eliminate plain-text vulnerabilities.</p>
+            <p>We enforce a minimum of 14 characters using complex passphrases. We strictly mandate Password Managers to eliminate plain-text vulnerabilities.</p>
         </div>
         <div class="guide-item">
             <strong>2. Mandatory Multi-Factor Authentication (MFA):</strong>
@@ -131,17 +134,15 @@
         <p style="margin-top:15px;"><a href="https://github.com/chifru19/chifru19" target="_blank"><i class="fab fa-github"></i> View SOC Pipeline</a></p>
     </div>
 
-    <div class="project-card">
-        <h5>2. Aura-Digital (Hardened Edge Defense)</h5>
-        <p>Infrastructure as Code lab focused on <strong>Cloudflare WAF</strong> hardening and HSTS deployment. Designed to mitigate Layer 7 DDoS attacks.</p>
-        <span class="tag">WAF</span> <span class="tag">SSL/TLS Hardening</span> <span class="tag">HSTS</span>
-    </div>
-
     <hr>
 
-    <h4>🛠️ Cybersecurity Toolkit</h4>
+    <h4>🛠️ Cybersecurity Toolkit & Insights</h4>
     <p><strong>Defensive Operations:</strong> Incident Response, SIEM (Log Analysis), Wireshark, Nmap, Vulnerability Assessment.</p>
     <p><strong>Infrastructure Security:</strong> DNSSEC, Cloudflare Edge Security, SSL/TLS Administration, Docker Hardening.</p>
+    
+    <p style="background: #fff3e0; padding: 15px; border-radius: 5px; border-left: 5px solid #e67e22;">
+        📖 <strong>Technical Deep Dive:</strong> <a href="#" class="blog-link">How I use Cloudflare Firewall Logs to track and mitigate edge threats in real-time.</a>
+    </p>
 
     <footer>
         &copy; 2026 Frank Fru | Verified SOC & Cybersecurity Professional
