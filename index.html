@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frank Fru | DevSecOps & Security Infrastructure</title>
-    <meta name="description" content="DevSecOps Engineer specializing in Hardened Infrastructure and Domain Security Administration.">
+    <title>Frank Fru | SOC Analyst & DevSecOps Engineer</title>
+    <meta name="description" content="Qualified SOC Analyst and DevSecOps Engineer specializing in Security Analytics and Hardened Infrastructure.">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -18,29 +18,22 @@
         h4 { font-weight: 700; color: #34495e; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem; margin-top: 40px; }
         
         .badges { margin-bottom: 30px; }
-        .badges img { margin-right: 10px; height: 20px; }
+        .badges img { margin-right: 10px; height: 22px; }
         
-        /* Professional Service Cards */
         .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px; }
         .service-card { background: #f8fbfe; border: 1px solid #d6eaf8; padding: 30px 20px; border-radius: 8px; text-align: center; }
-        .service-card i { 
-            font-size: 2.5rem; 
-            color: #3498db; 
-            background: #ffffff; 
-            padding: 15px; 
-            border-radius: 50%; 
-            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.1);
-            margin-bottom: 15px; 
-        }
-        .service-card h5 { font-size: 1.4rem; margin-bottom: 10px; font-weight: bold; }
+        .service-card i { font-size: 2.5rem; color: #3498db; background: #ffffff; padding: 15px; border-radius: 50%; box-shadow: 0 4px 10px rgba(52, 152, 219, 0.1); margin-bottom: 15px; }
 
-        /* Project Cards */
-        .project-card { border: 1px solid #eee; padding: 25px; border-radius: 8px; margin-bottom: 20px; transition: all 0.3s ease; position: relative; }
+        .project-card { border: 1px solid #eee; padding: 25px; border-radius: 8px; margin-bottom: 20px; transition: all 0.3s ease; }
         .project-card:hover { border-color: #3498db; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         .tag { background: #ebf5fb; color: #2980b9; padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 600; text-transform: uppercase; margin-right: 5px; border: 1px solid #d6eaf8; }
         
+        .cred-box { background: #fdfefe; border-left: 5px solid #3498db; padding: 15px; border-radius: 4px; flex: 1; min-width: 250px; }
+        .cred-box.csap { border-left-color: #27ae60; }
+        
         a { color: #3498db; text-decoration: none; font-weight: 600; }
-        .github-link { display: inline-block; margin-top: 10px; font-size: 1.3rem; color: #2c3e50; }
+        .credly-btn { background: #e67e22; color: white !important; padding: 8px 15px; border-radius: 5px; font-size: 1.2rem; display: inline-block; margin-top: 10px; }
+        .credly-btn:hover { background: #d35400; text-decoration: none; }
         hr { margin: 4rem 0; border-width: 1px; opacity: 0.3; }
     </style>
 </head>
@@ -49,31 +42,51 @@
     <div class="container">
         <header>
             <h1>Frank Fru</h1>
-            <p class="subtitle">DevSecOps & Security Infrastructure Engineer</p>
+            <p class="subtitle">SOC Analyst & Security Infrastructure Engineer</p>
             
             <div class="badges">
                 <img src="https://img.shields.io/github/actions/workflow/status/chifru19/chifru19/codeql.yml?branch=main&label=Security%20Scan&logo=github" alt="Security Scan">
-                <img src="https://img.shields.io/badge/Dependabot-Active-brightgreen?logo=dependabot" alt="Dependabot">
+                <img src="https://img.shields.io/badge/CompTIA-CSIS%20%7C%20CSAP-orange" alt="CompTIA Stackable">
                 <img src="https://img.shields.io/badge/Infrastructure-Hardened-blueviolet" alt="Infra Status">
             </div>
 
-            <p>I specialize in engineering <strong>Hardened Infrastructure</strong> and <strong>Automated Security Pipelines</strong>. I bridge the gap between development and operations by "Shifting Security Left."</p>
-            <p>📧 <a href="mailto:contact@frankfru.com">contact@frankfru.com</a> | 🛡️ Security+ Certified</p>
+            <p>Qualified <strong>Cybersecurity Analytics Professional</strong> specializing in Active Defense, Incident Response, and Hardened Cloud Infrastructure.</p>
+            
+            <p>📧 <a href="mailto:contact@frankfru.com">contact@frankfru.com</a></p>
+            <a href="https://www.credly.com/users/frank-fru" target="_blank" class="credly-btn">
+                <i class="fa-solid fa-certificate"></i> Verify My Digital Badges on Credly
+            </a>
         </header>
 
         <hr>
 
-        <h4>💼 Professional Services</h4>
+        <h4>🛡️ Cyber Security & SOC Services</h4>
         <div class="services-grid">
             <div class="service-card">
-                <i class="fa-solid fa-globe"></i>
-                <h5>Domain Architecture</h5>
-                <p>Strategic domain creation and DNS management. I configure high-availability records and DNSSEC to protect your digital identity.</p>
+                <i class="fa-solid fa-tower-observation"></i>
+                <h5>SOC Operations</h5>
+                <p>Monitoring and analyzing security events. I specialize in incident triage and identifying Indicators of Compromise (IoC) to protect organizational assets.</p>
             </div>
             <div class="service-card">
                 <i class="fa-solid fa-user-shield"></i>
-                <h5>Security Administration</h5>
-                <p>Full lifecycle management of SSL/TLS certificates and Cloudflare edge hardening, including WAF rules and HSTS deployment.</p>
+                <h5>Infrastructure Hardening</h5>
+                <p>Deploying Zero-Trust architecture, SSL/TLS management, and Cloudflare WAF optimization to reduce the attack surface.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h4>📜 Professional Credentials</h4>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div class="cred-box">
+                <strong>CompTIA CSIS</strong><br>
+                <small>Secure Infrastructure Specialist</small><br>
+                <a href="https://www.credly.com/users/frank-fru" target="_blank" style="font-size: 11px;">VERIFY ON CREDLY →</a>
+            </div>
+            <div class="cred-box csap">
+                <strong>CompTIA CSAP</strong><br>
+                <small>Security Analytics Professional</small><br>
+                <a href="https://www.credly.com/users/frank-fru" target="_blank" style="font-size: 11px;">VERIFY ON CREDLY →</a>
             </div>
         </div>
 
@@ -82,20 +95,31 @@
         <h4>🏗️ Featured Technical Labs</h4>
         
         <div class="project-card">
-            <h5>1. Aura-Digital (Secure Edge Delivery)</h5>
-            <p>Implementation of an automated web delivery system via Cloudflare Pages. Optimized for performance and hardened against Layer 7 attacks via Managed Transforms.</p>
-            <span class="tag">CI/CD</span> <span class="tag">Cloudflare Pages</span> <span class="tag">WAF</span>
+            <h5>1. Sentinel-Scan (Security Automation)</h5>
+            <p>A "Shift-Left" SOC pipeline using GitHub Actions and CodeQL to automate vulnerability scanning and secret detection before deployment.</p>
+            <span class="tag">Threat Detection</span> <span class="tag">DevSecOps</span> <span class="tag">SAST</span>
             <br>
-            <a href="https://github.com/chifru19/aura-digital" target="_blank" class="github-link"><i class="fab fa-github"></i> View Repository</a>
+            <a href="https://github.com/chifru19/chifru19" target="_blank" class="github-link" style="font-size: 1.3rem;"><i class="fab fa-github"></i> View Lab</a>
         </div>
 
         <div class="project-card">
-            <h5>2. Sentinel-Scan (Automated SAST)</h5>
-            <p>Integration of GitHub Actions with CodeQL and Dependabot to perform real-time Static Analysis Security Testing (SAST) on every push.</p>
-            <span class="tag">GitHub Actions</span> <span class="tag">CodeQL</span> <span class="tag">SCA</span>
+            <h5>2. Aura-Digital (Secure Edge Infrastructure)</h5>
+            <p>High-performance web infrastructure hardened via Cloudflare. Implements HSTS, WAF rules, and managed security headers.</p>
+            <span class="tag">Cloudflare</span> <span class="tag">WAF</span> <span class="tag">SSL/TLS</span>
             <br>
-            <a href="https://github.com/chifru19/chifru19" target="_blank" class="github-link"><i class="fab fa-github"></i> View Workflow</a>
+            <a href="https://github.com/chifru19/aura-digital" target="_blank" class="github-link" style="font-size: 1.3rem;"><i class="fab fa-github"></i> View Repo</a>
         </div>
 
-        <div class="project-card">
-            <h5>3. Project-Fortress (
+        <hr>
+
+        <h4>🛠️ Technical Toolkit</h4>
+        <p><strong>SOC & Analysis:</strong> SIEM Concepts, Log Analysis, Wireshark, Nmap, Vulnerability Management.</p>
+        <p><strong>Infrastructure:</strong> Cloudflare Security, Domain Administration, Docker Hardening, GitHub Actions.</p>
+
+        <footer style="text-align: center; margin-top: 50px; font-size: 1.2rem; color: #95a5a6;">
+            &copy; 2026 Frank Fru | Verified Cybersecurity Professional
+        </footer>
+    </div>
+
+</body>
+</html>
