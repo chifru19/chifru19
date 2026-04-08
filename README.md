@@ -1,52 +1,48 @@
-# 🛡️ Frank | DevSecOps & Security Infrastructure Engineer
+# Frank Fru | SOC Analyst & DevSecOps Engineer 🛡️
 
-![Security Scan](https://github.com/chifru19/chifru19/actions/workflows/codeql.yml/badge.svg)
-![Dependabot Status](https://img.shields.io/badge/Dependabot-Active-brightgreen)
+![Cloudflare Status](https://img.shields.io/badge/CLOUDFLARE_EDGE-SECURE_&_ACTIVE-green?style=for-the-badge&logo=cloudflare)
 
-I specialize in engineering **Hardened Infrastructure** and **Automated Security Pipelines**. I bridge the gap between development and operations by "Shifting Security Left"—integrating automated audits into the heart of the CI/CD cycle.
-
----
-
-## 🏗️ Featured Security Labs & Project Links
-
-### 🎮 Featured Project: PIDGIN BUILDER PRO
-Celebrating Pan-African culture with a high-energy Word Scramble game.
-👉 **[PLAY LIVE ON REPLIT](https://replit.com/@chifru19/pidgin-jumble-game-5?v=1)** 👈
-*Built with Python, Tkinter, and Pygame.*
-### 📂 [1. Project-Fortress (Automated IaC Security)](https://github.com/chifru19/chifru19/tree/main/.github/workflows)
-* **Objective**: Engineering a "Security Gate" that scans every commit for 50+ security policies.
-* **Verification**: Successfully implemented a hardened `deployment.yaml` that passed all **Checkov** gates for Kubernetes orchestration.
-* **Key Code**: View my [Security Workflows here](https://github.com/chifru19/chifru19/tree/main/.github/workflows).
-
-### 📂 [2. Network-Guard-Forensics (Zero-Trust Architecture)](https://github.com/chifru19/chifru19/blob/main/deployment.yaml)
-* **Objective**: Active defense using **Cowrie Honeypots** physically isolated from private database subnets.
-* **Result**: Used Docker's `internal: true` flag and K8s `securityContext` to eliminate lateral movement risks.
-* **Key Code**: View my [Hardened K8s Manifest here](https://github.com/chifru19/chifru19/blob/main/deployment.yaml).
+Qualified **Security Analytics Professional** and **AWS Certified Cloud Practitioner**. I specialize in **Cybersecurity Operations**, proactive threat hunting, and the engineering of hardened, zero-trust infrastructure.
 
 ---
 
-## 🛡️ Automated Security Posture
-This repository is a live demonstration of a hardened environment using:
-* **SAST (Static Analysis)**: Infrastructure-as-code scanning via **Checkov**.
-* **SCA (Supply Chain)**: Dependency monitoring via **Dependabot**.
-* **Secret Protection**: Native **Secret Scanning** with Push Protection enabled.
-
-
+### 📜 Verified Credentials & Badges
+![AWS](https://img.shields.io/badge/AWS-Certified%20Cloud%20Practitioner-ff9900?style=flat-square&logo=amazon-aws&logoColor=white)
+![CompTIA CSAP](https://img.shields.io/badge/CompTIA-CSAP%20%7C%20Security%20Analytics-orange?style=flat-square)
+![DevSecOps](https://img.shields.io/badge/DevSecOps-Pipeline%20Hardened-blueviolet?style=flat-square)
+![Pipeline Scan](https://img.shields.io/github/actions/workflow/status/chifru19/chifru19/codeql.yml?branch=main&label=Security%20Scan&logo=github&style=flat-square)
 
 ---
 
-## 🧠 Lessons Learned (The "Hardening" Journey)
-
-### 1. Remediation over Detection
-* **Finding**: My scanner flagged a "write-all" permission risk in the workflow.
-* **The Fix**: Restricted GitHub Token scopes to `contents: read` and `security-events: write`.
-
-### 2. Infrastructure Sandboxing
-* **The Fix**: Rewrote Dockerfiles and K8s manifests to enforce **Non-Root** execution and established 128MB RAM limits to prevent DoS attacks.
+### 💼 Core Technical Expertise
+* **Cloud Infrastructure:** AWS Architecture specializing in VPC security, IAM least-privilege, and Cloudflare edge hardening.
+* **SOC Operations:** Proactive threat hunting, log analysis (SIEM), and incident response using real-world forensics tools.
+* **DevSecOps Integration:** Automating **SAST**, **Secret Scanning**, and **DAST** within CI/CD pipelines to bridge the gap between development and security.
 
 ---
 
-## 🛠️ Technical Toolkit
-* **Security**: CodeQL, Checkov, SAST, SCA, Cowrie Honeypots.
-* **Orchestration**: Docker, Kubernetes (K8s).
-* **Automation**: GitHub Actions (CI/CD), YAML, Linux Shell.
+### 🏗️ Featured Engineering Labs
+#### 1. [Sentinel-Scan](https://github.com/chifru19/Sentinel-Scan) (DevSecOps Pipeline)
+A specialized SOC pipeline implementing **GitHub Advanced Security**. It automates vulnerability detection in source code to stop threats before they reach production.
+`SAST` `CI/CD Security` `AWS Hardening`
+
+#### 2. [Aura-Infrastructure](https://github.com/chifru19/Aura-Digital-Infrastructure) (Secure Architecture)
+Enterprise-grade secure LAN architecture featuring Cisco hardening, HSRP redundancy, and Zero-Trust segmentation.
+`Networking` `Zero-Trust` `Cisco`
+
+---
+
+### 🛡️ Layered Defense Strategy
+1.  **Infrastructure as Code (IaC) Hardening:** Scanning Terraform/CloudFormation for misconfigurations before deployment.
+2.  **Zero-Trust Perimeter:** Enforcement of Cloudflare Zero-Trust and AWS Client VPN with mandatory MFA.
+3.  **L7 DDoS Mitigation:** Leveraging L7 protection and custom WAF rules to ensure 99.9% uptime.
+
+---
+
+### 📫 Connect with me
+- **Portfolio:** [chifru19.pages.dev](https://chifru19.pages.dev)
+- **Email:** [contact@frankfru.com](mailto:contact@frankfru.com)
+- **Verification:** [Verify Credentials on Credly](https://www.credly.com/users/frank-fru)
+
+---
+*© 2026 Frank Fru | Verified SOC, DevSecOps & AWS Professional*
