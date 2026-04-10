@@ -17,6 +17,13 @@
         .mono { font-family: 'JetBrains Mono', monospace; }
         .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
         .badge-gradient { background: linear-gradient(90deg, #3b82f6 0%, #2dd4bf 100%); }
+        
+        /* The Blinking Security Indicator */
+        .dot { height: 8px; width: 8px; background-color: #2dd4bf; border-radius: 50%; display: inline-block; margin-right: 8px; }
+        .blink { animation: blink-animation 1.5s steps(2, start) infinite; -webkit-animation: blink-animation 1.5s steps(2, start) infinite; }
+        @keyframes blink-animation { to { visibility: hidden; } }
+        @-webkit-keyframes blink-animation { to { visibility: hidden; } }
+
         .strategy-card { border-left: 4px solid var(--accent); transition: all 0.3s ease; }
         .strategy-card:hover { background: rgba(59, 130, 246, 0.1); transform: translateX(10px); }
         .cert-link:hover { border-color: #3b82f6; color: #3b82f6; }
@@ -28,15 +35,18 @@
         <div class="max-w-7xl mx-auto py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <div class="w-8 h-8 badge-gradient rounded flex items-center justify-center font-bold text-slate-950 text-xs">FF</div>
-                <span class="mono font-bold tracking-tighter text-sm uppercase">Cloudflare Edge: <span class="text-blue-400">Secure</span></span>
+                <div class="flex items-center">
+                    <span class="dot blink shadow-[0_0_8px_#2dd4bf]"></span>
+                    <span class="mono font-bold tracking-tighter text-[10px] md:text-sm uppercase">Cloudflare Edge: <span class="text-[#2dd4bf]">Active & Secure</span></span>
+                </div>
             </div>
-            <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+            <div class="hidden lg:flex gap-8 text-[10px] font-bold uppercase tracking-widest text-slate-400">
                 <a href="#strategy" class="hover:text-blue-400 transition">Strategy</a>
                 <a href="#certs" class="hover:text-blue-400 transition">Credentials</a>
                 <a href="https://www.linkedin.com/in/frank-fru/" target="_blank" class="hover:text-blue-400 transition">LinkedIn</a>
                 <a href="https://github.com/chifru19/chifru19" target="_blank" class="hover:text-blue-400 transition">GitHub</a>
             </div>
-            <a href="https://www.credly.com/users/frank-fru/badges" target="_blank" class="text-[10px] font-black bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-500 transition shadow-lg shadow-blue-500/20 uppercase tracking-widest">Verify Badges</a>
+            <a href="https://www.credly.com/users/frank-fru/badges" target="_blank" class="text-[10px] font-black bg-white text-slate-950 px-5 py-2 rounded-full hover:bg-blue-400 hover:text-white transition uppercase tracking-widest shadow-lg">Verify Badges</a>
         </div>
     </nav>
 
