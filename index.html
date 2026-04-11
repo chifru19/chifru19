@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Frank Fru | SOC Analyst & DevSecOps Engineer</title>
+    <title>Frank Fru | Web Security & Resilience Engineer</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        :root {
+            --primary-blue: #2563eb;
+            --whatsapp-green: #25d366;
+            --dark-slate: #0f172a;
+        }
         body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         .mono { font-family: 'JetBrains Mono', monospace; }
+        
+        /* High-Impact Hero Adjustment */
+        .hero-min-height { min-height: 85vh; display: flex; align-items: center; }
         
         .dot { height: 10px; width: 10px; background-color: #10b981; border-radius: 50%; display: inline-block; margin-right: 8px; }
         .blink { animation: blink-animation 1.5s steps(2, start) infinite; }
@@ -20,24 +28,15 @@
 
         .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.05); }
         .tech-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(0,0,0,0.05); }
-        .tech-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); border-color: #3b82f6; }
+        .tech-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); border-color: var(--primary-blue); }
 
         .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            z-index: 1000;
-            transition: transform 0.3s ease;
+            position: fixed; bottom: 30px; right: 30px;
+            background-color: var(--whatsapp-green); color: white;
+            width: 60px; height: 60px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 1000; transition: transform 0.3s ease;
         }
         .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
     </style>
@@ -65,7 +64,6 @@
                 <div class="flex items-center gap-4 border-l pl-8 border-slate-200">
                     <a href="https://www.linkedin.com/in/frank-fru/" target="_blank" class="hover:text-blue-600 transition"><i class="fab fa-linkedin text-lg"></i></a>
                     <a href="https://github.com/chifru19" target="_blank" class="hover:text-blue-600 transition"><i class="fab fa-github text-lg"></i></a>
-                    <a href="https://wa.me/4915253794352" target="_blank" class="hover:text-[#25d366] transition"><i class="fab fa-whatsapp text-lg"></i></a>
                 </div>
             </div>
             <a href="mailto:contact@frankfru.com" class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest hover:bg-slate-900 transition shadow-xl shadow-blue-200 uppercase">
@@ -74,18 +72,21 @@
         </div>
     </nav>
 
-    <header class="pt-24 pb-32 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="max-w-3xl">
-                <h2 class="text-6xl md:text-8xl font-extrabold text-slate-900 mb-8 leading-[0.9] tracking-tighter italic uppercase">
-                    Advanced <br><span class="text-blue-600">Web Security</span> <br>& Resilience.
+    <header class="hero-min-height px-6">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="max-w-4xl">
+                <div class="mb-6 inline-block bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-100">
+                    Enterprise Web Protection
+                </div>
+                <h2 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-slate-900 mb-6 leading-[0.95] tracking-tighter italic uppercase">
+                    I SECURE YOUR <br><span class="text-blue-600">UPTIME</span> AGAINST <br>VOLUMETRIC ATTACKS.
                 </h2>
-                <p class="text-xl text-slate-500 mb-10 leading-relaxed font-medium">
-                    Specializing in **DDoS mitigation**, **Web Application Firewall (WAF)** tuning, and zero-trust architecture. I protect high-traffic applications from volumetric and application-layer threats.
+                <p class="text-lg md:text-xl text-slate-500 mb-10 leading-relaxed font-medium max-w-2xl">
+                    Specializing in **DDoS mitigation**, **WAF tuning**, and zero-trust architecture. I stop L7 threats and ensure 99.9% availability for high-traffic applications.
                 </p>
                 <div class="flex flex-wrap gap-4">
                     <a href="https://wa.me/4915253794352" target="_blank" class="bg-[#25d366] text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 hover:bg-slate-900 transition shadow-xl">
-                        <i class="fab fa-whatsapp"></i> WhatsApp Chat
+                        <i class="fab fa-whatsapp"></i> WhatsApp Consultation
                     </a>
                     <a href="mailto:contact@frankfru.com" class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 hover:bg-blue-600 transition">
                         <i class="fas fa-envelope"></i> contact@frankfru.com
@@ -95,85 +96,87 @@
         </div>
     </header>
 
-    <section id="expertise" class="py-32 px-6 bg-white border-y border-slate-100">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="tech-card bg-slate-50 p-10 rounded-[2.5rem]">
-                    <div class="w-14 h-14 bg-red-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-red-200">
-                        <i class="fas fa-shield-virus text-xl"></i>
+    <main>
+        <section id="expertise" class="py-24 px-6 bg-white border-y border-slate-100">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="tech-card bg-slate-50 p-10 rounded-[2.5rem]">
+                        <div class="w-14 h-14 bg-red-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-red-200">
+                            <i class="fas fa-shield-virus text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold mb-4 uppercase italic">Web Security & DDoS</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Mitigating L3/L4 and L7 attacks using Cloudflare and AWS Shield. Expert in WAF rules and TLS hardening.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="mono text-[9px] bg-white px-2 py-1 rounded border">Bot Management</span>
+                            <span class="mono text-[9px] bg-white px-2 py-1 rounded border">DDoS Resilience</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-extrabold mb-4 uppercase italic">Web Security & DDoS</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Mitigating L3/L4 and L7 DDoS attacks using Cloudflare and AWS Shield. Expert in WAF rules and TLS hardening.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="mono text-[9px] bg-white px-2 py-1 rounded border">Bot Management</span>
-                        <span class="mono text-[9px] bg-white px-2 py-1 rounded border">DDoS Resilience</span>
-                    </div>
-                </div>
 
-                <div class="tech-card bg-slate-50 p-10 rounded-[2.5rem]">
-                    <div class="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200">
-                        <i class="fas fa-network-wired text-xl"></i>
+                    <div class="tech-card bg-slate-50 p-10 rounded-[2.5rem]">
+                        <div class="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200">
+                            <i class="fas fa-network-wired text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold mb-4 uppercase italic">Network Hardening</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Implementing VLAN segmentation and encrypted tunnels to secure critical business infrastructure.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="mono text-[9px] bg-white px-2 py-1 rounded border">IPsec/VPN</span>
+                            <span class="mono text-[9px] bg-white px-2 py-1 rounded border">Zero-Trust</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-extrabold mb-4 uppercase italic">Network Hardening</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Implementing VLAN segmentation and encrypted tunnels to secure critical business infrastructure against lateral movement.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="mono text-[9px] bg-white px-2 py-1 rounded border">IPsec/VPN</span>
-                        <span class="mono text-[9px] bg-white px-2 py-1 rounded border">Zero-Trust</span>
-                    </div>
-                </div>
 
-                <div class="tech-card bg-slate-50 p-10 rounded-[2.5rem]">
-                    <div class="w-14 h-14 bg-purple-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-purple-200">
-                        <i class="fas fa-search-shield text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-extrabold mb-4 uppercase italic">SOC Analytics</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Monitoring traffic patterns for anomalies and responding to active security incidents with CompTIA CySA+ precision.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="mono text-[9px] bg-white px-2 py-1 rounded border">SIEM</span>
-                        <span class="mono text-[9px] bg-white px-2 py-1 rounded border">Incident Response</span>
+                    <div class="tech-card bg-slate-50 p-10 rounded-[2.5rem]">
+                        <div class="w-14 h-14 bg-purple-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-purple-200">
+                            <i class="fas fa-search-shield text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold mb-4 uppercase italic">SOC Analytics</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Monitoring traffic patterns for anomalies and responding to incidents with CompTIA CySA+ precision.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="mono text-[9px] bg-white px-2 py-1 rounded border">SIEM</span>
+                            <span class="mono text-[9px] bg-white px-2 py-1 rounded border">Incident Response</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="labs" class="py-32 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex justify-between items-end mb-16">
-                <div>
-                    <h2 class="text-4xl font-black uppercase italic tracking-tighter">Security Labs</h2>
-                    <p class="text-slate-500 font-bold text-xs uppercase mt-2">Specialized Web Protection Repos</p>
+        <section id="labs" class="py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex justify-between items-end mb-16">
+                    <div>
+                        <h2 class="text-4xl font-black uppercase italic tracking-tighter">Security Labs</h2>
+                        <p class="text-slate-500 font-bold text-xs uppercase mt-2">Open-Source Protection Frameworks</p>
+                    </div>
+                    <a href="https://github.com/chifru19" target="_blank" class="text-blue-600 font-black text-xs uppercase underline">View Full Github</a>
                 </div>
-                <a href="https://github.com/chifru19" target="_blank" class="text-blue-600 font-black text-xs uppercase underline">View Full Github</a>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <a href="https://github.com/chifru19/Network-Guard-Forensics" target="_blank" class="group bg-white border border-slate-200 p-8 rounded-3xl hover:border-red-600 transition">
+                        <div class="flex justify-between items-start mb-6">
+                            <h4 class="text-2xl font-extrabold group-hover:text-red-600 transition">Web-Guard Pro</h4>
+                            <i class="fab fa-github text-xl text-slate-300"></i>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-6">Infrastructure hardened with Cloudflare WAF and custom DDoS mitigation headers for maximum uptime.</p>
+                        <div class="flex gap-4 mono text-[10px] font-bold text-slate-400">
+                            <span>#WebSecurity</span> <span>#DDoS-Mitigation</span> <span>#WAF</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/chifru19/VoltGuard-DCEO-Sim" target="_blank" class="group bg-white border border-slate-200 p-8 rounded-3xl hover:border-blue-600 transition">
+                        <div class="flex justify-between items-start mb-6">
+                            <h4 class="text-2xl font-extrabold group-hover:text-blue-600 transition">VoltGuard Resilience</h4>
+                            <i class="fab fa-github text-xl text-slate-300"></i>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-6">Simulation of redundant network paths designed to maintain 99.9% availability during network attacks.</p>
+                        <div class="flex gap-4 mono text-[10px] font-bold text-slate-400">
+                            <span>#Infrastructure</span> <span>#Availability</span> <span>#Redundancy</span>
+                        </div>
+                    </a>
+                </div>
             </div>
+        </section>
+    </main>
 
-            <div class="grid md:grid-cols-2 gap-6">
-                <a href="https://github.com/chifru19/Network-Guard-Forensics" target="_blank" class="group bg-white border border-slate-200 p-8 rounded-3xl hover:border-red-600 transition">
-                    <div class="flex justify-between items-start mb-6">
-                        <h4 class="text-2xl font-extrabold group-hover:text-red-600 transition">Web-Guard Pro</h4>
-                        <i class="fab fa-github text-xl text-slate-300"></i>
-                    </div>
-                    <p class="text-slate-500 text-sm mb-6">Infrastructure hardened with Cloudflare WAF and custom DDoS mitigation headers for maximum web application uptime.</p>
-                    <div class="flex gap-4 mono text-[10px] font-bold text-slate-400">
-                        <span>#WebSecurity</span> <span>#DDoS-Mitigation</span> <span>#WAF</span>
-                    </div>
-                </a>
-
-                <a href="https://github.com/chifru19/VoltGuard-DCEO-Sim" target="_blank" class="group bg-white border border-slate-200 p-8 rounded-3xl hover:border-blue-600 transition">
-                    <div class="flex justify-between items-start mb-6">
-                        <h4 class="text-2xl font-extrabold group-hover:text-blue-600 transition">VoltGuard Resilience</h4>
-                        <i class="fab fa-github text-xl text-slate-300"></i>
-                    </div>
-                    <p class="text-slate-500 text-sm mb-6">Simulation of redundant network paths designed to maintain 99.9% availability during volumetric network attacks.</p>
-                    <div class="flex gap-4 mono text-[10px] font-bold text-slate-400">
-                        <span>#Infrastructure</span> <span>#Availability</span> <span>#Redundancy</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer id="credentials" class="bg-slate-900 text-white pt-32 pb-16 px-6">
+    <footer id="credentials" class="bg-slate-900 text-white pt-24 pb-12 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-20 mb-20">
                 <div>
@@ -198,13 +201,13 @@
                     <div>
                         <h5 class="mb-4">Connect</h5>
                         <ul class="space-y-3 text-white">
-                            <li><a href="https://www.linkedin.com/in/frank-fru/">LinkedIn</a></li>
-                            <li><a href="https://github.com/chifru19">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/frank-fru/" class="hover:text-blue-400">LinkedIn</a></li>
+                            <li><a href="https://github.com/chifru19" class="hover:text-blue-400">GitHub</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="pt-8 border-t border-slate-800 flex justify-between items-center text-[9px] font-black uppercase tracking-[0.3em] text-slate-500">
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] font-black uppercase tracking-[0.3em] text-slate-500">
                 <p>© 2026 Frank Fru | Systems Hardened with Cloudflare & AWS</p>
                 <p>Status: Under Monitoring</p>
             </div>
