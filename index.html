@@ -14,21 +14,22 @@
         :root {
             --primary-blue: #2563eb;
             --whatsapp-green: #25d366;
-            --dark-slate: #0f172a;
         }
         body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         .mono { font-family: 'JetBrains Mono', monospace; }
         
-        /* High-Impact Hero Adjustment */
         .hero-min-height { min-height: 85vh; display: flex; align-items: center; }
         
         .dot { height: 10px; width: 10px; background-color: #10b981; border-radius: 50%; display: inline-block; margin-right: 8px; }
         .blink { animation: blink-animation 1.5s steps(2, start) infinite; }
         @keyframes blink-animation { to { visibility: hidden; } }
 
-        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.05); }
         .tech-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(0,0,0,0.05); }
         .tech-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); border-color: var(--primary-blue); }
+
+        .cert-link { transition: all 0.2s ease; border: 1px solid #e2e8f0; }
+        .cert-link:hover { border-color: var(--primary-blue); background: #f0f7ff; transform: scale(1.02); }
 
         .whatsapp-float {
             position: fixed; bottom: 30px; right: 30px;
@@ -38,35 +39,35 @@
             font-size: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             z-index: 1000; transition: transform 0.3s ease;
         }
-        .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
     </style>
 </head>
 <body class="bg-[#f8fafc] text-slate-900">
 
-    <a href="https://wa.me/4915253794352" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/4915253794352" class="whatsapp-float hover:scale-110 transition-transform" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <div class="bg-slate-900 text-white py-2.5 px-6 text-center text-[10px] font-black sticky top-0 z-[100] tracking-[0.2em] uppercase">
+    <div class="bg-slate-900 text-white py-2 px-6 text-center text-[10px] font-black sticky top-0 z-[100] tracking-[0.2em] uppercase">
         <span class="dot blink shadow-[0_0_10px_#10b981]"></span> INFRASTRUCTURE STATUS: PROTECTED | DDoS SHIELD ACTIVE
     </div>
 
-    <nav class="glass-nav sticky top-[36px] z-50">
+    <nav class="glass-nav sticky top-[34px] z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div>
-                <h1 class="text-xl font-black text-slate-900 leading-none italic uppercase">Frank Fru</h1>
-                <p class="mono text-[9px] font-bold text-blue-600 uppercase tracking-widest mt-1">SOC Analyst & Web Security</p>
+                <h1 class="text-xl font-black text-slate-900 italic uppercase">Frank Fru</h1>
+                <p class="mono text-[9px] font-bold text-blue-600 uppercase tracking-widest mt-1">Web Security Engineer</p>
             </div>
             
             <div class="hidden lg:flex items-center gap-8 text-[10px] font-black uppercase tracking-widest text-slate-500">
                 <a href="#expertise" class="hover:text-blue-600 transition">Expertise</a>
+                <a href="#credentials" class="hover:text-blue-600 transition">Credentials</a>
                 <a href="#labs" class="hover:text-blue-600 transition">Security Labs</a>
                 <div class="flex items-center gap-4 border-l pl-8 border-slate-200">
                     <a href="https://www.linkedin.com/in/frank-fru/" target="_blank" class="hover:text-blue-600 transition"><i class="fab fa-linkedin text-lg"></i></a>
                     <a href="https://github.com/chifru19" target="_blank" class="hover:text-blue-600 transition"><i class="fab fa-github text-lg"></i></a>
                 </div>
             </div>
-            <a href="mailto:contact@frankfru.com" class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest hover:bg-slate-900 transition shadow-xl shadow-blue-200 uppercase">
+            <a href="mailto:contact@frankfru.com" class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest hover:bg-slate-900 transition shadow-xl uppercase">
                 Hire Engineer
             </a>
         </div>
@@ -82,10 +83,10 @@
                     I SECURE YOUR <br><span class="text-blue-600">UPTIME</span> AGAINST <br>VOLUMETRIC ATTACKS.
                 </h2>
                 <p class="text-lg md:text-xl text-slate-500 mb-10 leading-relaxed font-medium max-w-2xl">
-                    Specializing in **DDoS mitigation**, **WAF tuning**, and zero-trust architecture. I stop L7 threats and ensure 99.9% availability for high-traffic applications.
+                    Specializing in **DDoS mitigation**, **WAF tuning**, and zero-trust architecture. I stop L7 threats and ensure 99.9% availability for your high-traffic assets.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="https://wa.me/4915253794352" target="_blank" class="bg-[#25d366] text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 hover:bg-slate-900 transition shadow-xl">
+                    <a href="https://wa.me/4915253794352" target="_blank" class="bg-[#25d366] text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 hover:bg-slate-900 transition shadow-lg">
                         <i class="fab fa-whatsapp"></i> WhatsApp Consultation
                     </a>
                     <a href="mailto:contact@frankfru.com" class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 hover:bg-blue-600 transition">
@@ -96,120 +97,152 @@
         </div>
     </header>
 
-    <main>
-        <section id="expertise" class="py-24 px-6 bg-white border-y border-slate-100">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="tech-card bg-slate-50 p-10 rounded-[2.5rem]">
-                        <div class="w-14 h-14 bg-red-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-red-200">
-                            <i class="fas fa-shield-virus text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-extrabold mb-4 uppercase italic">Web Security & DDoS</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Mitigating L3/L4 and L7 attacks using Cloudflare and AWS Shield. Expert in WAF rules and TLS hardening.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="mono text-[9px] bg-white px-2 py-1 rounded border">Bot Management</span>
-                            <span class="mono text-[9px] bg-white px-2 py-1 rounded border">DDoS Resilience</span>
-                        </div>
-                    </div>
-
-                    <div class="tech-card bg-slate-50 p-10 rounded-[2.5rem]">
-                        <div class="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200">
-                            <i class="fas fa-network-wired text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-extrabold mb-4 uppercase italic">Network Hardening</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Implementing VLAN segmentation and encrypted tunnels to secure critical business infrastructure.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="mono text-[9px] bg-white px-2 py-1 rounded border">IPsec/VPN</span>
-                            <span class="mono text-[9px] bg-white px-2 py-1 rounded border">Zero-Trust</span>
-                        </div>
-                    </div>
-
-                    <div class="tech-card bg-slate-50 p-10 rounded-[2.5rem]">
-                        <div class="w-14 h-14 bg-purple-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-purple-200">
-                            <i class="fas fa-search-shield text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-extrabold mb-4 uppercase italic">SOC Analytics</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Monitoring traffic patterns for anomalies and responding to incidents with CompTIA CySA+ precision.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="mono text-[9px] bg-white px-2 py-1 rounded border">SIEM</span>
-                            <span class="mono text-[9px] bg-white px-2 py-1 rounded border">Incident Response</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="labs" class="py-24 px-6">
-            <div class="max-w-7xl mx-auto">
-                <div class="flex justify-between items-end mb-16">
+    <section id="credentials" class="py-12 px-6 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-7xl mx-auto">
+            <p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-6 italic">Engineering Authority</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <a href="https://www.credly.com/badges/5f047547-497d-444a-939e-e374e2c90c74" target="_blank" class="cert-link bg-white px-6 py-4 rounded-xl flex items-center gap-4">
+                    <i class="fas fa-shield-halved text-blue-600 text-xl"></i>
                     <div>
-                        <h2 class="text-4xl font-black uppercase italic tracking-tighter">Security Labs</h2>
-                        <p class="text-slate-500 font-bold text-xs uppercase mt-2">Open-Source Protection Frameworks</p>
+                        <span class="block text-xs font-black uppercase tracking-tight">CompTIA CSAP</span>
+                        <span class="block text-[9px] text-slate-400 font-bold uppercase">Security Analytics</span>
                     </div>
-                    <a href="https://github.com/chifru19" target="_blank" class="text-blue-600 font-black text-xs uppercase underline">View Full Github</a>
+                </a>
+
+                <a href="https://www.credly.com/badges/30d8c222-3837-4340-8b1b-5e483e5a5937" target="_blank" class="cert-link bg-white px-6 py-4 rounded-xl flex items-center gap-4">
+                    <i class="fab fa-aws text-orange-500 text-2xl"></i>
+                    <div>
+                        <span class="block text-xs font-black uppercase tracking-tight">AWS Knowledge</span>
+                        <span class="block text-[9px] text-slate-400 font-bold uppercase">Cloud Essentials</span>
+                    </div>
+                </a>
+
+                <a href="https://www.credly.com/badges/892f33f6-8c08-410d-8951-50e5606d15f3" target="_blank" class="cert-link bg-white px-6 py-4 rounded-xl flex items-center gap-4">
+                    <i class="fas fa-user-shield text-red-600 text-xl"></i>
+                    <div>
+                        <span class="block text-xs font-black uppercase tracking-tight">CompTIA CySA+</span>
+                        <span class="block text-[9px] text-slate-400 font-bold uppercase">Cyber Analyst</span>
+                    </div>
+                </a>
+
+                <a href="https://www.credly.com/badges/33215579-2476-470a-8533-333159937175" target="_blank" class="cert-link bg-white px-6 py-4 rounded-xl flex items-center gap-4">
+                    <i class="fas fa-lock text-emerald-600 text-xl"></i>
+                    <div>
+                        <span class="block text-xs font-black uppercase tracking-tight">CompTIA Security+</span>
+                        <span class="block text-[9px] text-slate-400 font-bold uppercase">Infrastructure</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="tech-card bg-slate-50 p-10 rounded-[2.5rem]">
+                    <div class="w-14 h-14 bg-red-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-red-200">
+                        <i class="fas fa-shield-virus text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-4 uppercase italic">Web Security & DDoS</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Mitigating L3/L4 and L7 attacks using Cloudflare and AWS Shield. Expert in WAF rules and TLS hardening.</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-6">
-                    <a href="https://github.com/chifru19/Network-Guard-Forensics" target="_blank" class="group bg-white border border-slate-200 p-8 rounded-3xl hover:border-red-600 transition">
-                        <div class="flex justify-between items-start mb-6">
-                            <h4 class="text-2xl font-extrabold group-hover:text-red-600 transition">Web-Guard Pro</h4>
-                            <i class="fab fa-github text-xl text-slate-300"></i>
-                        </div>
-                        <p class="text-slate-500 text-sm mb-6">Infrastructure hardened with Cloudflare WAF and custom DDoS mitigation headers for maximum uptime.</p>
-                        <div class="flex gap-4 mono text-[10px] font-bold text-slate-400">
-                            <span>#WebSecurity</span> <span>#DDoS-Mitigation</span> <span>#WAF</span>
-                        </div>
-                    </a>
+                <div class="tech-card bg-slate-50 p-10 rounded-[2.5rem]">
+                    <div class="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200">
+                        <i class="fas fa-network-wired text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-4 uppercase italic">Network Hardening</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Implementing VLAN segmentation and encrypted tunnels to secure critical business infrastructure.</p>
+                </div>
 
-                    <a href="https://github.com/chifru19/VoltGuard-DCEO-Sim" target="_blank" class="group bg-white border border-slate-200 p-8 rounded-3xl hover:border-blue-600 transition">
-                        <div class="flex justify-between items-start mb-6">
-                            <h4 class="text-2xl font-extrabold group-hover:text-blue-600 transition">VoltGuard Resilience</h4>
-                            <i class="fab fa-github text-xl text-slate-300"></i>
-                        </div>
-                        <p class="text-slate-500 text-sm mb-6">Simulation of redundant network paths designed to maintain 99.9% availability during network attacks.</p>
-                        <div class="flex gap-4 mono text-[10px] font-bold text-slate-400">
-                            <span>#Infrastructure</span> <span>#Availability</span> <span>#Redundancy</span>
-                        </div>
-                    </a>
+                <div class="tech-card bg-slate-50 p-10 rounded-[2.5rem]">
+                    <div class="w-14 h-14 bg-purple-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-purple-200">
+                        <i class="fas fa-search-shield text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-4 uppercase italic">SOC Analytics</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Monitoring traffic patterns for anomalies and responding to active incidents with precision.</p>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer id="credentials" class="bg-slate-900 text-white pt-24 pb-12 px-6">
+    <section id="labs" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <h2 class="text-4xl font-black uppercase italic tracking-tighter">Security Labs</h2>
+                    <p class="text-slate-500 font-bold text-xs uppercase mt-2">Open-Source Protection Frameworks</p>
+                </div>
+                <a href="https://github.com/chifru19" target="_blank" class="text-blue-600 font-black text-xs uppercase underline">View Full Github</a>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="https://github.com/chifru19/Network-Guard-Forensics" target="_blank" class="group bg-white border border-slate-200 p-8 rounded-3xl hover:border-red-600 transition">
+                    <div class="flex justify-between items-start mb-6">
+                        <h4 class="text-2xl font-extrabold group-hover:text-red-600 transition uppercase">Web-Guard Pro</h4>
+                        <i class="fab fa-github text-xl text-slate-300"></i>
+                    </div>
+                    <p class="text-slate-500 text-sm mb-6">Infrastructure hardened with Cloudflare WAF and custom DDoS mitigation headers.</p>
+                    <div class="flex gap-4 mono text-[10px] font-bold text-slate-400">
+                        <span>#WebSecurity</span> <span>#WAF</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/chifru19/VoltGuard-DCEO-Sim" target="_blank" class="group bg-white border border-slate-200 p-8 rounded-3xl hover:border-blue-600 transition">
+                    <div class="flex justify-between items-start mb-6">
+                        <h4 class="text-2xl font-extrabold group-hover:text-blue-600 transition uppercase">VoltGuard Resilience</h4>
+                        <i class="fab fa-github text-xl text-slate-300"></i>
+                    </div>
+                    <p class="text-slate-500 text-sm mb-6">Simulation of redundant network paths designed to maintain 99.9% availability.</p>
+                    <div class="flex gap-4 mono text-[10px] font-bold text-slate-400">
+                        <span>#Availability</span> <span>#Redundancy</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="bg-slate-900 text-white pt-24 pb-12 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-20 mb-20">
                 <div>
                     <h3 class="text-3xl font-black uppercase italic mb-8">Secure Your Infrastructure.</h3>
-                    <p class="text-slate-400 text-lg mb-10">Consultation available for Web Security audits and DDoS mitigation strategies.</p>
+                    <p class="text-slate-400 text-lg mb-10 leading-relaxed">Expert consultation available for web security audits and DDoS mitigation strategies.</p>
                     <a href="mailto:contact@frankfru.com" class="text-2xl font-bold text-blue-400 hover:underline">contact@frankfru.com</a>
-                    <div class="mt-6">
-                         <a href="https://wa.me/4915253794352" target="_blank" class="text-emerald-400 font-bold hover:underline tracking-tight italic uppercase text-sm">
-                             <i class="fab fa-whatsapp mr-2"></i> WhatsApp Inquiry
-                         </a>
+                    <div class="mt-8 flex gap-6">
+                        <a href="https://www.linkedin.com/in/frank-fru/" target="_blank" class="text-slate-400 hover:text-white transition text-xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/chifru19" target="_blank" class="text-slate-400 hover:text-white transition text-xl"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/4915253794352" target="_blank" class="text-slate-400 hover:text-[#25d366] transition text-xl"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-8 text-xs font-bold uppercase tracking-widest text-slate-500">
+                <div class="grid grid-cols-2 gap-8 text-[10px] font-black uppercase tracking-widest text-slate-500">
                     <div>
-                        <h5 class="mb-4">Authority</h5>
-                        <ul class="space-y-3 text-white">
+                        <h5 class="mb-6 text-blue-600">Authority</h5>
+                        <ul class="space-y-4 text-white">
                             <li>CompTIA CSAP</li>
                             <li>AWS Practitioner</li>
                             <li>Web Security Ops</li>
                         </ul>
                     </div>
                     <div>
-                        <h5 class="mb-4">Connect</h5>
-                        <ul class="space-y-3 text-white">
-                            <li><a href="https://www.linkedin.com/in/frank-fru/" class="hover:text-blue-400">LinkedIn</a></li>
-                            <li><a href="https://github.com/chifru19" class="hover:text-blue-400">GitHub</a></li>
+                        <h5 class="mb-6 text-blue-600">Contact Method</h5>
+                        <ul class="space-y-4 text-white">
+                            <li><a href="mailto:contact@frankfru.com" class="hover:text-blue-400">Email Inquiry</a></li>
+                            <li><a href="https://wa.me/4915253794352" class="hover:text-emerald-400">WhatsApp Chat</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] font-black uppercase tracking-[0.3em] text-slate-500">
-                <p>© 2026 Frank Fru | Systems Hardened with Cloudflare & AWS</p>
-                <p>Status: Under Monitoring</p>
+            
+            <div class="pt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6 text-[9px] font-black uppercase tracking-[0.4em] text-slate-500">
+                <p>© 2026 <span class="text-white">FRANK FRU</span> | LEAD WEB SECURITY ENGINEER</p>
+                <div class="flex gap-4">
+                    <span class="text-emerald-500">ENCRYPTION: AES-256</span>
+                    <span class="text-slate-700">|</span>
+                    <span>STATUS: UNDER MONITORING</span>
+                </div>
             </div>
         </div>
     </footer>
