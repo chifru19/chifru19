@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        :root { --primary-blue: #2563eb; --network-orange: #f59e0b; }
+        :root { --primary-blue: #2563eb; }
         body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         .mono { font-family: 'JetBrains Mono', monospace; }
         .dot { height: 10px; width: 10px; background-color: #10b981; border-radius: 50%; display: inline-block; margin-right: 8px; }
@@ -20,6 +20,8 @@
         .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.05); }
         .project-card { transition: all 0.3s ease; border: 1px solid #e2e8f0; }
         .project-card:hover { transform: translateY(-5px); border-color: var(--primary-blue); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .cert-badge { border: 1px solid #e2e8f0; transition: all 0.2s ease; }
+        .cert-badge:hover { border-color: var(--primary-blue); background: #f8faff; }
     </style>
 </head>
 <body class="bg-[#f8fafc] text-slate-900">
@@ -34,7 +36,10 @@
                 <h1 class="text-xl font-black text-slate-900 italic uppercase leading-none">Frank Fru</h1>
                 <p class="mono text-[9px] font-bold text-blue-600 uppercase tracking-widest mt-1">Network & Security Engineer</p>
             </div>
-            <a href="mailto:contact@frankfru.com" class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest hover:bg-slate-900 transition uppercase">Contact Engineer</a>
+            <div class="flex gap-4 items-center">
+                <a href="https://www.credly.com/users/frank-fru/badges" target="_blank" class="hidden sm:block text-[10px] font-black uppercase tracking-widest text-blue-600 border-b-2 border-blue-600 pb-1">Verify Credentials</a>
+                <a href="mailto:contact@frankfru.com" class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest hover:bg-slate-900 transition uppercase">Contact</a>
+            </div>
         </div>
     </nav>
 
@@ -44,89 +49,56 @@
                 Engineering <span class="text-blue-600">Resilient</span> <br> Network Architectures.
             </h2>
             <p class="text-lg text-slate-500 max-w-2xl leading-relaxed">
-                Focused on enterprise networking, multi-cloud security, and automated infrastructure. Leveraging <strong>Network+</strong> and <strong>Security+</strong> principles to build zero-trust environments.
+                Focused on enterprise networking and automated infrastructure. Leveraging <strong>Network+</strong> and <strong>Security+</strong> principles to build zero-trust environments.
             </p>
         </div>
     </header>
 
+    <section class="py-12 bg-slate-50 border-b border-slate-100 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <h3 class="text-lg font-black uppercase italic">Professional Authority</h3>
+                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Verified Certification Stack</p>
+                </div>
+                <a href="https://www.credly.com/users/frank-fru/badges" target="_blank" 
+                   class="bg-white border-2 border-slate-900 text-slate-900 px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-slate-900 hover:text-white transition flex items-center gap-3 shadow-sm">
+                    <i class="fas fa-external-link-alt"></i> View All 24 Digital Badges
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section class="py-20 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-end mb-12">
-                <div>
-                    <h3 class="text-2xl font-black uppercase italic">Infrastructure Labs</h3>
-                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Active Deployments & Security Audits</p>
-                </div>
-                <a href="https://github.com/chifru19" target="_blank" class="text-blue-600 font-black text-xs uppercase underline">Full GitHub</a>
+                <h3 class="text-2xl font-black uppercase italic">Infrastructure Labs</h3>
+                <a href="https://github.com/chifru19" target="_blank" class="text-blue-600 font-black text-xs uppercase underline">GitHub Repositories</a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <a href="https://github.com/chifru19/Cisco-Enterprise-Network-Lab" class="project-card bg-white p-8 rounded-3xl block">
                     <i class="fas fa-network-wired text-blue-600 text-2xl mb-4"></i>
                     <h4 class="font-black uppercase italic text-lg mb-2">Cisco Enterprise Lab</h4>
-                    <p class="text-slate-500 text-sm mb-4 leading-relaxed">Full-scale corporate network design featuring VLAN segmentation, OSPF routing, and secure gateways.</p>
-                    <span class="mono text-[10px] font-bold text-slate-400">#Networking #Cisco #Infrastructure</span>
+                    <p class="text-slate-500 text-sm mb-4 leading-relaxed">VLAN segmentation, OSPF routing, and secure gateway design.</p>
                 </a>
-
                 <a href="https://github.com/chifru19/Network-Security-Audit-Suite-2026" class="project-card bg-white p-8 rounded-3xl block">
                     <i class="fas fa-clipboard-check text-emerald-600 text-2xl mb-4"></i>
                     <h4 class="font-black uppercase italic text-lg mb-2">Security Audit Suite</h4>
-                    <p class="text-slate-500 text-sm mb-4 leading-relaxed">2026 toolkit for vulnerability scanning, compliance checks, and automated network discovery.</p>
-                    <span class="mono text-[10px] font-bold text-slate-400">#Security #Audit #Automation</span>
+                    <p class="text-slate-500 text-sm mb-4 leading-relaxed">Automated network discovery and vulnerability scanning toolkit.</p>
                 </a>
-
-                <a href="https://github.com/chifru19/VoltGuard-DCEO-Sim" class="project-card bg-white p-8 rounded-3xl block">
-                    <i class="fas fa-bolt text-amber-500 text-2xl mb-4"></i>
-                    <h4 class="font-black uppercase italic text-lg mb-2">VoltGuard Resilience</h4>
-                    <p class="text-slate-500 text-sm mb-4 leading-relaxed">Data center telemetry pipeline simulating high-availability redundancy and power-failover logic.</p>
-                    <span class="mono text-[10px] font-bold text-slate-400">#DataCenter #Resilience #IaC</span>
-                </a>
-
-                <a href="https://github.com/chifru19/Cloud-Security-Suite" class="project-card bg-white p-8 rounded-3xl block">
-                    <i class="fab fa-aws text-orange-500 text-2xl mb-4"></i>
-                    <h4 class="font-black uppercase italic text-lg mb-2">Cloud Security Suite</h4>
-                    <p class="text-slate-500 text-sm mb-4 leading-relaxed">Hardened AWS/Azure infrastructure models with WAF integration and IAM principle enforcement.</p>
-                    <span class="mono text-[10px] font-bold text-slate-400">#Cloud #AWS #CyberDefense</span>
-                </a>
-
                 <a href="https://github.com/chifru19/cisco-intervlan-roas-lab" class="project-card bg-white p-8 rounded-3xl block">
                     <i class="fas fa-route text-slate-900 text-2xl mb-4"></i>
                     <h4 class="font-black uppercase italic text-lg mb-2">Inter-VLAN (ROAS)</h4>
-                    <p class="text-slate-500 text-sm mb-4 leading-relaxed">Deep-dive into Router-on-a-Stick configurations for optimized traffic flow and sub-interface management.</p>
-                    <span class="mono text-[10px] font-bold text-slate-400">#Routing #VLAN #CCNA</span>
+                    <p class="text-slate-500 text-sm mb-4 leading-relaxed">Optimized traffic flow and sub-interface management for CCNA-level routing.</p>
                 </a>
-
-                <a href="https://github.com/chifru19/Project-Fortress" class="project-card bg-white p-8 rounded-3xl block">
-                    <i class="fas fa-tower-obsidian text-purple-600 text-2xl mb-4"></i>
-                    <h4 class="font-black uppercase italic text-lg mb-2">Project Fortress</h4>
-                    <p class="text-slate-500 text-sm mb-4 leading-relaxed">Centralized infrastructure monitoring and host-based intrusion detection system (HIDS) deployment.</p>
-                    <span class="mono text-[10px] font-bold text-slate-400">#Monitoring #HIDS #Security</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="credentials" class="py-12 bg-slate-50 border-y border-slate-100 px-6">
-        <div class="max-w-7xl mx-auto flex flex-wrap justify-center gap-8 items-center">
-            <a href="https://www.credly.com/users/frank-fru/badges" target="_blank" class="flex items-center gap-2 opacity-60 hover:opacity-100 transition">
-                <i class="fas fa-certificate text-blue-600"></i>
-                <span class="font-black text-[10px] uppercase tracking-widest">Credly Portfolio</span>
-            </a>
-            <span class="text-slate-200">|</span>
-            <div class="flex items-center gap-2">
-                <i class="fas fa-check-circle text-emerald-500"></i>
-                <span class="font-black text-[10px] uppercase tracking-widest text-slate-400">Network+ Targeted</span>
-            </div>
-            <span class="text-slate-200">|</span>
-            <div class="flex items-center gap-2">
-                <i class="fas fa-check-circle text-emerald-500"></i>
-                <span class="font-black text-[10px] uppercase tracking-widest text-slate-400">Security+ Verified</span>
             </div>
         </div>
     </section>
 
     <footer class="py-12 px-6 text-center text-slate-400">
         <p class="text-[9px] font-black uppercase tracking-[0.4em]">
-            © 2026 FRANK FRU | <span class="text-slate-900">INFRASTRUCTURE ENGINEER</span>
+            © 2026 FRANK FRU | <span class="text-slate-900">NETWORK & SECURITY ENGINEER</span>
         </p>
     </footer>
 
