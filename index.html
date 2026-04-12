@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        :root { --primary-blue: #2563eb; }
+        :root { --primary-blue: #2563eb; --whatsapp-green: #25d366; }
         body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         .mono { font-family: 'JetBrains Mono', monospace; }
         .dot { height: 10px; width: 10px; background-color: #10b981; border-radius: 50%; display: inline-block; margin-right: 8px; }
@@ -20,85 +20,104 @@
         .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.05); }
         .project-card { transition: all 0.3s ease; border: 1px solid #e2e8f0; }
         .project-card:hover { transform: translateY(-5px); border-color: var(--primary-blue); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .cert-badge { border: 1px solid #e2e8f0; transition: all 0.2s ease; }
-        .cert-badge:hover { border-color: var(--primary-blue); background: #f8faff; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: var(--whatsapp-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 1000; }
     </style>
 </head>
 <body class="bg-[#f8fafc] text-slate-900">
 
+    <a href="https://wa.me/4915253794352" class="whatsapp-float hover:scale-110 transition-transform" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <div class="bg-slate-900 text-white py-2 px-6 text-center text-[10px] font-black sticky top-0 z-[100] tracking-[0.2em] uppercase">
-        <span class="dot blink shadow-[0_0_10px_#10b981]"></span> NETWORK STATUS: OPERATIONAL | SECURITY LAYERS: ACTIVE
+        <span class="dot blink shadow-[0_0_10px_#10b981]"></span> INFRASTRUCTURE STATUS: PROTECTED | DDoS SHIELD ACTIVE
     </div>
 
     <nav class="glass-nav sticky top-[34px] z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div>
-                <h1 class="text-xl font-black text-slate-900 italic uppercase leading-none">Frank Fru</h1>
+                <h1 class="text-xl font-black text-slate-900 italic uppercase">Frank Fru</h1>
                 <p class="mono text-[9px] font-bold text-blue-600 uppercase tracking-widest mt-1">Network & Security Engineer</p>
             </div>
-            <div class="flex gap-4 items-center">
-                <a href="https://www.credly.com/users/frank-fru/badges" target="_blank" class="hidden sm:block text-[10px] font-black uppercase tracking-widest text-blue-600 border-b-2 border-blue-600 pb-1">Verify Credentials</a>
-                <a href="mailto:contact@frankfru.com" class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest hover:bg-slate-900 transition uppercase">Contact</a>
-            </div>
+            <a href="mailto:contact@frankfru.com" class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest hover:bg-slate-900 transition shadow-xl uppercase">Hire Engineer</a>
         </div>
     </nav>
 
-    <header class="py-20 px-6 bg-white border-b border-slate-100">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tighter italic uppercase">
-                Engineering <span class="text-blue-600">Resilient</span> <br> Network Architectures.
+    <main class="max-w-4xl mx-auto py-12 px-6 space-y-12">
+        
+        <header class="text-center space-y-4">
+            <h2 class="text-4xl md:text-6xl font-extrabold italic uppercase leading-[0.95] tracking-tighter">
+                Securing <span class="text-blue-600">Enterprise</span> <br> Networks & Data.
             </h2>
-            <p class="text-lg text-slate-500 max-w-2xl leading-relaxed">
-                Focused on enterprise networking and automated infrastructure. Leveraging <strong>Network+</strong> and <strong>Security+</strong> principles to build zero-trust environments.
+            <p class="text-slate-500 font-medium max-w-xl mx-auto">
+                Specializing in Network Engineering, multi-site connectivity, and security audits. Actively targeting Network+ and Security+ infrastructure roles.
             </p>
-        </div>
-    </header>
+        </header>
 
-    <section class="py-12 bg-slate-50 border-b border-slate-100 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>
-                    <h3 class="text-lg font-black uppercase italic">Professional Authority</h3>
-                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Verified Certification Stack</p>
+        <section id="credentials" class="bg-white rounded-[2.5rem] p-8 shadow-2xl border border-slate-100 text-center">
+            <div class="mb-6">
+                <i class="fas fa-certificate text-blue-600 text-4xl mb-4"></i>
+                <h3 class="text-2xl font-black uppercase italic">Verified Professional Authority</h3>
+                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Industry Leading Credentials</p>
+            </div>
+            
+            <a href="https://www.credly.com/users/frank-fru/badges" target="_blank" 
+               class="inline-flex items-center gap-4 bg-slate-900 text-white px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-blue-600 transition-all shadow-xl">
+                <span>View My 24 Verified Badges</span>
+                <i class="fas fa-external-link-alt text-xs text-blue-400"></i>
+            </a>
+            
+            <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <p class="text-[10px] font-black uppercase text-slate-400 mb-1">Network+</p>
+                    <div class="h-1 bg-blue-600 rounded-full w-full"></div>
                 </div>
-                <a href="https://www.credly.com/users/frank-fru/badges" target="_blank" 
-                   class="bg-white border-2 border-slate-900 text-slate-900 px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-slate-900 hover:text-white transition flex items-center gap-3 shadow-sm">
-                    <i class="fas fa-external-link-alt"></i> View All 24 Digital Badges
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <p class="text-[10px] font-black uppercase text-slate-400 mb-1">Security+</p>
+                    <div class="h-1 bg-green-500 rounded-full w-full"></div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <p class="text-[10px] font-black uppercase text-slate-400 mb-1">CySA+</p>
+                    <div class="h-1 bg-red-500 rounded-full w-full"></div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <p class="text-[10px] font-black uppercase text-slate-400 mb-1">AWS Cloud</p>
+                    <div class="h-1 bg-orange-500 rounded-full w-full"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-6">
+            <h3 class="text-[10px] font-black uppercase tracking-widest text-slate-400 italic">Core Network & Security Repositories</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="https://github.com/chifru19/Cisco-Enterprise-Network-Lab" target="_blank" class="project-card bg-white p-6 rounded-2xl group">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="fas fa-network-wired text-blue-600 text-2xl"></i>
+                        <i class="fab fa-github text-slate-300 group-hover:text-slate-900 transition"></i>
+                    </div>
+                    <h4 class="font-black uppercase italic text-lg">Cisco Enterprise Lab</h4>
+                    <p class="text-slate-500 text-xs mt-2 leading-relaxed">Enterprise routing, VLAN segmentation, and perimeter defense configurations.</p>
+                </a>
+
+                <a href="https://github.com/chifru19/Network-Security-Audit-Suite-2026" target="_blank" class="project-card bg-white p-6 rounded-2xl group">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="fas fa-shield-virus text-emerald-600 text-2xl"></i>
+                        <i class="fab fa-github text-slate-300 group-hover:text-slate-900 transition"></i>
+                    </div>
+                    <h4 class="font-black uppercase italic text-lg">Security Audit Suite</h4>
+                    <p class="text-slate-500 text-xs mt-2 leading-relaxed">Vulnerability assessment and automated security telemetry for large networks.</p>
                 </a>
             </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex justify-between items-end mb-12">
-                <h3 class="text-2xl font-black uppercase italic">Infrastructure Labs</h3>
-                <a href="https://github.com/chifru19" target="_blank" class="text-blue-600 font-black text-xs uppercase underline">GitHub Repositories</a>
+            <div class="text-center">
+                <a href="https://github.com/chifru19" target="_blank" class="mono text-[10px] font-bold text-slate-400 hover:text-blue-600 transition tracking-widest uppercase underline">Explore all 30+ repositories</a>
             </div>
+        </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <a href="https://github.com/chifru19/Cisco-Enterprise-Network-Lab" class="project-card bg-white p-8 rounded-3xl block">
-                    <i class="fas fa-network-wired text-blue-600 text-2xl mb-4"></i>
-                    <h4 class="font-black uppercase italic text-lg mb-2">Cisco Enterprise Lab</h4>
-                    <p class="text-slate-500 text-sm mb-4 leading-relaxed">VLAN segmentation, OSPF routing, and secure gateway design.</p>
-                </a>
-                <a href="https://github.com/chifru19/Network-Security-Audit-Suite-2026" class="project-card bg-white p-8 rounded-3xl block">
-                    <i class="fas fa-clipboard-check text-emerald-600 text-2xl mb-4"></i>
-                    <h4 class="font-black uppercase italic text-lg mb-2">Security Audit Suite</h4>
-                    <p class="text-slate-500 text-sm mb-4 leading-relaxed">Automated network discovery and vulnerability scanning toolkit.</p>
-                </a>
-                <a href="https://github.com/chifru19/cisco-intervlan-roas-lab" class="project-card bg-white p-8 rounded-3xl block">
-                    <i class="fas fa-route text-slate-900 text-2xl mb-4"></i>
-                    <h4 class="font-black uppercase italic text-lg mb-2">Inter-VLAN (ROAS)</h4>
-                    <p class="text-slate-500 text-sm mb-4 leading-relaxed">Optimized traffic flow and sub-interface management for CCNA-level routing.</p>
-                </a>
-            </div>
-        </div>
-    </section>
+    </main>
 
-    <footer class="py-12 px-6 text-center text-slate-400">
-        <p class="text-[9px] font-black uppercase tracking-[0.4em]">
-            © 2026 FRANK FRU | <span class="text-slate-900">NETWORK & SECURITY ENGINEER</span>
+    <footer class="py-12 border-t border-slate-100 text-center">
+        <p class="text-[9px] font-black uppercase tracking-[0.4em] text-slate-400">
+            © 2026 FRANK FRU | <span class="text-slate-900">VERIFIED INFRASTRUCTURE ENGINEER</span>
         </p>
     </footer>
 
