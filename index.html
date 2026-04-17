@@ -7,92 +7,146 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #f4f7f6; font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #2c3e50; line-height: 1.6; margin: 0; padding: 0; }
+        body { background-color: #f4f7f6; padding: 50px 0; font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #2c3e50; line-height: 1.6; }
+        .container { max-width: 900px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        h1 { color: #2c3e50; border-bottom: 4px solid #3498db; display: inline-block; margin-bottom: 10px; font-weight: 700; }
+        .subtitle { font-size: 1.8rem; color: #7f8c8d; margin-bottom: 20px; font-weight: 300; }
         
-        /* Hero Section - Above the Fold */
-        .hero { 
-            background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%); 
-            color: white; 
-            padding: 80px 0; 
-            text-align: center; 
-            border-bottom: 8px solid #3498db;
-        }
-        .hero h1 { color: white; font-size: 5rem; font-weight: 800; margin-bottom: 10px; text-transform: uppercase; letter-spacing: -1px; }
-        .hero .subtitle { color: #3498db; font-size: 2.2rem; font-weight: 700; margin-bottom: 30px; text-transform: uppercase; }
-        
-        .container { max-width: 900px; margin: -50px auto 50px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); position: relative; z-index: 10; }
-        
-        .live-status { display: inline-flex; align-items: center; background: rgba(46, 125, 50, 0.1); color: #2e7d32; padding: 8px 16px; border-radius: 20px; font-size: 1.1rem; font-weight: 700; border: 1px solid #c8e6c9; margin-bottom: 25px; }
-        .pulse { height: 10px; width: 10px; background-color: #2e7d32; border-radius: 50%; display: inline-block; margin-right: 8px; animation: pulse-animation 2s infinite; }
+        /* Live Status Badge Styling */
+        .live-status { display: inline-flex; align-items: center; background: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 20px; font-size: 1.1rem; font-weight: 700; border: 1px solid #c8e6c9; margin-bottom: 15px; }
+        .pulse { height: 8px; width: 8px; background-color: #2e7d32; border-radius: 50%; display: inline-block; margin-right: 8px; animation: pulse-animation 2s infinite; }
         @keyframes pulse-animation { 0% { box-shadow: 0 0 0 0px rgba(46, 125, 50, 0.7); } 100% { box-shadow: 0 0 0 10px rgba(46, 125, 50, 0); } }
 
-        h4 { font-weight: 700; color: #34495e; text-transform: uppercase; letter-spacing: 1px; font-size: 1.8rem; margin-top: 40px; border-left: 5px solid #3498db; padding-left: 15px; }
+        h4 { font-weight: 700; color: #34495e; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem; margin-top: 40px; }
+        .badges { margin-bottom: 25px; }
+        .badges img { height: 22px; margin-right: 8px; }
+
+        .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px; }
+        .service-card { background: #f8fbfe; border: 1px solid #d6eaf8; padding: 25px; border-radius: 8px; text-align: center; }
+        .service-card i { font-size: 2.5rem; color: #3498db; background: #fff; padding: 15px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 15px; display: inline-block; }
+
+        .security-guide { background: #2c3e50; color: #ecf0f1; padding: 35px; border-radius: 8px; border-left: 10px solid #e67e22; margin: 30px 0; }
+        .security-guide h5 { color: #e67e22; font-weight: 700; text-transform: uppercase; margin-bottom: 20px; }
+        .guide-item { margin-bottom: 20px; }
+        .guide-item strong { color: #3498db; display: block; font-size: 1.5rem; margin-bottom: 5px; }
+
+        .cred-flex { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
+        .cred-box { flex: 1; min-width: 280px; background: #fff; border: 1px solid #eee; border-left: 5px solid #3498db; padding: 20px; border-radius: 4px; }
+        .cred-box.cyber { border-left-color: #e67e22; }
+
+        .project-card { border: 1px solid #eee; padding: 25px; border-radius: 8px; margin-bottom: 20px; }
+        .tag { background: #ebf5fb; color: #2980b9; padding: 4px 10px; border-radius: 4px; font-size: 1.1rem; font-weight: 600; margin-right: 5px; }
         
-        .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin: 30px 0; }
-        .service-card { background: #f8fbfe; border: 1px solid #d6eaf8; padding: 30px; border-radius: 12px; text-align: center; transition: transform 0.3s ease; }
-        .service-card:hover { transform: translateY(-5px); border-color: #3498db; }
-        .service-card i { font-size: 3rem; color: #3498db; margin-bottom: 15px; display: block; }
-
-        .cta-button { background: #e67e22; color: white !important; padding: 18px 35px; border-radius: 8px; text-decoration: none; display: inline-block; font-weight: 700; font-size: 1.4rem; text-transform: uppercase; transition: all 0.3s; box-shadow: 0 10px 20px rgba(230, 126, 34, 0.2); }
-        .cta-button:hover { background: #d35400; transform: scale(1.05); }
-
-        .security-guide { background: #2c3e50; color: #ecf0f1; padding: 40px; border-radius: 12px; border-right: 10px solid #e67e22; margin: 40px 0; }
+        .credly-btn { background: #e67e22; color: white !important; padding: 12px 25px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: 600; }
+        .blog-link { color: #e67e22; font-weight: 700; text-decoration: underline; }
         
-        .giscus-section { margin-top: 60px; padding-top: 40px; border-top: 2px solid #f4f7f6; }
-
-        footer { text-align: center; padding: 60px 0; color: #95a5a6; font-size: 1.2rem; }
-        @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 3.5rem; } }
+        footer { text-align: center; color: #95a5a6; font-size: 1.3rem; margin-top: 50px; }
+        @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
-<header class="hero">
-    <div class="container-fluid">
-        <div class="live-status" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.2);">
-            <span class="pulse" style="background-color: #fff;"></span> CLOUDFLARE EDGE: ENFORCED
+<div class="container">
+    <header>
+        <div class="live-status">
+            <span class="pulse"></span> CLOUDFLARE EDGE: SECURE & ACTIVE
         </div>
+        
         <h1>Frank Fru</h1>
-        <p class="subtitle">SOC Analyst & Security Engineer</p>
-        <div style="margin-top: 20px;">
-            <a href="mailto:contact@frankfru.com" class="cta-button">Initiate Security Consultation</a>
+        <p class="subtitle">SOC Analyst & Cybersecurity Engineer</p>
+        
+        <div class="badges">
+            <img src="https://img.shields.io/github/actions/workflow/status/chifru19/chifru19/codeql.yml?branch=main&label=Security%20Scan&logo=github" alt="Scan">
+            <img src="https://img.shields.io/badge/CompTIA-CSAP%20%7C%20CSIS-orange" alt="Certs">
+            <img src="https://img.shields.io/badge/Infrastructure-Hardened-blueviolet" alt="Infra">
+        </div>
+
+        <p>Qualified <strong>Security Analytics Professional</strong>. I specialize in <strong>Cybersecurity Operations</strong>, proactive threat hunting, and the engineering of hardened, zero-trust infrastructure.</p>
+        
+        <p>📧 <a href="mailto:contact@frankfru.com">contact@frankfru.com</a></p>
+        <a href="https://www.credly.com/users/frank-fru" target="_blank" class="credly-btn">
+            <i class="fa-solid fa-certificate"></i> Verify Cybersecurity Credentials on Credly
+        </a>
+    </header>
+
+    <hr>
+
+    <h4>💼 Professional Cybersecurity Services</h4>
+    <div class="services-grid">
+        <div class="service-card">
+            <i class="fa-solid fa-earth-africa"></i>
+            <h5>Global Domain Architecture</h5>
+            <p>Strategic DNSSEC management and high-availability configuration. I ensure your digital identity is secure globally from an Africa-centric edge perspective.</p>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-user-shield"></i>
+            <h5>SOC Operations & Analysis</h5>
+            <p>Active monitoring of security events, incident triage, and log analysis. Identifying Indicators of Compromise (IoC) to defend against threats.</p>
         </div>
     </div>
-</header>
 
-<div class="container">
-    <section>
-        <h4>🛡️ Strategic Defensive Services</h4>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fa-solid fa-tower-broadcast"></i>
-                <h5>Edge Security Architecture</h5>
-                <p>Deploying Cloudflare Zero-Trust and DNSSEC to eliminate the attack surface before threats reach your server.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-microscope"></i>
-                <h5>Threat Hunting & Analysis</h5>
-                <p>Proactive SOC operations. I analyze logs to identify Indicators of Compromise (IoC) and neutralize stealth attacks.</p>
-            </div>
+    <hr>
+
+    <h4>🛡️ Client Security & Authentication Guide</h4>
+    <div class="security-guide">
+        <h5>Layered Defense Strategy</h5>
+        <div class="guide-item">
+            <strong>1. The "Golden Rule" of Passwords:</strong>
+            <p>We enforce a minimum of 14 characters using complex passphrases. We strictly mandate Password Managers to eliminate plain-text vulnerabilities.</p>
         </div>
-    </section>
-
-    <section class="security-guide">
-        <h5 style="color: #e67e22; font-weight: 800; text-transform: uppercase;">The Security Weaponry</h5>
-        <p>I don't just "fix" IT; I build **Impenetrable Assets**. My methodology involves Layered Defense (MFA, TLS 1.3, HSTS) and automated Vulnerability Management.</p>
-        <a href="https://www.credly.com/users/frank-fru" target="_blank" style="color: #3498db; font-weight: 700; text-decoration: none;">View 24+ Industry Credentials →</a>
-    </section>
-
-    <section>
-        <h4>🏗️ Featured SOC Labs</h4>
-        <div style="border: 1px solid #eee; padding: 30px; border-radius: 12px; background: #fff;">
-            <h5>Sentinel-Scan (Pipeline Hardening)</h5>
-            <p>Implementing GitHub Advanced Security for automated SAST and Secret Scanning. catching vulnerabilities in the CI/CD phase.</p>
-            <a href="https://github.com/chifru19" target="_blank" class="button">Explore GitHub Repositories</a>
+        <div class="guide-item">
+            <strong>2. Mandatory Multi-Factor Authentication (MFA):</strong>
+            <p>MFA is required on all entry points. We prioritize Authenticator Apps and Hardware Keys to mitigate 99% of bulk automated attacks.</p>
         </div>
-    </section>
+        <div class="guide-item">
+            <strong>3. Zero-Trust Perimeter (Cloudflare IAP):</strong>
+            <p>Login screens are hidden behind an Identity-Aware Proxy. The administration interface remains invisible to the public, requiring verified identity for access.</p>
+        </div>
+        <div class="guide-item">
+            <strong>4. Continuous Monitoring & Response:</strong>
+            <p>Enforcement of TLS 1.3/HSTS and strategic geofencing. We monitor login patterns to identify and block brute-force attempts in real-time.</p>
+        </div>
+    </div>
 
-    <section class="giscus-section">
-        <h4>💬 Client Feedback & Peer Review</h4>
+    <hr>
+
+    <h4>📜 Verified Cybersecurity Certifications</h4>
+    <div class="cred-flex">
+        <div class="cred-box cyber">
+            <strong>CompTIA CSAP</strong><br>
+            <small>Security Analytics Professional (CySA+ / Security+)</small><br><br>
+            <a href="https://www.credly.com/users/frank-fru" target="_blank">VERIFY ACTIVE DEFENSE SKILLS →</a>
+        </div>
+        <div class="cred-box">
+            <strong>CompTIA CSIS</strong><br>
+            <small>Secure Infrastructure Specialist (A+ / Net+ / Sec+)</small><br><br>
+            <a href="https://www.credly.com/users/frank-fru" target="_blank">VERIFY INFRASTRUCTURE SKILLS →</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <h4>🏗️ Featured Cybersecurity Labs</h4>
+    <div class="project-card">
+        <h5>1. Sentinel-Scan (Automated Threat Detection)</h5>
+        <p>A specialized SOC lab implementing <strong>GitHub Advanced Security</strong>. It automates SAST and secret scanning to catch vulnerabilities early.</p>
+        <span class="tag">Threat Hunting</span> <span class="tag">Vulnerability Management</span> <span class="tag">DevSecOps</span>
+        <p style="margin-top:15px;"><a href="https://github.com/chifru19/chifru19" target="_blank"><i class="fab fa-github"></i> View SOC Pipeline</a></p>
+    </div>
+
+    <hr>
+
+    <h4>🛠️ Cybersecurity Toolkit & Insights</h4>
+    <p><strong>Defensive Operations:</strong> Incident Response, SIEM (Log Analysis), Wireshark, Nmap, Vulnerability Assessment.</p>
+    <p><strong>Infrastructure Security:</strong> DNSSEC, Cloudflare Edge Security, SSL/TLS Administration, Docker Hardening.</p>
+    
+    <p style="background: #fff3e0; padding: 15px; border-radius: 5px; border-left: 5px solid #e67e22;">
+        📖 <strong>Technical Deep Dive:</strong> <a href="#" class="blog-link">How I use Cloudflare Firewall Logs to track and mitigate edge threats in real-time.</a>
+    </p>
+
+    <hr>
+    <div style="margin-top: 50px;">
+        <h4 style="margin-bottom: 20px;">💬 Guestbook & Peer Reviews</h4>
         <script src="https://giscus.app/client.js"
                 data-repo="chifru19/chifru19"
                 data-repo-id="R_kgDOM7yDyw"
@@ -108,10 +162,10 @@
                 crossorigin="anonymous"
                 async>
         </script>
-    </section>
+    </div>
 
     <footer>
-        &copy; 2026 Frank Fru | Infrastructure Security & SOC Operations
+        &copy; 2026 Frank Fru | Verified SOC & Cybersecurity Professional
     </footer>
 </div>
 
