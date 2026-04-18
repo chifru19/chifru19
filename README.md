@@ -32,6 +32,15 @@ Enterprise-grade secure LAN architecture featuring Cisco hardening, HSRP redunda
 
 ---
 
+### 🚀 Technical Deep Dive: Giscus & Permission Orchestration
+I integrated **Giscus** (a GitHub Discussions-powered comment system) across multiple portfolios to drive peer review and interactivity. During deployment, I resolved a critical **API Permission Mismatch**:
+
+* **The Problem:** Initialized threads failed with `Unable to create discussion`. This was due to choosing the `Announcements` category, which is restricted to maintainers on the GitHub backend.
+* **The Fix:** Pivoted the orchestration to the `General` category, enabling the Giscus app to programmatically create discussion threads on behalf of visitors.
+* **Outcome:** A decentralized, high-security feedback loop that logs peer review activity directly into my GitHub contribution graph.
+
+---
+
 ### 🛡️ Layered Defense Strategy
 1.  **Infrastructure as Code (IaC) Hardening:** Scanning Terraform/CloudFormation for misconfigurations before deployment.
 2.  **Zero-Trust Perimeter:** Enforcement of Cloudflare Zero-Trust and AWS Client VPN with mandatory MFA.
