@@ -8,41 +8,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { background-color: #f4f7f6; padding: 50px 0; font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #2c3e50; line-height: 1.6; }
-        .container { max-width: 900px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        h1 { color: #2c3e50; border-bottom: 4px solid #3498db; display: inline-block; margin-bottom: 10px; font-weight: 700; }
+        .container { max-width: 1000px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        h1 { color: #2c3e50; border-bottom: 4px solid #3498db; display: inline-block; font-weight: 700; margin-bottom: 5px; }
         .subtitle { font-size: 1.8rem; color: #7f8c8d; margin-bottom: 20px; font-weight: 300; }
         
-        .live-status { display: inline-flex; align-items: center; background: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 20px; font-size: 1.1rem; font-weight: 700; border: 1px solid #c8e6c9; margin-bottom: 15px; }
+        .live-status { display: inline-flex; align-items: center; background: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 20px; font-size: 1rem; font-weight: 700; margin-bottom: 25px; }
         .pulse { height: 8px; width: 8px; background-color: #2e7d32; border-radius: 50%; display: inline-block; margin-right: 8px; animation: pulse-animation 2s infinite; }
         @keyframes pulse-animation { 0% { box-shadow: 0 0 0 0px rgba(46, 125, 50, 0.7); } 100% { box-shadow: 0 0 0 10px rgba(46, 125, 50, 0); } }
 
-        h4 { font-weight: 700; color: #34495e; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem; margin-top: 40px; border-left: 5px solid #3498db; padding-left: 15px; }
+        h4 { font-weight: 700; color: #34495e; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem; margin-top: 40px; border-left: 5px solid #e67e22; padding-left: 15px; }
         
-        /* Web Ecosystem Grid */
-        .ecosystem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
-        .build-card { background: #1a1a1a; color: #fff; padding: 20px; border-radius: 8px; border-bottom: 4px solid #3498db; transition: 0.3s; text-decoration: none; display: block; }
-        .build-card:hover { transform: translateY(-5px); border-color: #e67e22; }
-        .build-card h5 { color: #3498db; margin-bottom: 10px; }
+        /* Grid Layout for Massive Project List */
+        .ecosystem-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; margin: 25px 0; }
+        .build-card { background: #1a1a1a; color: #fff; padding: 15px; border-radius: 6px; border-bottom: 3px solid #3498db; transition: 0.2s; text-decoration: none; display: block; font-size: 0.9rem; }
+        .build-card:hover { transform: translateY(-3px); border-color: #e67e22; background: #252525; }
+        .build-card h6 { color: #3498db; margin: 0 0 5px 0; font-size: 1.1rem; font-weight: bold; }
+        .build-card p { color: #aaa; margin: 0; font-size: 0.8rem; line-height: 1.3; }
 
-        /* Security Guide */
-        .security-guide { background: #2c3e50; color: #ecf0f1; padding: 35px; border-radius: 8px; border-left: 10px solid #e67e22; margin: 30px 0; }
-        .guide-item strong { color: #3498db; display: block; font-size: 1.5rem; }
-
-        /* Cert Boxes */
+        /* Clickable Certificate Boxes */
         .cred-flex { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
-        .cred-box { flex: 1; min-width: 280px; background: #fff; border: 1px solid #eee; border-left: 5px solid #3498db; padding: 20px; border-radius: 4px; }
+        .cred-link { flex: 1; min-width: 280px; text-decoration: none; color: inherit; }
+        .cred-box { background: #fff; border: 1px solid #eee; border-left: 5px solid #3498db; padding: 20px; border-radius: 4px; transition: 0.3s; }
+        .cred-box:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); background: #fcfcfc; }
         
         /* CVS Terminal */
-        #review-engine { background: #000; color: #00ff41; padding: 25px; border-radius: 8px; font-family: 'Courier New', monospace; border: 1px solid #333; min-height: 150px; }
-        .review-row { border-bottom: 1px solid #222; padding: 10px 0; font-size: 0.85rem; }
-        .review-user { color: #3498db; font-weight: bold; }
-        .loading { animation: blink 1s infinite; }
-        @keyframes blink { 50% { opacity: 0; } }
-
+        #review-engine { background: #000; color: #00ff41; padding: 25px; border-radius: 8px; font-family: 'Courier New', monospace; border: 1px solid #333; }
+        .review-row { border-bottom: 1px solid #222; padding: 8px 0; font-size: 0.85rem; }
         .btn-flex { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
-        .btn { padding: 12px 20px; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-block; color: white !important; }
+        .btn { padding: 12px 20px; border-radius: 5px; text-decoration: none; font-weight: 600; color: white !important; }
         
-        footer { text-align: center; color: #95a5a6; font-size: 1.3rem; margin-top: 50px; }
+        footer { text-align: center; color: #95a5a6; font-size: 1.2rem; margin-top: 50px; border-top: 1px solid #eee; padding-top: 20px; }
     </style>
 </head>
 <body>
@@ -51,79 +46,77 @@
     <header>
         <div class="live-status"><span class="pulse"></span> CLOUDFLARE EDGE: SECURE & ACTIVE</div>
         <h1>Frank Fru</h1>
-        <p class="subtitle">SOC Analyst & Cybersecurity Engineer</p>
-        
-        <p>Qualified <strong>Security Analytics Professional</strong>. I specialize in <strong>Cybersecurity Operations</strong>, proactive threat hunting, and the engineering of hardened infrastructure.</p>
+        <p class="subtitle">SOC Analyst & Security Engineer</p>
         
         <div class="btn-flex">
             <a href="https://www.credly.com/users/frank-fru" target="_blank" class="btn" style="background: #e67e22;"><i class="fa-solid fa-certificate"></i> Verify Credentials</a>
             <a href="https://linkedin.com/in/chifru19" target="_blank" class="btn" style="background: #0077b5;"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="mailto:contact@frankfru.com" class="btn" style="background: #333;"><i class="fa-solid fa-envelope"></i> contact@frankfru.com</a>
+            <a href="https://github.com/chifru19" target="_blank" class="btn" style="background: #333;"><i class="fab fa-github"></i> GitHub</a>
         </div>
     </header>
 
     <hr>
 
-    <h4>🏗️ Digital Ecosystem & Web Builds</h4>
-    <div class="ecosystem-grid">
-        <a href="https://chifru19.github.io/fon-ngwashi-law-office/" target="_blank" class="build-card">
-            <h5>Fon Ngwashi Law</h5>
-            <p>Barristers & Solicitors infrastructure. Built with secure communication tunnels and mobile optimization.</p>
-        </a>
-        <a href="#" class="build-card">
-            <h5>Wonder World</h5>
-            <p>Interactive platform featuring the CVS (Common Verification System) for real-time data validation.</p>
-        </a>
-    </div>
-
-    <hr>
-
-    <h4>🛡️ Client Security & Authentication Guide</h4>
-    <div class="security-guide">
-        <div class="guide-item">
-            <strong>1. The "Golden Rule" of Passwords:</strong>
-            <p>Minimum 14 characters using complex passphrases and mandatory Password Managers.</p>
-        </div>
-        <div class="guide-item">
-            <strong>2. Mandatory Multi-Factor Authentication (MFA):</strong>
-            <p>Authenticator Apps and Hardware Keys are required to mitigate 99% of automated attacks.</p>
-        </div>
-        <div class="guide-item">
-            <strong>3. Zero-Trust Perimeter:</strong>
-            <p>Login screens are hidden behind Cloudflare Identity-Aware Proxy (IAP).</p>
-        </div>
-    </div>
-
-    <hr>
-
-    <h4>📜 Verified Cybersecurity Certifications</h4>
+    <h4>📜 Verified Security Credentials (Click to Verify)</h4>
     <div class="cred-flex">
-        <div class="cred-box" style="border-left-color: #e67e22;">
-            <strong>CompTIA CSAP</strong><br>
-            <small>Security Analytics Professional (CySA+ / Security+)</small>
-        </div>
-        <div class="cred-box">
-            <strong>CompTIA CSIS</strong><br>
-            <small>Secure Infrastructure Specialist (A+ / Net+ / Sec+)</small>
-        </div>
+        <a href="https://www.credly.com/users/frank-fru" target="_blank" class="cred-link">
+            <div class="cred-box" style="border-left-color: #e67e22;">
+                <strong>CompTIA CSAP</strong><br>
+                <small>Security Analytics Professional (CySA+ / Security+)</small>
+            </div>
+        </a>
+        <a href="https://www.credly.com/users/frank-fru" target="_blank" class="cred-link">
+            <div class="cred-box">
+                <strong>CompTIA CSIS</strong><br>
+                <small>Secure Infrastructure Specialist (A+ / Net+ / Sec+)</small>
+            </div>
+        </a>
     </div>
 
     <hr>
 
-    <h4>🛠️ Cybersecurity Toolkit</h4>
-    <p><strong>Defensive Operations:</strong> Incident Response, SIEM (Log Analysis), Wireshark, Nmap, Vulnerability Assessment.</p>
-    <p><strong>Infrastructure Security:</strong> DNSSEC, Cloudflare Edge Security, SSL/TLS Administration, Docker Hardening.</p>
+    <h4>🏗️ Digital Infrastructure & Security Registry</h4>
+    <p>A comprehensive log of engineered environments, security labs, and technical case studies.</p>
+    
+    <div class="ecosystem-grid">
+        <a href="https://chifru19.github.io/fon-ngwashi-law-office/" class="build-card"><h6>fon-ngwashi-law-office</h6><p>Legal Tech & Secure Infrastructure</p></a>
+        <a href="https://github.com/chifru19/wonder-way-tours" class="build-card"><h6>wonder-way-tours</h6><p>Interactive CVS Implementation</p></a>
+        <a href="https://github.com/chifru19/lemac-wellness-Cameroon" class="build-card"><h6>lemac-wellness-Cameroon</h6><p>Health-Tech Digital Presence</p></a>
+        
+        <a href="https://github.com/chifru19/VoltGuard-DCEO-Sim" class="build-card"><h6>VoltGuard-DCEO-Sim</h6><p>Data Center Energy Ops Simulator</p></a>
+        <a href="https://github.com/chifru19/Network-Guard-Forensics" class="build-card"><h6>Network-Guard-Forensics</h6><p>Packet Analysis & Threat Intel</p></a>
+        <a href="https://github.com/chifru19/Cloud-Security-Suite" class="build-card"><h6>Cloud-Security-Suite</h6><p>Hardened Multi-Cloud Architecture</p></a>
+        <a href="https://github.com/chifru19/Infrastructure-HIDS" class="build-card"><h6>Infrastructure-HIDS</h6><p>Host Intrusion Detection Systems</p></a>
+        
+        <a href="https://github.com/chifru19/Cisco-Enterprise-Network-Lab" class="build-card"><h6>Cisco-Enterprise-Lab</h6><p>Core Routing & Switching Architecture</p></a>
+        <a href="https://github.com/chifru19/cisco-intervlan-roas-lab" class="build-card"><h6>cisco-intervlan-roas-lab</h6><p>VLAN Segmentation & Trunking</p></a>
+        <a href="https://github.com/chifru19/Corporate-Network-Lab-V1" class="build-card"><h6>Corporate-Network-Lab-V1</h6><p>Enterprise Infrastructure Model</p></a>
+        
+        <a href="https://github.com/chifru19/Secure-Redundancy-IaC" class="build-card"><h6>Secure-Redundancy-IaC</h6><p>High-Availability Terraform Lab</p></a>
+        <a href="https://github.com/chifru19/terraform-multi-version-setup" class="build-card"><h6>terraform-multi-version</h6><p>IaC Version Management</p></a>
+        <a href="https://github.com/chifru19/secure-url-shortener-tf" class="build-card"><h6>secure-url-shortener-tf</h6><p>Serverless Security Deployment</p></a>
+        
+        <a href="https://github.com/chifru19/nsongwa-credit-union" class="build-card"><h6>nsongwa-credit-union</h6><p>FinTech Digital Hardening</p></a>
+        <a href="https://github.com/chifru19/pidgin-jumble-game" class="build-card"><h6>pidgin-jumble-game</h6><p>Linguistic Algorithm Lab</p></a>
+        <a href="https://github.com/chifru19/Aura-Digital-Infrastructure" class="build-card"><h6>Aura-Digital-Infra</h6><p>Next-Gen Edge Computing Model</p></a>
+        <a href="https://github.com/chifru19/Project-Fortress" class="build-card"><h6>Project-Fortress</h6><p>Zero-Trust Implementation Study</p></a>
+        <a href="https://github.com/chifru19/reunion2026" class="build-card"><h6>reunion2026</h6><p>Dynamic Event Infrastructure</p></a>
+    </div>
+
+    <hr>
+
+    <h4>🛡️ Security Guide & Strategy</h4>
+    <p>Implementing <strong>MFA</strong>, <strong>Zero-Trust Perimeters</strong>, and <strong>14+ Character Passphrases</strong> as the standard for all builds.</p>
 
     <hr>
 
     <h4>💬 CVS Output: Verified Peer Reviews</h4>
-    <p>Real-time logs pulled from the Google Sheet verification engine.</p>
     <div id="review-engine">
         <div id="review-content" class="loading">[INITIALIZING_CVS_STREAM...]</div>
     </div>
 
     <footer>
-        &copy; 2026 Frank Fru | <a href="https://frankfru.com" style="color:#3498db; text-decoration:none;">frankfru.com</a> | GitHub: chifru19
+        &copy; 2026 Frank Fru | <a href="https://frankfru.com" style="color:#3498db; text-decoration:none;">frankfru.com</a> | LinkedIn | GitHub
     </footer>
 </div>
 
@@ -136,22 +129,19 @@
             const response = await fetch(SHEET_CSV_URL);
             const data = await response.text();
             const rows = data.split(/\r?\n/).slice(1); 
-            
             container.classList.remove('loading');
             container.innerHTML = '';
-            
             rows.forEach(row => {
                 const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
                 if(cols.length >= 2 && cols[0].trim() !== "") {
                     const div = document.createElement('div');
                     div.className = 'review-row';
-                    div.innerHTML = `[VERIFIED_LOG] <span class="review-user">${cols[0].replace(/"/g, "")}</span>: "${cols[1].replace(/"/g, "")}"`;
+                    div.innerHTML = `[VERIFIED_LOG] <span style="color:#3498db;font-weight:bold;">${cols[0].replace(/"/g, "")}</span>: "${cols[1].replace(/"/g, "")}"`;
                     container.appendChild(div);
                 }
             });
         } catch (err) {
-            container.innerHTML = '[ERROR: OFFLINE_MODE] Manual backup active.';
-            container.classList.remove('loading');
+            container.innerHTML = '[ERROR]: CVS_STREAM_OFFLINE';
         }
     }
     fetchReviews();
