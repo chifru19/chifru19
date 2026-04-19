@@ -12,37 +12,37 @@
         h1 { color: #2c3e50; border-bottom: 4px solid #3498db; display: inline-block; margin-bottom: 10px; font-weight: 700; }
         .subtitle { font-size: 1.8rem; color: #7f8c8d; margin-bottom: 20px; font-weight: 300; }
         
-        /* Live Status Pulse */
         .live-status { display: inline-flex; align-items: center; background: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 20px; font-size: 1.1rem; font-weight: 700; border: 1px solid #c8e6c9; margin-bottom: 15px; }
         .pulse { height: 8px; width: 8px; background-color: #2e7d32; border-radius: 50%; display: inline-block; margin-right: 8px; animation: pulse-animation 2s infinite; }
         @keyframes pulse-animation { 0% { box-shadow: 0 0 0 0px rgba(46, 125, 50, 0.7); } 100% { box-shadow: 0 0 0 10px rgba(46, 125, 50, 0); } }
 
-        h4 { font-weight: 700; color: #34495e; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem; margin-top: 40px; border-left: 5px solid #e67e22; padding-left: 15px; }
+        h4 { font-weight: 700; color: #34495e; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem; margin-top: 40px; border-left: 5px solid #3498db; padding-left: 15px; }
         
         /* Web Ecosystem Grid */
         .ecosystem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
         .build-card { background: #1a1a1a; color: #fff; padding: 20px; border-radius: 8px; border-bottom: 4px solid #3498db; transition: 0.3s; text-decoration: none; display: block; }
         .build-card:hover { transform: translateY(-5px); border-color: #e67e22; }
-        .build-card h5 { color: #3498db; margin-bottom: 10px; font-size: 1.4rem; }
-        .build-card p { font-size: 0.9rem; color: #bbb; margin-bottom: 0; }
+        .build-card h5 { color: #3498db; margin-bottom: 10px; }
 
-        /* CVS Terminal Style */
-        #review-engine { background: #000; color: #00ff41; padding: 25px; border-radius: 8px; font-family: 'Courier New', monospace; border: 1px solid #333; min-height: 150px; position: relative; overflow: hidden; }
-        #review-engine::before { content: "CVS_TERMINAL_V1.0"; position: absolute; top: 5px; right: 10px; font-size: 0.7rem; color: #333; }
-        .review-row { border-bottom: 1px solid #1a1a1a; padding: 12px 0; font-size: 0.9rem; }
-        .review-user { color: #3498db; font-weight: bold; }
-        .verify-badge { color: #e67e22; font-size: 0.7rem; margin-left: 5px; vertical-align: middle; }
+        /* Security Guide */
+        .security-guide { background: #2c3e50; color: #ecf0f1; padding: 35px; border-radius: 8px; border-left: 10px solid #e67e22; margin: 30px 0; }
+        .guide-item strong { color: #3498db; display: block; font-size: 1.5rem; }
+
+        /* Cert Boxes */
+        .cred-flex { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
+        .cred-box { flex: 1; min-width: 280px; background: #fff; border: 1px solid #eee; border-left: 5px solid #3498db; padding: 20px; border-radius: 4px; }
         
-        .loading { animation: blink 1s infinite; color: #7f8c8d; }
+        /* CVS Terminal */
+        #review-engine { background: #000; color: #00ff41; padding: 25px; border-radius: 8px; font-family: 'Courier New', monospace; border: 1px solid #333; min-height: 150px; }
+        .review-row { border-bottom: 1px solid #222; padding: 10px 0; font-size: 0.85rem; }
+        .review-user { color: #3498db; font-weight: bold; }
+        .loading { animation: blink 1s infinite; }
         @keyframes blink { 50% { opacity: 0; } }
 
         .btn-flex { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
-        .btn { padding: 12px 20px; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; color: white !important; }
-        .btn-credly { background: #e67e22; }
-        .btn-linkedin { background: #0077b5; }
+        .btn { padding: 12px 20px; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-block; color: white !important; }
         
-        footer { text-align: center; color: #95a5a6; font-size: 1.3rem; margin-top: 50px; border-top: 1px solid #eee; padding-top: 20px; }
-        @media (max-width: 600px) { .ecosystem-grid { grid-template-columns: 1fr; } }
+        footer { text-align: center; color: #95a5a6; font-size: 1.3rem; margin-top: 50px; }
     </style>
 </head>
 <body>
@@ -53,42 +53,73 @@
         <h1>Frank Fru</h1>
         <p class="subtitle">SOC Analyst & Cybersecurity Engineer</p>
         
-        <p>Qualified <strong>Security Analytics Professional</strong>. I specialize in engineering hardened infrastructure, zero-trust deployments, and automated SOC pipelines.</p>
+        <p>Qualified <strong>Security Analytics Professional</strong>. I specialize in <strong>Cybersecurity Operations</strong>, proactive threat hunting, and the engineering of hardened infrastructure.</p>
         
         <div class="btn-flex">
-            <a href="https://www.credly.com/users/frank-fru" target="_blank" class="btn btn-credly"><i class="fa-solid fa-certificate"></i>&nbsp;Verify Credentials</a>
-            <a href="https://linkedin.com/in/chifru19" target="_blank" class="btn btn-linkedin"><i class="fab fa-linkedin"></i>&nbsp;LinkedIn</a>
-            <a href="https://github.com/chifru19" target="_blank" class="btn" style="background: #333;"><i class="fab fa-github"></i>&nbsp;GitHub</a>
+            <a href="https://www.credly.com/users/frank-fru" target="_blank" class="btn" style="background: #e67e22;"><i class="fa-solid fa-certificate"></i> Verify Credentials</a>
+            <a href="https://linkedin.com/in/chifru19" target="_blank" class="btn" style="background: #0077b5;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="mailto:contact@frankfru.com" class="btn" style="background: #333;"><i class="fa-solid fa-envelope"></i> contact@frankfru.com</a>
         </div>
     </header>
 
     <hr>
 
-    <h4>🌐 Digital Ecosystem & Web Builds</h4>
-    <p>Architecture of high-performance, secure web environments. Every project is hardened via Cloudflare Edge and NIST standards.</p>
+    <h4>🏗️ Digital Ecosystem & Web Builds</h4>
     <div class="ecosystem-grid">
         <a href="https://chifru19.github.io/fon-ngwashi-law-office/" target="_blank" class="build-card">
             <h5>Fon Ngwashi Law</h5>
-            <p>Barristers & Solicitors infrastructure. Built with secure communication tunnels and mobile-first logic.</p>
+            <p>Barristers & Solicitors infrastructure. Built with secure communication tunnels and mobile optimization.</p>
         </a>
         <a href="#" class="build-card">
             <h5>Wonder World</h5>
-            <p>Interactive platform utilizing the CVS (Common Verification System) for real-time data injection.</p>
+            <p>Interactive platform featuring the CVS (Common Verification System) for real-time data validation.</p>
         </a>
     </div>
 
     <hr>
 
-    <h4>🛡️ Layered Defense Protocol</h4>
-    <p>My builds prioritize <strong>Identity-Aware Proxies</strong>, <strong>DNSSEC</strong>, and <strong>Automated SAST</strong> to ensure sovereign digital security.</p>
+    <h4>🛡️ Client Security & Authentication Guide</h4>
+    <div class="security-guide">
+        <div class="guide-item">
+            <strong>1. The "Golden Rule" of Passwords:</strong>
+            <p>Minimum 14 characters using complex passphrases and mandatory Password Managers.</p>
+        </div>
+        <div class="guide-item">
+            <strong>2. Mandatory Multi-Factor Authentication (MFA):</strong>
+            <p>Authenticator Apps and Hardware Keys are required to mitigate 99% of automated attacks.</p>
+        </div>
+        <div class="guide-item">
+            <strong>3. Zero-Trust Perimeter:</strong>
+            <p>Login screens are hidden behind Cloudflare Identity-Aware Proxy (IAP).</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <h4>📜 Verified Cybersecurity Certifications</h4>
+    <div class="cred-flex">
+        <div class="cred-box" style="border-left-color: #e67e22;">
+            <strong>CompTIA CSAP</strong><br>
+            <small>Security Analytics Professional (CySA+ / Security+)</small>
+        </div>
+        <div class="cred-box">
+            <strong>CompTIA CSIS</strong><br>
+            <small>Secure Infrastructure Specialist (A+ / Net+ / Sec+)</small>
+        </div>
+    </div>
+
+    <hr>
+
+    <h4>🛠️ Cybersecurity Toolkit</h4>
+    <p><strong>Defensive Operations:</strong> Incident Response, SIEM (Log Analysis), Wireshark, Nmap, Vulnerability Assessment.</p>
+    <p><strong>Infrastructure Security:</strong> DNSSEC, Cloudflare Edge Security, SSL/TLS Administration, Docker Hardening.</p>
 
     <hr>
 
     <h4>💬 CVS Output: Verified Peer Reviews</h4>
-    <p>Live verification logs streamed directly from the Google Sheet engine.</p>
-    
+    <p>Real-time logs pulled from the Google Sheet verification engine.</p>
     <div id="review-engine">
-        <div id="review-content" class="loading">[INITIALIZING_SECURE_STREAM...]</div>
+        <div id="review-content" class="loading">[INITIALIZING_CVS_STREAM...]</div>
     </div>
 
     <footer>
@@ -104,36 +135,25 @@
         try {
             const response = await fetch(SHEET_CSV_URL);
             const data = await response.text();
-            
-            // Parsing CSV rows (handling potential quotes)
             const rows = data.split(/\r?\n/).slice(1); 
             
             container.classList.remove('loading');
             container.innerHTML = '';
             
             rows.forEach(row => {
-                // Regex to handle commas inside quotes if they exist
                 const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
                 if(cols.length >= 2 && cols[0].trim() !== "") {
-                    const name = cols[0].replace(/"/g, "");
-                    const comment = cols[1].replace(/"/g, "");
-                    
                     const div = document.createElement('div');
                     div.className = 'review-row';
-                    div.innerHTML = `[VERIFIED_LOG] <span class="review-user">${name}</span>: "${comment}" <i class="fas fa-check-shield verify-badge"></i>`;
+                    div.innerHTML = `[VERIFIED_LOG] <span class="review-user">${cols[0].replace(/"/g, "")}</span>: "${cols[1].replace(/"/g, "")}"`;
                     container.appendChild(div);
                 }
             });
-            
-            if (container.innerHTML === '') {
-                container.innerHTML = '[STATUS]: Awaiting new verification logs...';
-            }
         } catch (err) {
-            container.innerHTML = '[ERROR: OFFLINE_MODE] Manual CSV backup required.<br>[AUDIT]: "Infrastructure is solid." - SysAudit';
+            container.innerHTML = '[ERROR: OFFLINE_MODE] Manual backup active.';
             container.classList.remove('loading');
         }
     }
-
     fetchReviews();
 </script>
 
