@@ -18,26 +18,23 @@
 
         h4 { font-weight: 700; color: #34495e; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem; margin-top: 40px; border-left: 5px solid #e67e22; padding-left: 15px; }
         
-        /* Security Guide Box */
         .security-guide { background: #2c3e50; color: #ecf0f1; padding: 35px; border-radius: 8px; border-left: 10px solid #e67e22; margin: 30px 0; }
         .guide-item { margin-bottom: 25px; }
         .guide-item strong { color: #3498db; display: block; font-size: 1.5rem; margin-bottom: 5px; }
 
-        /* Project Grid */
         .ecosystem-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin: 25px 0; }
         .build-card { background: #1a1a1a; color: #fff; padding: 12px; border-radius: 6px; border-bottom: 3px solid #3498db; transition: 0.2s; text-decoration: none; display: block; font-size: 0.85rem; }
         .build-card:hover { transform: translateY(-3px); border-color: #e67e22; background: #252525; }
         .build-card h6 { color: #3498db; margin: 0; font-size: 0.95rem; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-        /* CVS Terminal */
         #review-engine { background: #000; color: #00ff41; padding: 25px; border-radius: 8px; font-family: 'Courier New', monospace; border: 1px solid #333; min-height: 150px; }
         .review-row { border-bottom: 1px solid #222; padding: 10px 0; font-size: 0.85rem; }
         .loading { animation: blink 1s infinite; }
         @keyframes blink { 50% { opacity: 0; } }
 
-        .btn { padding: 10px 18px; border-radius: 5px; text-decoration: none; font-weight: 600; color: white !important; display: inline-block; margin-right: 8px; font-size: 0.9rem; }
+        .btn { padding: 10px 18px; border-radius: 5px; text-decoration: none; font-weight: 600; color: white !important; display: inline-block; margin-right: 8px; font-size: 0.9rem; background: #333; }
         
-        footer { text-align: center; color: #95a5a6; font-size: 1.2rem; margin-top: 50px; }
+        footer { text-align: center; color: #95a5a6; font-size: 1.2rem; margin-top: 50px; border-top: 1px solid #eee; padding-top: 20px; }
     </style>
 </head>
 <body>
@@ -48,7 +45,7 @@
         <h1>Frank Fru</h1>
         <p class="subtitle">SOC Analyst & Cybersecurity Engineer</p>
         <a href="https://linkedin.com/in/chifru19" target="_blank" class="btn" style="background: #0077b5;"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/chifru19" target="_blank" class="btn" style="background: #333;"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://github.com/chifru19" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
         <a href="https://www.credly.com/users/frank-fru" target="_blank" class="btn" style="background: #e67e22;"><i class="fa-solid fa-certificate"></i> Certifications</a>
     </header>
 
@@ -58,19 +55,19 @@
     <div class="security-guide">
         <div class="guide-item">
             <strong>1. The "Golden Rule" of Passwords:</strong>
-            <p>We enforce a minimum of 14 characters using complex passphrases. We strictly mandate Password Managers to eliminate plain-text vulnerabilities.</p>
+            <p>Minimum 14 characters using complex passphrases. Strictly mandated Password Managers to eliminate plain-text vulnerabilities.</p>
         </div>
         <div class="guide-item">
             <strong>2. Mandatory Multi-Factor Authentication (MFA):</strong>
-            <p>MFA is required on all entry points. We prioritize Authenticator Apps and Hardware Keys to mitigate 99% of bulk automated attacks.</p>
+            <p>Authenticator Apps and Hardware Keys prioritize mitigating 99% of bulk automated attacks.</p>
         </div>
         <div class="guide-item">
             <strong>3. Zero-Trust Perimeter (Cloudflare IAP):</strong>
-            <p>Login screens are hidden behind an Identity-Aware Proxy. The administration interface remains invisible to the public, requiring verified identity for access.</p>
+            <p>Internal infrastructure hidden behind Identity-Aware Proxy; administration interfaces remain invisible to the public.</p>
         </div>
         <div class="guide-item">
             <strong>4. Continuous Monitoring & Response:</strong>
-            <p>Enforcement of TLS 1.3/HSTS and strategic geofencing. We monitor login patterns to identify and block brute-force attempts in real-time.</p>
+            <p>Enforcement of TLS 1.3/HSTS and geofencing to block brute-force threats in real-time at the edge.</p>
         </div>
     </div>
 
@@ -78,73 +75,71 @@
 
     <h4>🏗️ Full Infrastructure & Project Registry</h4>
     <div class="ecosystem-grid">
-        <a href="https://github.com/chifru19/fon-ngwashi-law-office" target="_blank" class="build-card"><h6>fon-ngwashi-law-office</h6></a>
         <a href="https://github.com/chifru19/wonder-way-tours" target="_blank" class="build-card"><h6>wonder-way-tours</h6></a>
-        <a href="https://github.com/chifru19/lemac-wellness-Cameroon" target="_blank" class="build-card"><h6>lemac-wellness-Cameroon</h6></a>
+        <a href="https://github.com/chifru19/chifru19" target="_blank" class="build-card"><h6>chifru19-root</h6></a>
+        <a href="https://github.com/chifru19/lemac-wellness-Cameroon" target="_blank" class="build-card"><h6>lemac-wellness</h6></a>
         <a href="https://github.com/chifru19/reunion2026" target="_blank" class="build-card"><h6>reunion2026</h6></a>
-        <a href="https://github.com/chifru19/VoltGuard-DCEO-Sim" target="_blank" class="build-card"><h6>VoltGuard-DCEO-Sim</h6></a>
-        <a href="https://github.com/chifru19/Network-Guard-Forensics" target="_blank" class="build-card"><h6>Network-Guard-Forensics</h6></a>
-        <a href="https://github.com/chifru19/pidgin-jumble-game" target="_blank" class="build-card"><h6>pidgin-jumble-game</h6></a>
+        <a href="https://github.com/chifru19/VoltGuard-DCEO-Sim" target="_blank" class="build-card"><h6>VoltGuard-DCEO</h6></a>
+        <a href="https://github.com/chifru19/Network-Guard-Forensics" target="_blank" class="build-card"><h6>Network-Guard</h6></a>
+        <a href="https://github.com/chifru19/pidgin-jumble-game" target="_blank" class="build-card"><h6>pidgin-jumble</h6></a>
         <a href="https://github.com/chifru19/Aura-Digital-Infrastructure" target="_blank" class="build-card"><h6>Aura-Digital-Infra</h6></a>
         <a href="https://github.com/chifru19/Cisco-Enterprise-Network-Lab" target="_blank" class="build-card"><h6>Cisco-Enterprise-Lab</h6></a>
         <a href="https://github.com/chifru19/nsongwa-credit-union" target="_blank" class="build-card"><h6>nsongwa-credit-union</h6></a>
         <a href="https://github.com/chifru19/Cloud-Security-Suite" target="_blank" class="build-card"><h6>Cloud-Security-Suite</h6></a>
-        <a href="https://github.com/chifru19/Data-Center-Telemetry-Pipeline" target="_blank" class="build-card"><h6>Data-Center-Pipeline</h6></a>
+        <a href="https://github.com/chifru19/Data-Center-Telemetry-Pipeline" target="_blank" class="build-card"><h6>Data-Center-Telemetry</h6></a>
         <a href="https://github.com/chifru19/Project-Fortress" target="_blank" class="build-card"><h6>Project-Fortress</h6></a>
         <a href="https://github.com/chifru19/Secure-Redundancy-IaC" target="_blank" class="build-card"><h6>Secure-Redundancy-IaC</h6></a>
+        <a href="https://github.com/chifru19/Cisco-Networking-Labs" target="_blank" class="build-card"><h6>Cisco-Networking-Labs</h6></a>
+        <a href="https://github.com/chifru19/praxis-demo" target="_blank" class="build-card"><h6>praxis-demo</h6></a>
+        <a href="https://github.com/chifru19/Corporate-Network-Lab-V1" target="_blank" class="build-card"><h6>Corporate-Network-Lab</h6></a>
+        <a href="https://github.com/chifru19/AWS-RAID-Lab" target="_blank" class="build-card"><h6>AWS-RAID-Lab</h6></a>
+        <a href="https://github.com/chifru19/pidgin-builder-mobile" target="_blank" class="build-card"><h6>pidgin-builder-mobile</h6></a>
+        <a href="https://github.com/chifru19/git-troubleshooting-case-study" target="_blank" class="build-card"><h6>git-troubleshooting</h6></a>
         <a href="https://github.com/chifru19/Infrastructure-HIDS" target="_blank" class="build-card"><h6>Infrastructure-HIDS</h6></a>
+        <a href="https://github.com/chifru19/legal-tech-articles" target="_blank" class="build-card"><h6>legal-tech-articles</h6></a>
         <a href="https://github.com/chifru19/terraform-multi-version-setup" target="_blank" class="build-card"><h6>terraform-setup</h6></a>
         <a href="https://github.com/chifru19/AA-Fashion-Cameroon" target="_blank" class="build-card"><h6>AA-Fashion-Cameroon</h6></a>
-        <a href="https://github.com/chifru19/Network-Security-Audit-Suite-2026" target="_blank" class="build-card"><h6>Security-Audit-2026</h6></a>
-        <a href="https://github.com/chifru19/secure-url-shortener-tf" target="_blank" class="build-card"><h6>secure-url-shortener</h6></a>
-        <a href="https://github.com/chifru19/master-school-student" target="_blank" class="build-card"><h6>master-school-student</h6></a>
-        <a href="https://github.com/chifru19/cyber-security-student" target="_blank" class="build-card"><h6>cyber-security-student</h6></a>
-        <a href="https://github.com/chifru19/skills-introduction-to-github" target="_blank" class="build-card"><h6>skills-intro-github</h6></a>
-        <a href="https://github.com/chifru19/my-first-git-project" target="_blank" class="build-card"><h6>first-git-project</h6></a>
         <a href="https://github.com/chifru19/cisco-intervlan-roas-lab" target="_blank" class="build-card"><h6>cisco-roas-lab</h6></a>
+        <a href="https://github.com/chifru19/Network-Security-Audit-Suite-2026" target="_blank" class="build-card"><h6>Security-Audit-2026</h6></a>
         <a href="https://github.com/chifru19/nsosccul-demo" target="_blank" class="build-card"><h6>nsosccul-demo</h6></a>
         <a href="https://github.com/chifru19/webeet-internship-observability" target="_blank" class="build-card"><h6>webeet-observability</h6></a>
         <a href="https://github.com/chifru19/troubleshooting-case-study" target="_blank" class="build-card"><h6>troubleshooting-case</h6></a>
         <a href="https://github.com/chifru19/Simple-macOS-Sec" target="_blank" class="build-card"><h6>Simple-macOS-Sec</h6></a>
+        <a href="https://github.com/chifru19/secure-url-shortener-tf" target="_blank" class="build-card"><h6>secure-url-shortener</h6></a>
+        <a href="https://github.com/chifru19/fon-ngwashi-law-office" target="_blank" class="build-card"><h6>fon-ngwashi-law</h6></a>
         <a href="https://github.com/chifru19/conceptual-mvp-project-final" target="_blank" class="build-card"><h6>conceptual-mvp</h6></a>
         <a href="https://github.com/chifru19/MVP-Infrastructure-Model" target="_blank" class="build-card"><h6>MVP-Infra-Model</h6></a>
-        <a href="https://github.com/chifru19/pidgin-builder-mobile" target="_blank" class="build-card"><h6>pidgin-builder-mobile</h6></a>
-        <a href="https://github.com/chifru19/AWS-RAID-Lab" target="_blank" class="build-card"><h6>AWS-RAID-Lab</h6></a>
-        <a href="https://github.com/chifru19/Corporate-Network-Lab-V1" target="_blank" class="build-card"><h6>Corporate-Network-Lab</h6></a>
-        <a href="https://github.com/chifru19/Cisco-Networking-Labs" target="_blank" class="build-card"><h6>Cisco-Networking-Labs</h6></a>
-        <a href="https://github.com/chifru19/praxis-demo" target="_blank" class="build-card"><h6>praxis-demo</h6></a>
-        <a href="https://github.com/chifru19/legal-tech-articles" target="_blank" class="build-card"><h6>legal-tech-articles</h6></a>
+        <a href="https://github.com/chifru19/master-school-student" target="_blank" class="build-card"><h6>master-school</h6></a>
+        <a href="https://github.com/chifru19/cyber-security-student" target="_blank" class="build-card"><h6>cyber-security-student</h6></a>
+        <a href="https://github.com/chifru19/skills-introduction-to-github" target="_blank" class="build-card"><h6>intro-to-github</h6></a>
+        <a href="https://github.com/chifru19/my-first-git-project" target="_blank" class="build-card"><h6>first-git-project</h6></a>
     </div>
 
     <hr>
 
     <h4>💬 CVS Output: Verified Peer Reviews</h4>
     <div id="review-engine">
-        <div id="review-content" class="loading">[INITIALIZING_SECURE_CVS_STREAM...]</div>
+        <div id="review-content" class="loading">[CONNECTING_TO_JSON_STREAM...]</div>
     </div>
 
-    <footer>&copy; 2026 Frank Fru | frankfru.com</footer>
+    <footer>&copy; 2026 Frank Fru | <a href="https://frankfru.com" style="color:#3498db; text-decoration:none;">frankfru.com</a></footer>
 </div>
 
 <script>
-    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwHdfoJcO_YC2gIf2DUuPV7H9LqjBndtwWOuEvcGl8pP5_jCpOK_y74RgnNMULZOHgiLw/exec';
+    const DEPLOY_LINK = 'https://script.google.com/macros/s/AKfycbwHdfoJcO_YC2gIf2DUuPV7H9LqjBndtwWOuEvcGl8pP5_jCpOK_y74RgnNMULZOHgiLw/exec';
 
     async function fetchReviews() {
         const container = document.getElementById('review-content');
         try {
-            // Updated fetch to better handle Google Apps Script redirect
-            const response = await fetch(APPS_SCRIPT_URL);
+            // Using a simple fetch - the /exec link handles the JSON response
+            const response = await fetch(DEPLOY_LINK);
+            const reviews = await response.json(); 
             
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-
-            const reviews = await response.json();
             container.classList.remove('loading');
             container.innerHTML = '';
 
-            if (reviews.length === 0) {
-                container.innerHTML = '[EMPTY_LOG]: No reviews available.';
+            if (!reviews || reviews.length === 0) {
+                container.innerHTML = '[EMPTY_LOG]: No reviews available in spreadsheet.';
                 return;
             }
 
@@ -155,7 +150,7 @@
                 container.appendChild(div);
             });
         } catch (err) {
-            console.error('Fetch error:', err);
+            console.error('CVS Fetch Error:', err);
             container.innerHTML = '[ERROR]: CVS_STREAM_TIMEOUT. Ensure script is deployed as "Anyone".';
             container.classList.remove('loading');
         }
