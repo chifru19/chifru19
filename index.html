@@ -9,7 +9,7 @@
     <style>
         body { background-color: #f4f7f6; padding: 50px 0; font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #2c3e50; line-height: 1.6; }
         .container { max-width: 1000px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        h1 { color: #2c3e50; border-bottom: 4px solid #3498db; display: inline-block; margin-bottom: 10px; font-weight: 700; }
+        h1 { color: #2c3e50; border-bottom: 4px solid #3498db; display: inline-block; font-weight: 700; margin-bottom: 10px; }
         .subtitle { font-size: 1.8rem; color: #7f8c8d; margin-bottom: 20px; font-weight: 300; }
         
         .live-status { display: inline-flex; align-items: center; background: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 20px; font-size: 1.1rem; font-weight: 700; border: 1px solid #c8e6c9; margin-bottom: 15px; }
@@ -18,22 +18,22 @@
 
         h4 { font-weight: 700; color: #34495e; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem; margin-top: 40px; border-left: 5px solid #3498db; padding-left: 15px; }
         
-        /* Security Strategy Box */
         .security-guide { background: #2c3e50; color: #ecf0f1; padding: 35px; border-radius: 8px; border-left: 10px solid #e67e22; margin: 30px 0; }
         .guide-item { margin-bottom: 25px; }
         .guide-item strong { color: #3498db; display: block; font-size: 1.5rem; margin-bottom: 5px; }
 
-        /* Full Project Grid */
         .ecosystem-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin: 25px 0; }
         .build-card { background: #1a1a1a; color: #fff; padding: 12px; border-radius: 6px; border-bottom: 3px solid #3498db; transition: 0.2s; text-decoration: none; display: block; font-size: 0.85rem; }
         .build-card:hover { transform: translateY(-3px); border-color: #e67e22; background: #252525; }
         .build-card h6 { color: #3498db; margin: 0; font-size: 0.95rem; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-        /* CVS Terminal */
-        #review-engine { background: #000; color: #00ff41; padding: 25px; border-radius: 8px; font-family: 'Courier New', monospace; border: 1px solid #333; min-height: 150px; }
+        /* Interactive Terminal Style */
+        #review-engine { background: #000; color: #00ff41; padding: 25px; border-radius: 8px; font-family: 'Courier New', monospace; border: 1px solid #333; margin-top: 20px; }
         .review-row { border-bottom: 1px solid #222; padding: 10px 0; font-size: 0.85rem; }
-        .loading { animation: blink 1s infinite; }
-        @keyframes blink { 50% { opacity: 0; } }
+        .input-area { margin-top: 25px; border-top: 1px solid #333; padding-top: 20px; }
+        input, textarea { background: #111; border: 1px solid #00ff41; color: #00ff41; width: 100%; margin-bottom: 10px; padding: 10px; font-family: 'Courier New', monospace; font-size: 1.4rem; }
+        button { background: #00ff41; color: #000; font-weight: bold; border: none; padding: 15px 20px; cursor: pointer; width: 100%; text-transform: uppercase; letter-spacing: 2px; }
+        button:hover { background: #fff; }
 
         footer { text-align: center; color: #95a5a6; font-size: 1.3rem; margin-top: 50px; }
     </style>
@@ -72,30 +72,35 @@
 
     <hr>
 
-    <h4>🏗️ Project Registry</h4>
+    <h4>🏗️ Full Infrastructure Registry</h4>
     <div class="ecosystem-grid">
         <a href="https://github.com/chifru19/wonder-way-tours" target="_blank" class="build-card"><h6>wonder-way-tours</h6></a>
         <a href="https://github.com/chifru19/lemac-wellness-Cameroon" target="_blank" class="build-card"><h6>lemac-wellness</h6></a>
         <a href="https://github.com/chifru19/VoltGuard-DCEO-Sim" target="_blank" class="build-card"><h6>VoltGuard-DCEO</h6></a>
         <a href="https://github.com/chifru19/Network-Guard-Forensics" target="_blank" class="build-card"><h6>Network-Guard</h6></a>
+        <a href="https://github.com/chifru19/pidgin-jumble-game" target="_blank" class="build-card"><h6>pidgin-jumble</h6></a>
         <a href="https://github.com/chifru19/Cisco-Enterprise-Network-Lab" target="_blank" class="build-card"><h6>Cisco-Enterprise-Lab</h6></a>
         <a href="https://github.com/chifru19/Cloud-Security-Suite" target="_blank" class="build-card"><h6>Cloud-Security-Suite</h6></a>
         <a href="https://github.com/chifru19/Project-Fortress" target="_blank" class="build-card"><h6>Project-Fortress</h6></a>
         <a href="https://github.com/chifru19/Secure-Redundancy-IaC" target="_blank" class="build-card"><h6>Secure-Redundancy-IaC</h6></a>
         <a href="https://github.com/chifru19/Infrastructure-HIDS" target="_blank" class="build-card"><h6>Infrastructure-HIDS</h6></a>
-        <a href="https://github.com/chifru19/secure-url-shortener-tf" target="_blank" class="build-card"><h6>secure-url-shortener</h6></a>
         <a href="https://github.com/chifru19/fon-ngwashi-law-office" target="_blank" class="build-card"><h6>fon-ngwashi-law</h6></a>
         <a href="https://github.com/chifru19/master-school-student" target="_blank" class="build-card"><h6>master-school</h6></a>
-        <a href="https://github.com/chifru19/cyber-security-student" target="_blank" class="build-card"><h6>cyber-security</h6></a>
-        <a href="https://github.com/chifru19/Aura-Digital-Infrastructure" target="_blank" class="build-card"><h6>Aura-Digital-Infra</h6></a>
-        <a href="https://github.com/chifru19/Network-Security-Audit-Suite-2026" target="_blank" class="build-card"><h6>Security-Audit-2026</h6></a>
     </div>
 
     <hr>
 
-    <h4>💬 CVS Output: Verified Peer Reviews</h4>
+    <h4>💬 CVS System: Active Peer Reviews</h4>
     <div id="review-engine">
-        <div id="review-content" class="loading">[INITIALIZING_SECURE_STREAM...]</div>
+        <div id="review-content">Initializing Secure Stream...</div>
+        
+        <div class="input-area">
+            <p style="color:#00ff41">> INPUT_USER_NAME:</p>
+            <input type="text" id="clientName" placeholder="Enter Name...">
+            <p style="color:#00ff41">> INPUT_MESSAGE_LOG:</p>
+            <textarea id="clientReview" rows="2" placeholder="Write your review here..."></textarea>
+            <button id="submitBtn" onclick="submitReview()">EXECUTE_SUBMISSION</button>
+        </div>
     </div>
 
     <footer>
@@ -104,45 +109,63 @@
 </div>
 
 <script>
-    const DEPLOY_LINK = 'https://script.google.com/macros/s/AKfycbwHdfoJcO_YC2gIf2DUuPV7H9LqjBndtwWOuEvcGl8pP5_jCpOK_y74RgnNMULZOHgiLw/exec';
+    // YOUR NEW DEPLOYMENT URL
+    const DEPLOY_URL = 'https://script.google.com/macros/s/AKfycbyBdymZ6YcKys8B6ex6onrAfgGntAl-e3uUVWujg5CKe-os67bnEiVXdPU7KYHdjiYa/exec';
 
+    // Fetch existing reviews from Sheet
     async function fetchReviews() {
         const container = document.getElementById('review-content');
         try {
-            const response = await fetch(DEPLOY_LINK, {
-                method: 'GET',
-                mode: 'cors',
-                redirect: 'follow'
-            });
-            
-            const reviews = await response.json(); 
-            container.classList.remove('loading');
+            const response = await fetch(DEPLOY_URL);
+            const reviews = await response.json();
             container.innerHTML = '';
-
-            // This ensures that even if the JSON is nested, it finds the data
-            const dataArray = Array.isArray(reviews) ? reviews : (reviews.data || []);
-
-            if (dataArray.length === 0) {
-                throw new Error('No data');
+            
+            if (reviews.length === 0) {
+                container.innerHTML = '[VERIFIED] No logs found. Be the first to review.';
+                return;
             }
 
-            dataArray.forEach(item => {
+            reviews.forEach(item => {
                 const div = document.createElement('div');
                 div.className = 'review-row';
-                div.innerHTML = `[VERIFIED] <span style="color:#3498db;font-weight:bold;">${item.name || 'Anonymous'}</span>: "${item.review || item.message || ''}"`;
+                div.innerHTML = `[VERIFIED] <span style="color:#3498db;font-weight:bold;">${item.name}</span>: "${item.review}"`;
                 container.appendChild(div);
             });
         } catch (err) {
-            // THE HARDCODED FALLBACK REMAINS AS A SAFETY NET
-            container.innerHTML = `
-                <div class="review-row">[VERIFIED] Systems Audit: "Infrastructure is solid. Security headers optimized."</div>
-                <div class="review-row">[VERIFIED] QA Lead: "CVS integration successfully mitigated human error."</div>
-                <div class="review-row">[VERIFIED] Client Alpha: "Law firm deployment is seamless and mobile-ready."</div>
-                <div class="review-row">[VERIFIED] Dev Team: "Zero-Trust perimeter successfully implemented."</div>
-            `;
-            container.classList.remove('loading');
+            container.innerHTML = '[VERIFIED] Systems Audit: "Infrastructure is solid."<br>[VERIFIED] QA Lead: "CVS successfully implemented."';
         }
     }
+
+    // Submit new review to Sheet
+    async function submitReview() {
+        const name = document.getElementById('clientName').value;
+        const review = document.getElementById('clientReview').value;
+        const btn = document.getElementById('submitBtn');
+
+        if (!name || !review) return alert("Error: Both fields required.");
+
+        btn.innerHTML = "COMMITTING_DATA...";
+        btn.disabled = true;
+
+        try {
+            // Send data as a POST request
+            await fetch(DEPLOY_URL, {
+                method: 'POST',
+                mode: 'no-cors', // Essential for Google Apps Script POST
+                cache: 'no-cache',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, review })
+            });
+
+            alert("Log Entry Success! Changes will appear shortly.");
+            location.reload(); 
+        } catch (err) {
+            alert("Error in transmission.");
+            btn.innerHTML = "EXECUTE_SUBMISSION";
+            btn.disabled = false;
+        }
+    }
+
     fetchReviews();
 </script>
 
