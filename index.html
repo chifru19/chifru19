@@ -15,25 +15,19 @@
         .pulse { height: 8px; width: 8px; background-color: #2e7d32; border-radius: 50%; display: inline-block; margin-right: 8px; animation: pulse-animation 2s infinite; }
         @keyframes pulse-animation { 0% { box-shadow: 0 0 0 0px rgba(46, 125, 50, 0.7); } 100% { box-shadow: 0 0 0 10px rgba(46, 125, 50, 0); } }
 
-        h4 { font-weight: 700; color: #34495e; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem; margin-top: 40px; border-left: 5px solid #3498db; padding-left: 15px; }
-
-        /* SECTION: QUALIFIED AUDIT LOGS (STATIC) */
-        .qualified-logs-box { background: #fdfefe; border: 1px solid #d6eaf8; padding: 25px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #3498db; }
-        .log-entry { font-family: 'Courier New', monospace; font-size: 0.95rem; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px dashed #eee; color: #2c3e50; }
+        /* QUALIFIED LOGS SECTION */
+        .qualified-logs-box { background: #fdfefe; border: 1px solid #d6eaf8; padding: 25px; border-radius: 8px; margin: 30px 0; border-left: 5px solid #3498db; }
+        .log-entry { font-family: 'Courier New', monospace; font-size: 0.95rem; margin-bottom: 10px; border-bottom: 1px dashed #eee; padding-bottom: 10px; }
         .log-tag { color: #2980b9; font-weight: bold; margin-right: 10px; }
 
-        /* SECTION: INTERACTIVE REVIEW TERMINAL (LIVE) */
-        #review-engine { background: #000; color: #00ff41; padding: 25px; border-radius: 8px; font-family: 'Courier New', monospace; border: 1px solid #333; margin-top: 20px; }
+        /* INTERACTIVE TERMINAL SECTION */
+        #review-engine { background: #000; color: #00ff41; padding: 25px; border-radius: 8px; font-family: 'Courier New', monospace; border: 1px solid #333; }
         .live-row { border-bottom: 1px solid #222; padding: 10px 0; font-size: 0.85rem; color: #00ff41; }
         .input-area { margin-top: 25px; border-top: 1px solid #333; padding-top: 25px; }
-        label { color: #00ff41; display: block; margin-bottom: 5px; font-size: 1.2rem; }
-        input, textarea { background: #111; border: 1px solid #00ff41; color: #00ff41; width: 100%; margin-bottom: 15px; padding: 12px; font-family: 'Courier New', monospace; font-size: 1.4rem; }
-        button { background: #00ff41; color: #000; font-weight: bold; border: none; padding: 15px; cursor: pointer; width: 100%; text-transform: uppercase; letter-spacing: 2px; }
+        input, textarea { background: #111; border: 1px solid #00ff41; color: #00ff41; width: 100%; margin-bottom: 15px; padding: 12px; font-family: 'Courier New', monospace; }
+        button { background: #00ff41; color: #000; font-weight: bold; border: none; padding: 15px; cursor: pointer; width: 100%; text-transform: uppercase; letter-spacing: 1px; }
         button:hover { background: #fff; }
-        button:disabled { background: #555; cursor: not-allowed; }
-
-        .security-guide { background: #2c3e50; color: #ecf0f1; padding: 35px; border-radius: 8px; border-left: 10px solid #e67e22; margin: 30px 0; }
-        .guide-item strong { color: #3498db; display: block; font-size: 1.5rem; }
+        button:disabled { background: #444; color: #888; cursor: not-allowed; }
 
         .ecosystem-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin: 25px 0; }
         .build-card { background: #1a1a1a; color: #fff; padding: 12px; border-radius: 6px; border-bottom: 3px solid #3498db; text-decoration: none; display: block; }
@@ -48,7 +42,6 @@
         <div class="live-status"><span class="pulse"></span> CLOUDFLARE EDGE: ACTIVE</div>
         <h1>Frank Fru</h1>
         <p>SOC Analyst & Cybersecurity Engineer</p>
-        <p>📧 <a href="mailto:contact@frankfru.com">contact@frankfru.com</a> | <a href="https://github.com/chifru19" target="_blank">GitHub</a></p>
     </header>
 
     <hr>
@@ -63,23 +56,11 @@
 
     <hr>
 
-    <h4>🛡️ Layered Defense Strategy</h4>
-    <div class="security-guide">
-        <div class="guide-item"><strong>1. Passwords:</strong><p>14+ characters and complex passphrases.</p></div>
-        <div class="guide-item"><strong>2. MFA:</strong><p>Authenticator Apps and Hardware Keys mandated.</p></div>
-        <div class="guide-item"><strong>3. Zero-Trust:</strong><p>Identity-Aware Proxy barriers active.</p></div>
-        <div class="guide-item"><strong>4. Monitoring:</strong><p>TLS 1.3, HSTS, and geofencing active.</p></div>
-    </div>
-
-    <hr>
-
     <h4>🏗️ Project Registry</h4>
     <div class="ecosystem-grid">
         <a href="https://github.com/chifru19/wonder-way-tours" class="build-card"><h6>wonder-way-tours</h6></a>
-        <a href="https://github.com/chifru19/lemac-wellness-Cameroon" class="build-card"><h6>lemac-wellness</h6></a>
         <a href="https://github.com/chifru19/VoltGuard-DCEO-Sim" class="build-card"><h6>VoltGuard-DCEO</h6></a>
         <a href="https://github.com/chifru19/Network-Guard-Forensics" class="build-card"><h6>Network-Guard</h6></a>
-        <a href="https://github.com/chifru19/Cloud-Security-Suite" class="build-card"><h6>Cloud-Security-Suite</h6></a>
         <a href="https://github.com/chifru19/fon-ngwashi-law-office" class="build-card"><h6>fon-ngwashi-law</h6></a>
     </div>
 
@@ -87,25 +68,24 @@
 
     <h4>💬 CVS Interactive Review Terminal</h4>
     <div id="review-engine">
-        <div id="review-content">Fetching live stream...</div>
+        <div id="review-content">Accessing peer logs...</div>
         
         <div class="input-area">
-            <label>> INPUT_USER_NAME:</label>
-            <input type="text" id="clientName" placeholder="Name..." required>
-            <label>> INPUT_MESSAGE_LOG:</label>
-            <textarea id="clientReview" rows="2" placeholder="Write feedback..." required></textarea>
-            <button id="submitBtn" onclick="submitReview()">EXECUTE_SUBMISSION</button>
+            <p style="color:#00ff41">> ID_REQUEST_CLIENT_NAME:</p>
+            <input type="text" id="clientName" placeholder="Type Name..." required>
+            <p style="color:#00ff41">> ID_REQUEST_REVIEW_LOG:</p>
+            <textarea id="clientReview" rows="2" placeholder="Type Review..." required></textarea>
+            <button id="submitBtn" onclick="submitReview()">COMMIT_TO_SPREADSHEET</button>
         </div>
     </div>
 
-    <footer>
-        &copy; 2026 Frank Fru | Verified SOC Professional
-    </footer>
+    <footer>&copy; 2026 Frank Fru | Verified SOC Professional</footer>
 </div>
 
 <script>
     const DEPLOY_URL = 'https://script.google.com/macros/s/AKfycbyBdymZ6YcKys8B6ex6onrAfgGntAl-e3uUVWujg5CKe-os67bnEiVXdPU7KYHdjiYa/exec';
 
+    // 1. FETCH REVIEWS (GET)
     async function fetchReviews() {
         const container = document.getElementById('review-content');
         try {
@@ -113,7 +93,7 @@
             const reviews = await response.json();
             container.innerHTML = '';
             if (!reviews || reviews.length === 0) {
-                container.innerHTML = '[TERMINAL] Waiting for new external logs...';
+                container.innerHTML = '[TERMINAL] Waiting for external logs...';
                 return;
             }
             reviews.forEach(item => {
@@ -127,27 +107,38 @@
         }
     }
 
+    // 2. SUBMIT REVIEW (POST via Query Params for CORS Stability)
     function submitReview() {
         const name = document.getElementById('clientName').value;
         const review = document.getElementById('clientReview').value;
         const btn = document.getElementById('submitBtn');
-        if (!name || !review) return alert("Validation Error: Fields required.");
 
-        btn.innerHTML = "COMMITTING_LOG...";
+        if (!name || !review) {
+            alert("Input Required: Both fields must be populated.");
+            return;
+        }
+
+        btn.innerHTML = "COMMITTING_DATA...";
         btn.disabled = true;
 
-        const finalUrl = DEPLOY_URL + "?name=" + encodeURIComponent(name) + "&review=" + encodeURIComponent(review);
-        
-        fetch(finalUrl, { method: 'POST', mode: 'no-cors' })
+        // Append data to the URL as parameters to bypass POST blocks
+        const finalUrl = `${DEPLOY_URL}?name=${encodeURIComponent(name)}&review=${encodeURIComponent(review)}`;
+
+        fetch(finalUrl, {
+            method: 'POST',
+            mode: 'no-cors'
+        })
         .then(() => {
-            alert("SUCCESS: Log entry appended to spreadsheet.");
+            alert("SUCCESS: Entry recorded in Spreadsheet.");
             location.reload(); 
         })
-        .catch(() => {
-            btn.innerHTML = "EXECUTE_SUBMISSION";
+        .catch(err => {
+            console.error(err);
+            btn.innerHTML = "COMMIT_TO_SPREADSHEET";
             btn.disabled = false;
         });
     }
+
     fetchReviews();
 </script>
 
