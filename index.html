@@ -19,18 +19,33 @@
         .log-entry { font-family: 'Courier New', monospace; font-size: 0.95rem; margin-bottom: 10px; border-bottom: 1px dashed #eee; padding-bottom: 10px; }
         .log-tag { color: #2980b9; font-weight: bold; margin-right: 10px; }
 
-        /* PROJECT GRID */
+        /* PROJECT GRID - Hardened Selections */
         .ecosystem-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin: 25px 0; }
-        .build-card { background: #1a1a1a; color: #fff; padding: 12px; border-radius: 6px; border-bottom: 3px solid #3498db; text-decoration: none; display: block; }
+        .build-card { background: #1a1a1a; color: #fff; padding: 12px; border-radius: 6px; border-bottom: 3px solid #3498db; text-decoration: none; display: block; transition: 0.3s; }
+        .build-card:hover { transform: translateY(-3px); border-color: #e67e22; background: #222; }
         .build-card h6 { color: #3498db; margin: 0; font-size: 0.95rem; font-weight: bold; }
+        .build-card p { font-size: 0.75rem; margin: 5px 0 0; color: #aaa; }
 
-        /* INTERACTIVE REVIEW TERMINAL */
+        /* INTERACTIVE REVIEW TERMINAL - Fixed Visibility */
         #review-engine { background: #000; color: #00ff41; padding: 25px; border-radius: 8px; font-family: 'Courier New', monospace; border: 1px solid #333; }
         .live-row { border-bottom: 1px solid #222; padding: 10px 0; font-size: 0.85rem; color: #00ff41; }
         .input-area { margin-top: 25px; border-top: 1px solid #333; padding-top: 25px; }
-        input, textarea { background: #111; border: 1px solid #00ff41; color: #00ff41; width: 100%; margin-bottom: 15px; padding: 12px; font-family: 'Courier New', monospace; font-size: 1.4rem; }
+        
+        /* High-Visibility Inputs */
+        input, textarea { 
+            background: #111; 
+            border: 1px solid #00ff41; 
+            color: #ffffff; /* Changed to White for clarity */
+            width: 100%; 
+            margin-bottom: 15px; 
+            padding: 12px; 
+            font-family: 'Courier New', monospace; 
+            font-size: 1.4rem; 
+        }
+        input::placeholder, textarea::placeholder { color: #555; } /* Subdued placeholder */
+        
         button { background: #00ff41; color: #000; font-weight: bold; border: none; padding: 15px; cursor: pointer; width: 100%; text-transform: uppercase; letter-spacing: 1px; }
-        button:disabled { background: #444; color: #888; cursor: not-allowed; }
+        button:hover { background: #fff; }
 
         footer { text-align: center; color: #95a5a6; font-size: 1.3rem; margin-top: 50px; }
     </style>
@@ -57,27 +72,36 @@
 
     <hr>
 
-    <h4>🏗️ Project Registry</h4>
+    <h4>🏗️ Top-Tier Project Showcase</h4>
     <div class="ecosystem-grid">
-        <a href="https://github.com/chifru19/wonder-way-tours" class="build-card"><h6>wonder-way-tours</h6></a>
-        <a href="https://github.com/chifru19/VoltGuard-DCEO-Sim" class="build-card"><h6>VoltGuard-DCEO</h6></a>
-        <a href="https://github.com/chifru19/Network-Guard-Forensics" class="build-card"><h6>Network-Guard</h6></a>
-        <a href="https://github.com/chifru19/fon-ngwashi-law-office" class="build-card"><h6>fon-ngwashi-law</h6></a>
-        <a href="https://github.com/chifru19/Cloud-Security-Suite" class="build-card"><h6>Cloud-Security-Suite</h6></a>
-        <a href="https://github.com/chifru19/Infrastructure-HIDS" class="build-card"><h6>Infrastructure-HIDS</h6></a>
+        <a href="https://github.com/chifru19/Network-Guard-Forensics" class="build-card"><h6>Network-Guard-Forensics</h6><p>Packet Analysis & Threat Intel</p></a>
+        <a href="https://github.com/chifru19/fon-ngwashi-law-office" class="build-card"><h6>fon-ngwashi-law</h6><p>Secured Legal Tech Infra</p></a>
+        <a href="https://github.com/chifru19/Infrastructure-HIDS" class="build-card"><h6>Infrastructure-HIDS</h6><p>Host Intrusion Detection Systems</p></a>
+        <a href="https://github.com/chifru19/Cloud-Security-Suite" class="build-card"><h6>Cloud-Security-Suite</h6><p>Hardened Multi-Cloud Lab</p></a>
+        <a href="https://github.com/chifru19/VoltGuard-DCEO-Sim" class="build-card"><h6>VoltGuard-DCEO</h6><p>Critical Power Ops Simulation</p></a>
+        <a href="https://github.com/chifru19/wonder-way-tours" class="build-card"><h6>wonder-way-tours</h6><p>Dynamic CVS Interface</p></a>
+        <a href="https://github.com/chifru19/Secure-Redundancy-IaC" class="build-card"><h6>Secure-Redundancy-IaC</h6><p>High-Availability Infrastructure</p></a>
+        <a href="https://github.com/chifru19/Aura-Digital-Infrastructure" class="build-card"><h6>Aura-Digital-Infra</h6><p>Edge Computing & Security</p></a>
+        <a href="https://github.com/chifru19/Cisco-Enterprise-Network-Lab" class="build-card"><h6>Cisco-Enterprise-Lab</h6></a>
+        <a href="https://github.com/chifru19/nsongwa-credit-union" class="build-card"><h6>nsongwa-credit-union</h6><p>FinTech Security Architecture</p></a>
+        <a href="https://github.com/chifru19/Network-Security-Audit-Suite-2026" class="build-card"><h6>Security-Audit-Suite</h6></a>
+        <a href="https://github.com/chifru19/Data-Center-Telemetry-Pipeline" class="build-card"><h6>Data-Center-Telemetry</h6></a>
+        <a href="https://github.com/chifru19/secure-url-shortener-tf" class="build-card"><h6>secure-url-shortener</h6><p>Terraform & AWS Hardening</p></a>
+        <a href="https://github.com/chifru19/webeet-internship-observability" class="build-card"><h6>Observability-Lab</h6></a>
+        <a href="https://github.com/chifru19/lemac-wellness-Cameroon" class="build-card"><h6>lemac-wellness</h6></a>
     </div>
 
     <hr>
 
     <h4>💬 CVS Interactive Review Terminal</h4>
     <div id="review-engine">
-        <div id="review-content">Initializing secure peer logs...</div>
+        <div id="review-content">Accessing secure logs...</div>
         
         <div class="input-area">
             <p style="color:#00ff41">> ID_REQUEST_CLIENT_NAME:</p>
-            <input type="text" id="clientName" placeholder="Type Name..." required>
+            <input type="text" id="clientName" placeholder="Type your name here..." required>
             <p style="color:#00ff41">> ID_REQUEST_REVIEW_LOG:</p>
-            <textarea id="clientReview" rows="2" placeholder="Type Review..." required></textarea>
+            <textarea id="clientReview" rows="2" placeholder="Write your review here..." required></textarea>
             <button id="submitBtn" onclick="submitReview()">COMMIT_TO_SPREADSHEET</button>
         </div>
     </div>
@@ -88,7 +112,6 @@
 <script>
     const DEPLOY_URL = 'https://script.google.com/macros/s/AKfycbyBdymZ6YcKys8B6ex6onrAfgGntAl-e3uUVWujg5CKe-os67bnEiVXdPU7KYHdjiYa/exec';
 
-    // Fetch Reviews from Spreadsheet
     async function fetchReviews() {
         const container = document.getElementById('review-content');
         try {
@@ -96,7 +119,7 @@
             const reviews = await response.json();
             container.innerHTML = '';
             if (!reviews || reviews.length === 0) {
-                container.innerHTML = '[TERMINAL] Waiting for external logs...';
+                container.innerHTML = '[TERMINAL] Waiting for peer logs...';
                 return;
             }
             reviews.forEach(item => {
@@ -110,7 +133,6 @@
         }
     }
 
-    // Submit Review to Spreadsheet
     function submitReview() {
         const name = document.getElementById('clientName').value;
         const review = document.getElementById('clientReview').value;
@@ -124,7 +146,6 @@
         btn.innerHTML = "COMMITTING_DATA...";
         btn.disabled = true;
 
-        // Sending via URL parameters to bypass CORS POST restrictions
         const finalUrl = `${DEPLOY_URL}?name=${encodeURIComponent(name)}&review=${encodeURIComponent(review)}`;
 
         fetch(finalUrl, {
@@ -132,7 +153,7 @@
             mode: 'no-cors'
         })
         .then(() => {
-            alert("SUCCESS: Review sent to Google Spreadsheet.");
+            alert("SUCCESS: Entry recorded.");
             location.reload(); 
         })
         .catch(err => {
