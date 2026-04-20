@@ -10,28 +10,28 @@
         body { background-color: #f4f7f6; padding: 50px 0; font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #2c3e50; line-height: 1.6; }
         .container { max-width: 1000px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
         h1 { color: #2c3e50; border-bottom: 4px solid #3498db; display: inline-block; font-weight: 700; }
-        
         .live-status { display: inline-flex; align-items: center; background: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 20px; font-size: 1.1rem; font-weight: 700; border: 1px solid #c8e6c9; margin-bottom: 15px; }
         .pulse { height: 8px; width: 8px; background-color: #2e7d32; border-radius: 50%; display: inline-block; margin-right: 8px; animation: pulse-animation 2s infinite; }
         @keyframes pulse-animation { 0% { box-shadow: 0 0 0 0px rgba(46, 125, 50, 0.7); } 100% { box-shadow: 0 0 0 10px rgba(46, 125, 50, 0); } }
 
-        /* QUALIFIED LOGS SECTION */
+        /* QUALIFIED AUDIT LOGS */
         .qualified-logs-box { background: #fdfefe; border: 1px solid #d6eaf8; padding: 25px; border-radius: 8px; margin: 30px 0; border-left: 5px solid #3498db; }
         .log-entry { font-family: 'Courier New', monospace; font-size: 0.95rem; margin-bottom: 10px; border-bottom: 1px dashed #eee; padding-bottom: 10px; }
         .log-tag { color: #2980b9; font-weight: bold; margin-right: 10px; }
 
-        /* INTERACTIVE TERMINAL SECTION */
+        /* PROJECT GRID */
+        .ecosystem-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin: 25px 0; }
+        .build-card { background: #1a1a1a; color: #fff; padding: 12px; border-radius: 6px; border-bottom: 3px solid #3498db; text-decoration: none; display: block; }
+        .build-card h6 { color: #3498db; margin: 0; font-size: 0.95rem; font-weight: bold; }
+
+        /* INTERACTIVE REVIEW TERMINAL */
         #review-engine { background: #000; color: #00ff41; padding: 25px; border-radius: 8px; font-family: 'Courier New', monospace; border: 1px solid #333; }
         .live-row { border-bottom: 1px solid #222; padding: 10px 0; font-size: 0.85rem; color: #00ff41; }
         .input-area { margin-top: 25px; border-top: 1px solid #333; padding-top: 25px; }
-        input, textarea { background: #111; border: 1px solid #00ff41; color: #00ff41; width: 100%; margin-bottom: 15px; padding: 12px; font-family: 'Courier New', monospace; }
+        input, textarea { background: #111; border: 1px solid #00ff41; color: #00ff41; width: 100%; margin-bottom: 15px; padding: 12px; font-family: 'Courier New', monospace; font-size: 1.4rem; }
         button { background: #00ff41; color: #000; font-weight: bold; border: none; padding: 15px; cursor: pointer; width: 100%; text-transform: uppercase; letter-spacing: 1px; }
-        button:hover { background: #fff; }
         button:disabled { background: #444; color: #888; cursor: not-allowed; }
 
-        .ecosystem-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin: 25px 0; }
-        .build-card { background: #1a1a1a; color: #fff; padding: 12px; border-radius: 6px; border-bottom: 3px solid #3498db; text-decoration: none; display: block; }
-        
         footer { text-align: center; color: #95a5a6; font-size: 1.3rem; margin-top: 50px; }
     </style>
 </head>
@@ -42,6 +42,7 @@
         <div class="live-status"><span class="pulse"></span> CLOUDFLARE EDGE: ACTIVE</div>
         <h1>Frank Fru</h1>
         <p>SOC Analyst & Cybersecurity Engineer</p>
+        <p>📧 <a href="mailto:contact@frankfru.com">contact@frankfru.com</a> | <a href="https://linkedin.com/in/chifru19" target="_blank">LinkedIn</a></p>
     </header>
 
     <hr>
@@ -62,13 +63,15 @@
         <a href="https://github.com/chifru19/VoltGuard-DCEO-Sim" class="build-card"><h6>VoltGuard-DCEO</h6></a>
         <a href="https://github.com/chifru19/Network-Guard-Forensics" class="build-card"><h6>Network-Guard</h6></a>
         <a href="https://github.com/chifru19/fon-ngwashi-law-office" class="build-card"><h6>fon-ngwashi-law</h6></a>
+        <a href="https://github.com/chifru19/Cloud-Security-Suite" class="build-card"><h6>Cloud-Security-Suite</h6></a>
+        <a href="https://github.com/chifru19/Infrastructure-HIDS" class="build-card"><h6>Infrastructure-HIDS</h6></a>
     </div>
 
     <hr>
 
     <h4>💬 CVS Interactive Review Terminal</h4>
     <div id="review-engine">
-        <div id="review-content">Accessing peer logs...</div>
+        <div id="review-content">Initializing secure peer logs...</div>
         
         <div class="input-area">
             <p style="color:#00ff41">> ID_REQUEST_CLIENT_NAME:</p>
@@ -85,7 +88,7 @@
 <script>
     const DEPLOY_URL = 'https://script.google.com/macros/s/AKfycbyBdymZ6YcKys8B6ex6onrAfgGntAl-e3uUVWujg5CKe-os67bnEiVXdPU7KYHdjiYa/exec';
 
-    // 1. FETCH REVIEWS (GET)
+    // Fetch Reviews from Spreadsheet
     async function fetchReviews() {
         const container = document.getElementById('review-content');
         try {
@@ -107,21 +110,21 @@
         }
     }
 
-    // 2. SUBMIT REVIEW (POST via Query Params for CORS Stability)
+    // Submit Review to Spreadsheet
     function submitReview() {
         const name = document.getElementById('clientName').value;
         const review = document.getElementById('clientReview').value;
         const btn = document.getElementById('submitBtn');
 
         if (!name || !review) {
-            alert("Input Required: Both fields must be populated.");
+            alert("Input Required: Name and Review cannot be empty.");
             return;
         }
 
         btn.innerHTML = "COMMITTING_DATA...";
         btn.disabled = true;
 
-        // Append data to the URL as parameters to bypass POST blocks
+        // Sending via URL parameters to bypass CORS POST restrictions
         const finalUrl = `${DEPLOY_URL}?name=${encodeURIComponent(name)}&review=${encodeURIComponent(review)}`;
 
         fetch(finalUrl, {
@@ -129,7 +132,7 @@
             mode: 'no-cors'
         })
         .then(() => {
-            alert("SUCCESS: Entry recorded in Spreadsheet.");
+            alert("SUCCESS: Review sent to Google Spreadsheet.");
             location.reload(); 
         })
         .catch(err => {
