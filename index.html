@@ -24,6 +24,13 @@
         .service-card { background: #f8fbfe; border: 1px solid #d6eaf8; padding: 25px; border-radius: 8px; text-align: center; }
         .service-card i { font-size: 2.5rem; color: #3498db; background: #fff; padding: 15px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 15px; display: inline-block; }
 
+        /* --- THREAT MONITORING SECTION --- */
+        .monitoring-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 30px; }
+        .monitor-card { background: #0b0e14; color: #fff; padding: 20px; border-radius: 8px; border-left: 4px solid #00ff41; text-decoration: none; display: block; transition: 0.3s; }
+        .monitor-card:hover { transform: translateY(-3px); background: #161b22; }
+        .monitor-card h6 { color: #00ff41; margin: 0 0 5px 0; font-size: 1.1rem; font-weight: bold; }
+        .monitor-card p { font-size: 0.8rem; color: #ccc; margin: 0; }
+
         .security-guide { background: #2c3e50; color: #ecf0f1; padding: 35px; border-radius: 8px; border-left: 10px solid #e67e22; margin: 30px 0; }
         .security-guide h5 { color: #e67e22; font-weight: 700; text-transform: uppercase; margin-bottom: 20px; }
         .guide-item { margin-bottom: 20px; }
@@ -123,19 +130,19 @@
 
     <hr>
 
-    <h4>🛡️ Active Threat Monitoring & Infrastructure</h4>
-    <div class="ecosystem-grid">
-        <a href="https://agwocarlson.com" class="build-card" target="_blank">
+    <h4>📡 Active Threat Monitoring Dashboard (Splunk SIEM)</h4>
+    <div class="monitoring-grid">
+        <a href="https://agwocarlson.com/" class="monitor-card" target="_blank">
             <h6>AgwoCarlson.com</h6>
-            <p>Splunk SIEM Integration (Brute Force Monitoring)</p>
+            <p><i class="fa-solid fa-shield-halved"></i> Brute Force Protection: ACTIVE</p>
         </a>
-        <a href="https://wonderwaytourcameroon.com" class="build-card" target="_blank">
+        <a href="https://wonderwaytourcameroon.com/" class="monitor-card" target="_blank">
             <h6>WonderwayTour.com</h6>
-            <p>Admin & Real-time Threat Triage</p>
+            <p><i class="fa-solid fa-shield-halved"></i> Threat Triage: ACTIVE</p>
         </a>
-        <a href="https://frankfru.com" class="build-card" target="_blank">
+        <a href="https://frankfru.com/" class="monitor-card" target="_blank">
             <h6>FrankFru.com</h6>
-            <p>DevOps & Edge Security Hardening</p>
+            <p><i class="fa-solid fa-shield-halved"></i> Edge Protection: HARDENED</p>
         </a>
     </div>
 
@@ -178,7 +185,7 @@
         <a href="https://github.com/chifru19/Data-Center-Telemetry-Pipeline" class="build-card"><h6>Telemetry-Pipeline</h6><p>Real-time SIEM Data</p></a>
         <a href="https://github.com/chifru19/secure-url-shortener-tf" class="build-card"><h6>secure-url-shortener</h6><p>Terraform & AWS Hardening</p></a>
         <a href="https://github.com/chifru19/webeet-internship-observability" class="build-card"><h6>Observability-Lab</h6><p>Metrics & Logs Monitoring</p></a>
-        <a href="https://github.com/chifru19/lemac-wellness-Cameroon" class="build-card"><h6>lemac-wellness</h6><p>Production Cloud Setup</p></a>
+        <a href="https://github.com/chifru19/splunk-soc-lab" class="build-card"><h6>Splunk-SOC-Lab</h6><p>SIEM & Threat Hunting</p></a>
         <a href="https://github.com/chifru19/terraform-multi-version-setup" class="build-card"><h6>terraform-setup</h6><p>IaC Version Management</p></a>
         <a href="https://github.com/chifru19/Cisco-Enterprise-Network-Lab" class="build-card"><h6>Cisco-Enterprise-Lab</h6><p>L3 Routing & Switching</p></a>
     </div>
