@@ -24,7 +24,7 @@
         .service-card { background: #f8fbfe; border: 1px solid #d6eaf8; padding: 25px; border-radius: 8px; text-align: center; }
         .service-card i { font-size: 2.5rem; color: #3498db; background: #fff; padding: 15px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 15px; display: inline-block; }
 
-        /* --- THREAT MONITORING SECTION --- */
+        /* --- ACTIVE THREAT MONITORING --- */
         .monitoring-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 30px; }
         .monitor-card { background: #0b0e14; color: #fff; padding: 20px; border-radius: 8px; border-left: 4px solid #00ff41; text-decoration: none; display: block; transition: 0.3s; }
         .monitor-card:hover { transform: translateY(-3px); background: #161b22; }
@@ -43,47 +43,13 @@
         .build-card p { font-size: 0.8rem; color: #aaa; margin: 5px 0 0; line-height: 1.2; }
 
         /* --- HARDENED INTERACTIVE TERMINAL --- */
-        #review-engine { 
-            background: #000; 
-            color: #00ff41; 
-            padding: 25px; 
-            border-radius: 8px; 
-            font-family: 'Courier New', monospace; 
-            border: 1px solid #333; 
-            margin-top: 20px; 
-            box-shadow: inset 0 0 10px rgba(0, 255, 65, 0.2);
-        }
+        #review-engine { background: #000; color: #00ff41; padding: 25px; border-radius: 8px; font-family: 'Courier New', monospace; border: 1px solid #333; margin-top: 20px; box-shadow: inset 0 0 10px rgba(0, 255, 65, 0.2); }
         .live-row { border-bottom: 1px solid #222; padding: 10px 0; font-size: 0.9rem; color: #00ff41; }
         .input-area { margin-top: 25px; border-top: 1px solid #333; padding-top: 20px; }
         .terminal-label { color: #00ff41; display: block; margin-bottom: 5px; font-weight: bold; }
-        
-        input#clientName, textarea#clientReview { 
-            background: #0a0a0a; 
-            border: 1px solid #00ff41; 
-            color: #ffffff !important; 
-            width: 100%; 
-            margin-bottom: 15px; 
-            padding: 12px; 
-            font-family: 'Courier New', monospace; 
-            outline: none;
-        }
-        input#clientName:focus, textarea#clientReview:focus { box-shadow: 0 0 5px #00ff41; }
-        input::placeholder, textarea::placeholder { color: #444; }
-
-        button#submitBtn { 
-            background: #00ff41; 
-            color: #000; 
-            font-weight: bold; 
-            border: none; 
-            padding: 15px; 
-            cursor: pointer; 
-            width: 100%; 
-            text-transform: uppercase; 
-            letter-spacing: 1px;
-            transition: 0.2s;
-        }
+        input#clientName, textarea#clientReview { background: #0a0a0a; border: 1px solid #00ff41; color: #ffffff !important; width: 100%; margin-bottom: 15px; padding: 12px; font-family: 'Courier New', monospace; outline: none; }
+        button#submitBtn { background: #00ff41; color: #000; font-weight: bold; border: none; padding: 15px; cursor: pointer; width: 100%; text-transform: uppercase; letter-spacing: 1px; transition: 0.2s; }
         button#submitBtn:hover { background: #fff; }
-        button#submitBtn:disabled { background: #444; color: #888; cursor: not-allowed; }
         
         .credly-btn { background: #e67e22; color: white !important; padding: 12px 25px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: 600; }
         footer { text-align: center; color: #95a5a6; font-size: 1.3rem; margin-top: 50px; }
@@ -130,19 +96,19 @@
 
     <hr>
 
-    <h4>📡 Active Threat Monitoring Dashboard (Splunk SIEM)</h4>
+    <h4>📡 Active Threat Monitoring & Infrastructure</h4>
     <div class="monitoring-grid">
-        <a href="https://agwocarlson.com/" class="monitor-card" target="_blank">
+        <a href="https://agwocarlson.com" class="monitor-card" target="_blank">
             <h6>AgwoCarlson.com</h6>
-            <p><i class="fa-solid fa-shield-halved"></i> Brute Force Protection: ACTIVE</p>
+            <p><i class="fa-solid fa-lock"></i> Splunk Managed: Brute Force Detection</p>
         </a>
-        <a href="https://wonderwaytourcameroon.com/" class="monitor-card" target="_blank">
+        <a href="https://wonderwaytourcameroon.com" class="monitor-card" target="_blank">
             <h6>WonderwayTour.com</h6>
-            <p><i class="fa-solid fa-shield-halved"></i> Threat Triage: ACTIVE</p>
+            <p><i class="fa-solid fa-shield-halved"></i> Active Triage & SIEM Alerts</p>
         </a>
-        <a href="https://frankfru.com/" class="monitor-card" target="_blank">
+        <a href="https://frankfru.com" class="monitor-card" target="_blank">
             <h6>FrankFru.com</h6>
-            <p><i class="fa-solid fa-shield-halved"></i> Edge Protection: HARDENED</p>
+            <p><i class="fa-solid fa-terminal"></i> Edge Hardening & Observability</p>
         </a>
     </div>
 
@@ -173,6 +139,7 @@
 
     <h4>🏗️ Featured Project Registry</h4>
     <div class="ecosystem-grid">
+        <a href="https://github.com/chifru19/splunk-soc-lab" class="build-card"><h6>Splunk-SOC-Lab</h6><p>SIEM & Threat Hunting Engine</p></a>
         <a href="https://github.com/chifru19/Network-Guard-Forensics" class="build-card"><h6>Network-Guard-Forensics</h6><p>Packet Analysis & Threat Intel</p></a>
         <a href="https://github.com/chifru19/fon-ngwashi-law-office" class="build-card"><h6>fon-ngwashi-law</h6><p>Secured Legal Tech Infra</p></a>
         <a href="https://github.com/chifru19/Infrastructure-HIDS" class="build-card"><h6>Infrastructure-HIDS</h6><p>Host Intrusion Detection</p></a>
@@ -185,7 +152,6 @@
         <a href="https://github.com/chifru19/Data-Center-Telemetry-Pipeline" class="build-card"><h6>Telemetry-Pipeline</h6><p>Real-time SIEM Data</p></a>
         <a href="https://github.com/chifru19/secure-url-shortener-tf" class="build-card"><h6>secure-url-shortener</h6><p>Terraform & AWS Hardening</p></a>
         <a href="https://github.com/chifru19/webeet-internship-observability" class="build-card"><h6>Observability-Lab</h6><p>Metrics & Logs Monitoring</p></a>
-        <a href="https://github.com/chifru19/splunk-soc-lab" class="build-card"><h6>Splunk-SOC-Lab</h6><p>SIEM & Threat Hunting</p></a>
         <a href="https://github.com/chifru19/terraform-multi-version-setup" class="build-card"><h6>terraform-setup</h6><p>IaC Version Management</p></a>
         <a href="https://github.com/chifru19/Cisco-Enterprise-Network-Lab" class="build-card"><h6>Cisco-Enterprise-Lab</h6><p>L3 Routing & Switching</p></a>
     </div>
