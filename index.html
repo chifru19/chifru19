@@ -20,11 +20,11 @@
         .badges { margin-bottom: 25px; }
         .badges img { height: 22px; margin-right: 8px; }
 
-        .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px; }
+        /* Updated Grid for 3 cards */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 30px; }
         .service-card { background: #f8fbfe; border: 1px solid #d6eaf8; padding: 25px; border-radius: 8px; text-align: center; }
         .service-card i { font-size: 2.5rem; color: #3498db; background: #fff; padding: 15px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 15px; display: inline-block; }
 
-        /* --- THREAT MONITORING SECTION --- */
         .monitoring-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 30px; }
         .monitor-card { background: #0b0e14; color: #fff; padding: 20px; border-radius: 8px; border-left: 4px solid #00ff41; text-decoration: none; display: block; transition: 0.3s; }
         .monitor-card:hover { transform: translateY(-3px); background: #161b22; }
@@ -42,7 +42,6 @@
         .build-card h6 { color: #3498db; margin: 0; font-size: 1rem; font-weight: bold; }
         .build-card p { font-size: 0.8rem; color: #aaa; margin: 5px 0 0; line-height: 1.2; }
 
-        /* --- HARDENED INTERACTIVE TERMINAL --- */
         #review-engine { background: #000; color: #00ff41; padding: 25px; border-radius: 8px; font-family: 'Courier New', monospace; border: 1px solid #333; margin-top: 20px; box-shadow: inset 0 0 10px rgba(0, 255, 65, 0.2); }
         .live-row { border-bottom: 1px solid #222; padding: 10px 0; font-size: 0.9rem; color: #00ff41; }
         .input-area { margin-top: 25px; border-top: 1px solid #333; padding-top: 20px; }
@@ -92,12 +91,21 @@
             <h5>SOC Operations & Analysis</h5>
             <p>Active monitoring, incident triage, and Identifying Indicators of Compromise (IoC) to defend against threats.</p>
         </div>
+        <div class="service-card">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+            <h5>SIEM & Observability</h5>
+            <p>Engineering log ingestion pipelines, real-time threat hunting via Splunk, and automated detection logic.</p>
+        </div>
     </div>
 
     <hr>
 
     <h4>📡 Active Threat Monitoring & Infrastructure</h4>
     <div class="monitoring-grid">
+        <a href="https://github.com/chifru19/splunk-soc-lab" class="monitor-card" target="_blank">
+            <h6>Sentinel Fortress (SOC Lab)</h6>
+            <p><i class="fa-solid fa-eye"></i> Active SIEM Detection & Threat Hunting</p>
+        </a>
         <a href="https://agwocarlson.com" class="monitor-card" target="_blank">
             <h6>AgwoCarlson.com</h6>
             <p><i class="fa-solid fa-lock"></i> Splunk Managed: Brute Force Detection</p>
@@ -105,10 +113,6 @@
         <a href="https://wonderwaytourcameroon.com" class="monitor-card" target="_blank">
             <h6>WonderwayTour.com</h6>
             <p><i class="fa-solid fa-shield-halved"></i> Active Triage & SIEM Alerts</p>
-        </a>
-        <a href="https://frankfru.com" class="monitor-card" target="_blank">
-            <h6>FrankFru.com</h6>
-            <p><i class="fa-solid fa-terminal"></i> Edge Hardening & Observability</p>
         </a>
     </div>
 
