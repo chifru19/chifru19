@@ -20,7 +20,6 @@
         .badges { margin-bottom: 25px; }
         .badges img { height: 22px; margin-right: 8px; }
 
-        /* Updated Grid for 3 cards */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 30px; }
         .service-card { background: #f8fbfe; border: 1px solid #d6eaf8; padding: 25px; border-radius: 8px; text-align: center; }
         .service-card i { font-size: 2.5rem; color: #3498db; background: #fff; padding: 15px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 15px; display: inline-block; }
@@ -61,17 +60,17 @@
     <header>
         <div class="live-status"><span class="pulse"></span> CLOUDFLARE EDGE: SECURE & ACTIVE</div>
         <h1>Frank Fru</h1>
-        <p class="subtitle">SOC Analyst & Cybersecurity Engineer</p>
+        <p class="subtitle">SOC Analyst & DevSecOps Engineer</p>
         
         <div class="badges">
-            <img src="https://img.shields.io/github/actions/workflow/status/chifru19/chifru19/codeql.yml?branch=main&label=Security%20Scan&logo=github" alt="Scan">
+            <img src="https://github.com/chifru19/Cloud-Security-Suite/actions/workflows/cloud-security.yml/badge.svg" alt="Cloud Build">
             <img src="https://img.shields.io/badge/CompTIA-CSAP%20%7C%20CSIS-orange" alt="Certs">
             <img src="https://img.shields.io/badge/Infrastructure-Hardened-blueviolet" alt="Infra">
         </div>
 
-        <p>Qualified <strong>Security Analytics Professional</strong>. I specialize in <strong>Cybersecurity Operations</strong>, proactive threat hunting, and the engineering of hardened, zero-trust infrastructure.</p>
+        <p>Qualified <strong>Security Analytics Professional</strong>. I specialize in <strong>Cybersecurity Operations</strong>, automated cloud remediation, and the engineering of hardened, zero-trust infrastructure.</p>
         
-        <p>📧 <a href="mailto:contact@frankfru.com">contact@frankfru.com</a> | <a href="https://linkedin.com/in/chifru19" target="_blank">LinkedIn</a> | <a href="https://github.com/chifru19" target="_blank">GitHub</a></p>
+        <p>📧 <a href="mailto:contact@frankfru.com">contact@frankfru.com</a> | <a href="https://linkedin.com/in/frankfru" target="_blank">LinkedIn</a> | <a href="https://github.com/chifru19" target="_blank">GitHub</a></p>
         <a href="https://www.credly.com/users/frank-fru" target="_blank" class="credly-btn">
             <i class="fa-solid fa-certificate"></i> Verify Credentials on Credly
         </a>
@@ -82,9 +81,9 @@
     <h4>💼 Professional Cybersecurity Services</h4>
     <div class="services-grid">
         <div class="service-card">
-            <i class="fa-solid fa-earth-africa"></i>
-            <h5>Global Domain Architecture</h5>
-            <p>Strategic DNSSEC management and high-availability configuration ensuring digital identity security globally.</p>
+            <i class="fa-solid fa-cloud-shield"></i>
+            <h5>DevSecOps & Cloud Hardening</h5>
+            <p>Implementing automated IaC security gates and remediating configuration drift via Python/Boto3.</p>
         </div>
         <div class="service-card">
             <i class="fa-solid fa-user-shield"></i>
@@ -100,8 +99,12 @@
 
     <hr>
 
-    <h4>📡 Active Threat Monitoring & Infrastructure</h4>
+    <h4>📡 Active Cloud Audit & Threat Monitoring</h4>
     <div class="monitoring-grid">
+        <a href="https://github.com/chifru19/Cloud-Security-Suite" class="monitor-card" target="_blank">
+            <h6>Cloud-Security-Suite</h6>
+            <p><i class="fa-solid fa-circle-check"></i> Build: PASSING | S3 Auto-Remediation Active</p>
+        </a>
         <a href="https://github.com/chifru19/splunk-soc-lab" class="monitor-card" target="_blank">
             <h6>Sentinel Fortress (SOC Lab)</h6>
             <p><i class="fa-solid fa-eye"></i> Active SIEM Detection & Threat Hunting</p>
@@ -110,32 +113,28 @@
             <h6>AgwoCarlson.com</h6>
             <p><i class="fa-solid fa-lock"></i> Splunk Managed: Brute Force Detection</p>
         </a>
-        <a href="https://wonderwaytourcameroon.com" class="monitor-card" target="_blank">
-            <h6>WonderwayTour.com</h6>
-            <p><i class="fa-solid fa-shield-halved"></i> Active Triage & SIEM Alerts</p>
-        </a>
     </div>
 
     <hr>
 
-    <h4>🛡️ Client Security & Authentication Guide</h4>
+    <h4>🛡️ DevSecOps & Authentication Standards</h4>
     <div class="security-guide">
-        <h5>Layered Defense Strategy</h5>
+        <h5>Layered Governance Strategy</h5>
         <div class="guide-item">
-            <strong>1. The "Golden Rule" of Passwords:</strong>
-            <p>Minimum 14 characters via complex passphrases and mandatory Password Managers.</p>
+            <strong>1. IaC Hardening:</strong>
+            <p>Checkov-enforced security gates for Terraform ensuring 100% encryption and logging compliance.</p>
         </div>
         <div class="guide-item">
-            <strong>2. Mandatory MFA:</strong>
-            <p>Authenticator Apps and Hardware Keys prioritize mitigating 99% of bulk automated attacks.</p>
+            <strong>2. Supply Chain Security:</strong>
+            <p>Hardened Docker containers via non-root execution and health-monitored orchestration.</p>
         </div>
         <div class="guide-item">
-            <strong>3. Zero-Trust Perimeter:</strong>
-            <p>Infrastructure hidden behind Identity-Aware Proxy (IAP) barriers.</p>
+            <strong>3. Self-Healing Perimeter:</strong>
+            <p>Python-driven CSPM logic for real-time remediation of cloud configuration drift.</p>
         </div>
         <div class="guide-item">
-            <strong>4. Continuous Monitoring:</strong>
-            <p>Enforcement of TLS 1.3/HSTS and strategic geofencing for real-time mitigation.</p>
+            <strong>4. Zero-Trust Access:</strong>
+            <p>Mandatory Hardware MFA and Identity-Aware Proxy (IAP) for all administrative interfaces.</p>
         </div>
     </div>
 
@@ -143,19 +142,17 @@
 
     <h4>🏗️ Featured Project Registry</h4>
     <div class="ecosystem-grid">
+        <a href="https://github.com/chifru19/Cloud-Security-Suite" class="build-card"><h6>Cloud-Security-Suite</h6><p>Hardened Multi-Cloud & Auto-Remediation</p></a>
         <a href="https://github.com/chifru19/splunk-soc-lab" class="build-card"><h6>Splunk-SOC-Lab</h6><p>SIEM & Threat Hunting Engine</p></a>
         <a href="https://github.com/chifru19/Network-Guard-Forensics" class="build-card"><h6>Network-Guard-Forensics</h6><p>Packet Analysis & Threat Intel</p></a>
         <a href="https://github.com/chifru19/agwo-carlson-partners" class="build-card"><h6>Agwo-Carlson-Partners</h6><p>Legal Tech & Digital Infra</p></a>
         <a href="https://github.com/chifru19/Infrastructure-HIDS" class="build-card"><h6>Infrastructure-HIDS</h6><p>Host Intrusion Detection</p></a>
-        <a href="https://github.com/chifru19/Cloud-Security-Suite" class="build-card"><h6>Cloud-Security-Suite</h6><p>Hardened Multi-Cloud Lab</p></a>
         <a href="https://github.com/chifru19/VoltGuard-DCEO-Sim" class="build-card"><h6>VoltGuard-DCEO</h6><p>Critical Power Ops Simulation</p></a>
-        <a href="https://github.com/chifru19/wonder-way-tours" class="build-card"><h6>wonder-way-tours</h6><p>Dynamic CVS Interface</p></a>
         <a href="https://github.com/chifru19/Secure-Redundancy-IaC" class="build-card"><h6>Secure-Redundancy-IaC</h6><p>High-Availability Design</p></a>
         <a href="https://github.com/chifru19/Aura-Digital-Infrastructure" class="build-card"><h6>Aura-Digital-Infra</h6><p>Edge Computing Security</p></a>
         <a href="https://github.com/chifru19/nsongwa-credit-union" class="build-card"><h6>nsongwa-credit-union</h6><p>FinTech Security Architecture</p></a>
         <a href="https://github.com/chifru19/Data-Center-Telemetry-Pipeline" class="build-card"><h6>Telemetry-Pipeline</h6><p>Real-time SIEM Data</p></a>
         <a href="https://github.com/chifru19/secure-url-shortener-tf" class="build-card"><h6>secure-url-shortener</h6><p>Terraform & AWS Hardening</p></a>
-        <a href="https://github.com/chifru19/webeet-internship-observability" class="build-card"><h6>Observability-Lab</h6><p>Metrics & Logs Monitoring</p></a>
         <a href="https://github.com/chifru19/terraform-multi-version-setup" class="build-card"><h6>terraform-setup</h6><p>IaC Version Management</p></a>
         <a href="https://github.com/chifru19/Cisco-Enterprise-Network-Lab" class="build-card"><h6>Cisco-Enterprise-Lab</h6><p>L3 Routing & Switching</p></a>
     </div>
