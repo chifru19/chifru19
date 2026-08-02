@@ -3,226 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Frank Fru | SOC Analyst & Cybersecurity Engineer</title>
-    <meta name="description" content="Professional portfolio of Frank Fru. SOC Analyst and DevSecOps Engineer specializing in Zero-Trust infrastructure, Splunk SIEM, and automated cloud security.">
-    <link rel="canonical" href="https://frankfru.com">
-    
-    <meta property="og:title" content="Frank Fru | Cybersecurity & Infrastructure Engineering">
-    <meta property="og:description" content="Security Analytics Professional specializing in threat hunting, DevSecOps pipelines, and hardened cloud architecture.">
-    <meta property="og:type" content="website">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <title>Kunwa Business Consulting Services Ltd</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <style>
-        body { background-color: #f4f7f6; padding: 50px 0; font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #2c3e50; line-height: 1.6; }
-        .container { max-width: 900px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        
-        .profile-header-grid { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; margin-bottom: 20px; }
-        .profile-image-container { flex: 0 0 200px; text-align: center; }
-        .profile-image-container img { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; border: 4px solid #3498db; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .profile-text-content { flex: 1; min-width: 250px; }
-
-        h1 { color: #2c3e50; border-bottom: 4px solid #3498db; display: inline-block; margin-bottom: 10px; font-weight: 700; }
-        .subtitle { font-size: 1.8rem; color: #7f8c8d; margin-bottom: 15px; font-weight: 300; }
-        
-        .live-status { display: inline-flex; align-items: center; background: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 20px; font-size: 1.1rem; font-weight: 700; border: 1px solid #c8e6c9; margin-bottom: 15px; }
-        .pulse { height: 8px; width: 8px; background-color: #2e7d32; border-radius: 50%; display: inline-block; margin-right: 8px; animation: pulse-animation 2s infinite; }
-        @keyframes pulse-animation { 0% { box-shadow: 0 0 0 0px rgba(46, 125, 50, 0.7); } 100% { box-shadow: 0 0 0 10px rgba(46, 125, 50, 0); } }
-
-        h4 { font-weight: 700; color: #34495e; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem; margin-top: 40px; }
-        .badges { margin-bottom: 25px; }
-        .badges img { height: 22px; margin-right: 8px; }
-
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 30px; }
-        .service-card { background: #f8fbfe; border: 1px solid #d6eaf8; padding: 25px; border-radius: 8px; text-align: center; }
-        .service-card i { font-size: 2.5rem; color: #3498db; background: #fff; padding: 15px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 15px; display: inline-block; }
-
-        .monitoring-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 30px; }
-        .monitor-card { background: #0b0e14; color: #fff; padding: 20px; border-radius: 8px; border-left: 4px solid #00ff41; text-decoration: none; display: block; transition: 0.3s; }
-        .monitor-card:hover { transform: translateY(-3px); background: #161b22; }
-        .monitor-card h6 { color: #00ff41; margin: 0 0 5px 0; font-size: 1.1rem; font-weight: bold; }
-        .monitor-card p { font-size: 0.8rem; color: #ccc; margin: 0; }
-
-        .security-guide { background: #2c3e50; color: #ecf0f1; padding: 35px; border-radius: 8px; border-left: 10px solid #e67e22; margin: 30px 0; }
-        .security-guide h5 { color: #e67e22; font-weight: 700; text-transform: uppercase; margin-bottom: 20px; }
-        .guide-item { margin-bottom: 20px; }
-        .guide-item strong { color: #3498db; display: block; font-size: 1.5rem; margin-bottom: 5px; }
-
         .ecosystem-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; margin-bottom: 30px; }
-        .build-card { background: #1a1a1a; color: #fff; padding: 15px; border-radius: 8px; border-bottom: 3px solid #3498db; text-decoration: none; display: block; transition: 0.3s; }
-        .build-card:hover { transform: translateY(-3px); border-color: #e67e22; background: #222; }
-        .build-card h6 { color: #3498db; margin: 0; font-size: 1rem; font-weight: bold; }
+        .build-card { background: #1a1a1a; color: #fff; padding: 15px; border-radius: 8px; border-bottom: 3px solid #d4af37; text-decoration: none; display: block; transition: 0.3s; }
+        .build-card:hover { transform: translateY(-3px); border-color: #fff; background: #222; }
+        .build-card h6 { color: #d4af37; margin: 0; font-size: 1rem; font-weight: bold; }
         .build-card p { font-size: 0.8rem; color: #aaa; margin: 5px 0 0; line-height: 1.2; }
-
-        #review-engine { background: #000; color: #00ff41; padding: 25px; border-radius: 8px; font-family: 'Courier New', monospace; border: 1px solid #333; margin-top: 20px; box-shadow: inset 0 0 10px rgba(0, 255, 65, 0.2); }
-        .live-row { border-bottom: 1px solid #222; padding: 10px 0; font-size: 0.9rem; color: #00ff41; }
-        .input-area { margin-top: 25px; border-top: 1px solid #333; padding-top: 20px; }
-        input#clientName, textarea#clientReview { background: #0a0a0a; border: 1px solid #00ff41; color: #ffffff !important; width: 100%; margin-bottom: 15px; padding: 12px; font-family: 'Courier New', monospace; outline: none; }
-        button#submitBtn { background: #00ff41; color: #000; font-weight: bold; border: none; padding: 15px; cursor: pointer; width: 100%; text-transform: uppercase; letter-spacing: 1px; transition: 0.2s; }
-        button#submitBtn:hover { background: #fff; }
-        
-        .credly-btn { background: #e67e22; color: white !important; padding: 12px 25px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: 600; }
-        footer { text-align: center; color: #95a5a6; font-size: 1.3rem; margin-top: 50px; }
-        @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } .profile-header-grid { flex-direction: column; text-align: center; } }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <header>
-        <div class="live-status"><span class="pulse"></span> CLOUDFLARE EDGE: SECURE & ACTIVE</div>
-        
-        <div class="profile-header-grid">
-            <div class="profile-image-container">
-                <img src="assets/profilepicture.jpeg" alt="Frank Fru - Professional Portrait">
+    <!-- Navigation / Header with Logo -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo-container">
+                <a href="#" style="display: inline-block;">
+                    <img src="assets/logo.png" alt="Kunwa Business Consulting Services Logo" class="site-logo">
+                </a>
             </div>
-            <div class="profile-text-content">
-                <h1>Frank Fru</h1>
-                <p class="subtitle">SOC Analyst & DevSecOps Engineer</p>
-            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#skills">Expertise</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#insights">Insights</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="nav-btn">Request Services</a></li>
+            </ul>
         </div>
-        
-        <div class="badges">
-            <img src="https://img.shields.io/badge/Security+-Certified-blue" alt="Security+">
-            <img src="https://img.shields.io/badge/Network+-Certified-blue" alt="Network+">
-            <img src="https://img.shields.io/badge/SOC-Operations-brightgreen" alt="SOC">
-            <img src="https://img.shields.io/badge/IaC-Automation-blueviolet" alt="DevSecOps">
-        </div>
+    </nav>
 
-        <p>Qualified <strong>Security Analytics Professional</strong>. Engineering hardened, zero-trust infrastructure through <strong>DevSecOps automation</strong> and <strong>proactive threat hunting</strong>.</p>
-        
-        <p>📧 <a href="mailto:contact@frankfru.com">contact@frankfru.com</a> | <a href="https://linkedin.com/in/frankfru" target="_blank">LinkedIn</a> | <a href="https://github.com/chifru19" target="_blank">GitHub</a></p>
-        <a href="https://www.credly.com/users/frank-fru" target="_blank" class="credly-btn">
-            <i class="fa-solid fa-certificate"></i> Verify Credentials on Credly
-        </a>
+    <!-- 1. Home / Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Kunwa Business Consulting Services Ltd</h1>
+            <p class="tagline">Premier consultancy specializing in International Negotiations, Procurement Contracts, Procurement Outsourcing, and Career Development Coaching.</p>
+            <a href="#contact" class="btn">Request Services</a>
+        </div>
     </header>
 
-    <hr>
-
-    <h4>💼 Professional Cybersecurity Services</h4>
-    <div class="services-grid">
-        <div class="service-card">
-            <i class="fa-solid fa-earth-africa"></i>
-            <h5>Global Domain Architecture</h5>
-            <p>Strategic DNSSEC management and high-availability configuration.</p>
+    <!-- 2. About Section -->
+    <section id="about" class="section">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Based in Douala, Cameroon, Kunwa Business Consulting Services Ltd is a premier consultancy dedicated to driving operational excellence and strategic supply chain transformation across African markets and beyond.</p>
+                <p>Led by Managing Consultant <strong>Sophie W Tafon</strong> and certified experts trained through CIPS (The Chartered Institute of Procurement & Supply), we combine deep industry knowledge with rigorous global standards. Our leadership brings extensive expertise in International Negotiations, Procurement Contracts, Procurement Outsourcing, and specialized sourcing frameworks including FF&E Procurement, Transportation Procurement, and E-procurement.</p>
+                <p>We are committed to fostering enduring trust, mitigating cross-border risk, and delivering measurable value through Total Cost of Ownership (TCO) optimization for businesses scaling in Africa.</p>
+            </div>
+            <div class="profile-container">
+                <div class="profile-pic-placeholder">
+                    <div style="text-align: center; margin: 20px 0;"><img src="assets/sophie-profile.jpg" alt="Sophie W Tafon - Managing Consultant" style="max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"></div>
+                    <h4 style="text-align: center; color: #333;">Trusted Leadership in Africa</h4>
+                </div>
+            </div>
         </div>
-        <div class="service-card">
-            <i class="fa-solid fa-user-shield"></i>
-            <h5>SOC Operations & Analysis</h5>
-            <p>Active threat hunting, incident triage, and IoC identification.</p>
+    </section>
+
+    <!-- 3. Core Competencies & Skills Section -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2>Core Competencies & Expertise</h2>
+            <p class="section-subtitle">Specialized professional skills powering our consultancy services.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Procurement Contracts</h3>
+                    <p>Rigorous drafting, review, and management of commercial and international contracts to safeguard organizational interests.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Procurement Outsourcing</h3>
+                    <p>End-to-end outsourcing solutions to streamline operations, optimize vendor relationships, and scale supply chain capabilities.</p>
+                </div>
+                <div class="service-card">
+                    <h3>New Business Procurement</h3>
+                    <p>Strategic setup and sourcing frameworks designed for new ventures and market expansions.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Transportation Procurement</h3>
+                    <p>Optimizing freight, logistics corridors, and carrier networks for cost-effective distribution.</p>
+                </div>
+                <div class="service-card">
+                    <h3>E-procurement</h3>
+                    <p>Digital transformation of purchasing workflows, vendor portals, and automated sourcing platforms.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Procurement</h3>
+                    <p>Comprehensive supply chain and purchasing management aligned with global CIPS standards.</p>
+                </div>
+                <div class="service-card">
+                    <h3>FF&E Procurement</h3>
+                    <p>Specialized sourcing and management of Furniture, Fixtures, and Equipment for corporate and hospitality projects.</p>
+                </div>
+                <div class="service-card">
+                    <h3>International Negotiations</h3>
+                    <p>Expert cross-border contract negotiation and supplier selection focusing on Total Cost of Ownership (TCO) and risk resilience.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Supply Chain Management</h3>
+                    <p>Strategic oversight of end-to-end logistics, inventory optimization, and supplier performance.</p>
+                </div>
+            </div>
         </div>
-        <div class="service-card">
-            <i class="fa-solid fa-magnifying-glass-chart"></i>
-            <h5>SIEM & Observability</h5>
-            <p>Log ingestion pipelines and automated detection logic.</p>
+    </section>
+
+    <!-- 4. Services Offered Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Services Offered</h2>
+            <p class="section-subtitle">Available remotely or on-site in Douala, Cameroon.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Career Development Coaching</h3>
+                    <p>Guidance for supply chain professionals through MCIPS pathways, tailored career coaching, and interview preparation.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Business Consulting</h3>
+                    <p>Streamline operations, optimize vendor management, and scale your procurement and supply chain capabilities.</p>
+                </div>
+                <div class="service-card">
+                    <h3>International Negotiations</h3>
+                    <p>Expert cross-border contract negotiation and supplier selection focusing on Total Cost of Ownership (TCO) and risk resilience.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Interview Preparation</h3>
+                    <p>Rigorous interview readiness coaching tailored specifically for procurement and supply chain roles.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Assessment Delivery (Professional Certification)</h3>
+                    <p>Professional assessment delivery services supporting certification standards and competency evaluations for supply chain candidates.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <hr>
-
-    <h4>📡 Active Threat Monitoring & Infrastructure</h4>
-    <div class="monitoring-grid">
-        <a href="https://github.com/chifru19/zero-trust-mesh" class="monitor-card" target="_blank">
-            <h6>zero-trust-mesh</h6>
-            <p><i class="fa-solid fa-shield-halved"></i> Snort3 IDS Enforcement</p>
-        </a>
-        <a href="https://github.com/chifru19/Cloud-Security-Suite" class="monitor-card" target="_blank">
-            <h6>Cloud-Security-Suite</h6>
-            <p><i class="fa-solid fa-circle-check"></i> S3 Auto-Remediation Active</p>
-        </a>
-        <a href="https://github.com/chifru19/splunk-soc-lab" class="monitor-card" target="_blank">
-            <h6>Sentinel Fortress</h6>
-            <p><i class="fa-solid fa-eye"></i> SIEM Threat Hunting</p>
-        </a>
-    </div>
-
-    <hr>
-
-    <h4>🛡️ Client Security Guide</h4>
-    <div class="security-guide">
-        <h5>Layered Defense Strategy</h5>
-        <div class="guide-item">
-            <strong>1. Password Discipline:</strong>
-            <p>Complex passphrases (14+ chars) with mandatory Password Managers.</p>
+    <!-- 5. Insights / Industry Expertise Section -->
+    <section id="insights" class="section bg-light">
+        <div class="container">
+            <h2>Insights & Industry Expertise</h2>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <h3>Global Supply Chain Dynamics</h3>
+                    <p>Thought leadership addressing critical logistical corridors, energy shifts (such as African petroleum supply chain adaptations like Dangote refinery impacts), and proactive risk management.</p>
+                </div>
+            </div>
         </div>
-        <div class="guide-item">
-            <strong>2. Hardware-Based MFA:</strong>
-            <p>Prioritizing FIDO2 keys to mitigate automated attacks.</p>
+    </section>
+
+    <!-- Featured Project Registry Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Featured Engineering & Security Projects</h2>
+            <p class="section-subtitle">Explore technical infrastructure implementations and digital engineering solutions.</p>
+            <div class="ecosystem-grid">
+                <a href="https://github.com/chifru19/GPON-Network-Design" target="_blank" class="build-card"><h6>GPON-Network-Design</h6><p>ITU-T G.984 Fiber Optic Architecture</p></a>
+                <a href="https://github.com/chifru19/zero-trust-mesh" target="_blank" class="build-card"><h6>zero-trust-mesh</h6><p>Microservice Isolation & IDS</p></a>
+                <a href="https://github.com/chifru19/splunk-soc-lab" target="_blank" class="build-card"><h6>Splunk-SOC-Lab</h6><p>SIEM Threat Hunting Engine</p></a>
+                <a href="https://github.com/chifru19/Data-Center-Telemetry-Pipeline" target="_blank" class="build-card"><h6>Telemetry-Pipeline</h6><p>Real-time SIEM Data</p></a>
+                <a href="https://github.com/chifru19/VoltGuard-DCEO-Sim" target="_blank" class="build-card"><h6>VoltGuard-DCEO</h6><p>Power Ops Simulation</p></a>
+                <a href="https://github.com/chifru19/Aura-Digital-Infrastructure" target="_blank" class="build-card"><h6>Aura-Digital-Infra</h6><p>Edge Computing Security</p></a>
+                <a href="https://github.com/chifru19/Secure-Redundancy-IaC" target="_blank" class="build-card"><h6>Secure-Redundancy-IaC</h6><p>High-Availability Design</p></a>
+                <a href="https://github.com/chifru19/Network-Guard-Forensics" target="_blank" class="build-card"><h6>Network-Guard-Forensics</h6><p>Packet Analysis & Threat Intel</p></a>
+                <a href="https://github.com/chifru19/webeet-internship-observability" target="_blank" class="build-card"><h6>Observability-Lab</h6><p>Metrics & Logs Monitoring</p></a>
+                <a href="https://github.com/chifru19/nsongwa-credit-union" target="_blank" class="build-card"><h6>nsongwa-credit-union</h6><p>FinTech Security Architecture</p></a>
+                <a href="https://github.com/chifru19/secure-url-shortener-tf" target="_blank" class="build-card"><h6>secure-url-shortener</h6><p>Terraform & AWS Hardening</p></a>
+                <a href="https://github.com/chifru19/Cisco-Enterprise-Network-Lab" target="_blank" class="build-card"><h6>Cisco-Enterprise-Lab</h6><p>L3 Routing & Switching</p></a>
+                <a href="https://github.com/chifru19/Infrastructure-HIDS" target="_blank" class="build-card"><h6>Infrastructure-HIDS</h6><p>Host Intrusion Detection</p></a>
+                <a href="https://github.com/chifru19/terraform-multi-version-setup" target="_blank" class="build-card"><h6>terraform-setup</h6><p>IaC Version Management</p></a>
+                <a href="https://github.com/chifru19/wonder-way-tours" target="_blank" class="build-card"><h6>wonder-way-tours</h6><p>Dynamic CVS Interface</p></a>
+                <a href="https://github.com/chifru19/agwo-carlson-partners" target="_blank" class="build-card"><h6>Agwo-Carlson</h6><p>Legal Tech Digital Infra</p></a>
+            </div>
         </div>
-        <div class="guide-item">
-            <strong>3. Zero-Trust Architecture:</strong>
-            <p>Infrastructure hidden behind Identity-Aware Proxy (IAP) barriers.</p>
+    </section>
+
+    <!-- 6. Contact / Request Services Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2>Contact / Request Services</h2>
+            <p class="contact-sub">Reach out directly to partner with our expert consultants for your upcoming projects and coaching needs (Available Remotely or in Douala, Cameroon).</p>
+            <div style="margin: 20px 0; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://wa.me/237677092642" target="_blank" class="btn" style="background-color: #25d366; color: white; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: 600;">Chat on WhatsApp</a>
+                <a href="mailto:kunwabizcons@gmail.com" class="btn" style="background-color: #d4af37; color: white; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: 600;">Send Email</a>
+            </div>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="81ed07da-5bf9-482f-9499-02afb2c0e72d">
+                <input type="hidden" name="email_to" value="kunwabizcons@gmail.com">
+                <input type="text" name="name" autocomplete="off" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Describe your procurement, consulting, or coaching requirements..." rows="5" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
         </div>
-        <div class="guide-item">
-            <strong>4. Continuous Monitoring:</strong>
-            <p>Enforcement of TLS 1.3/HSTS and strategic geofencing for real-time mitigation.</p>
+    </section>
+
+    <!-- 7. Customer Reviews Section -->
+    <section id="reviews" class="section">
+        <div class="container">
+            <h2>Client Reviews & Testimonials</h2>
+            <p class="section-subtitle">Read feedback from our valued partners or leave your own review below.</p>
+
+            <div class="services-grid" style="margin-bottom: 50px;">
+                <div id="reviews-container"></div>
+            </div>
+
+            <div style="max-width: 700px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #d4af37;">
+                <h3 style="text-align: center; margin-bottom: 20px; color: #111;">Leave a Review</h3>
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                    <input type="hidden" name="access_key" value="81ed07da-5bf9-482f-9499-02afb2c0e72d">
+                    <input type="hidden" name="email_to" value="kunwabizcons@gmail.com">
+                    <input type="text" name="name" autocomplete="off" placeholder="Your Name / Company" required>
+                    <select name="rating" required style="width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                        <option value="5">5 Stars - Excellent</option>
+                        <option value="4">4 Stars - Very Good</option>
+                        <option value="3">3 Stars - Good</option>
+                        <option value="2">2 Stars - Fair</option>
+                        <option value="1">1 Star - Poor</option>
+                    </select>
+                    <textarea name="comment" autocomplete="off" placeholder="Write your review or feedback here..." rows="4" required></textarea>
+                    <button type="submit" class="btn" style="width: 100%; text-align: center;">Submit Review</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <hr>
-
-    <h4>🏗️ Featured Project Registry</h4>
-    <div class="ecosystem-grid">
-        <a href="https://github.com/chifru19/GPON-Network-Design" class="build-card"><h6>GPON-Network-Design</h6><p>ITU-T G.984 Fiber Optic Architecture</p></a>
-        <a href="https://github.com/chifru19/zero-trust-mesh" class="build-card"><h6>zero-trust-mesh</h6><p>Microservice Isolation & IDS</p></a>
-        <a href="https://github.com/chifru19/splunk-soc-lab" class="build-card"><h6>Splunk-SOC-Lab</h6><p>SIEM Threat Hunting Engine</p></a>
-        <a href="https://github.com/chifru19/Data-Center-Telemetry-Pipeline" class="build-card"><h6>Telemetry-Pipeline</h6><p>Real-time SIEM Data</p></a>
-        <a href="https://github.com/chifru19/VoltGuard-DCEO-Sim" class="build-card"><h6>VoltGuard-DCEO</h6><p>Power Ops Simulation</p></a>
-        <a href="https://github.com/chifru19/Aura-Digital-Infrastructure" class="build-card"><h6>Aura-Digital-Infra</h6><p>Edge Computing Security</p></a>
-        <a href="https://github.com/chifru19/Secure-Redundancy-IaC" class="build-card"><h6>Secure-Redundancy-IaC</h6><p>High-Availability Design</p></a>
-        <a href="https://github.com/chifru19/Network-Guard-Forensics" class="build-card"><h6>Network-Guard-Forensics</h6><p>Packet Analysis & Threat Intel</p></a>
-        <a href="https://github.com/chifru19/webeet-internship-observability" class="build-card"><h6>Observability-Lab</h6><p>Metrics & Logs Monitoring</p></a>
-        <a href="https://github.com/chifru19/nsongwa-credit-union" class="build-card"><h6>nsongwa-credit-union</h6><p>FinTech Security Architecture</p></a>
-        <a href="https://github.com/chifru19/secure-url-shortener-tf" class="build-card"><h6>secure-url-shortener</h6><p>Terraform & AWS Hardening</p></a>
-        <a href="https://github.com/chifru19/Cisco-Enterprise-Network-Lab" class="build-card"><h6>Cisco-Enterprise-Lab</h6><p>L3 Routing & Switching</p></a>
-        <a href="https://github.com/chifru19/Infrastructure-HIDS" class="build-card"><h6>Infrastructure-HIDS</h6><p>Host Intrusion Detection</p></a>
-        <a href="https://github.com/chifru19/terraform-multi-version-setup" class="build-card"><h6>terraform-setup</h6><p>IaC Version Management</p></a>
-        <a href="https://github.com/chifru19/wonder-way-tours" class="build-card"><h6>wonder-way-tours</h6><p>Dynamic CVS Interface</p></a>
-        <a href="https://github.com/chifru19/agwo-carlson-partners" class="build-card"><h6>Agwo-Carlson</h6><p>Legal Tech Digital Infra</p></a>
-    </div>
-
-    <hr>
-
-    <h4>💬 CVS Interactive Review Terminal</h4>
-    <div id="review-engine">
-        <div id="review-content">Initializing logs...</div>
-        <div class="input-area">
-            <input type="text" id="clientName" placeholder="[Enter Name]">
-            <textarea id="clientReview" rows="2" placeholder="[Enter Security Feedback]"></textarea>
-            <button id="submitBtn" onclick="submitReview()">COMMIT_TO_SPREADSHEET</button>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Kunwa Business Consulting Services Ltd. All rights reserved.</p>
         </div>
-    </div>
+    </footer>
 
-    <footer>&copy; 2026 Frank Fru | Verified SOC & Cybersecurity Professional</footer>
-</div>
-
-<script>
-    const DEPLOY_URL = 'https://script.google.com/macros/s/AKfycbyBdymZ6YcKys8B6ex6onrAfgGntAl-e3uUVWujg5CKe-os67bnEiVXdPU7KYHdjiYa/exec';
-    async function fetchReviews() {
-        const container = document.getElementById('review-content');
-        try {
-            const response = await fetch(DEPLOY_URL);
-            const reviews = await response.json();
-            container.innerHTML = '';
-            reviews.forEach(item => {
-                const div = document.createElement('div');
-                div.className = 'live-row';
-                div.innerHTML = `[EXTERNAL_LOG] ${item.name}: "${item.review}"`;
-                container.appendChild(div);
-            });
-        } catch (err) { container.innerHTML = '[TERMINAL] Audit: Infrastructure solid.'; }
-    }
-    function submitReview() {
-        const name = document.getElementById('clientName').value;
-        const review = document.getElementById('clientReview').value;
-        if (!name || !review) return alert("Fields Required.");
-        const finalUrl = `${DEPLOY_URL}?name=${encodeURIComponent(name)}&review=${encodeURIComponent(review)}`;
-        fetch(finalUrl, { method: 'POST', mode: 'no-cors' }).then(() => { alert("Entry Saved."); location.reload(); });
-    }
-    fetchReviews();
-</script>
-
+    <!-- Portfolio Signature Footer -->
+    <section class="section bg-light" style="border-top: 1px solid #ddd; padding: 40px 0; text-align: center;">
+        <div class="container">
+            <p style="font-size: 1.1rem; color: #111; font-weight: 600;">Chi Fru</p>
+            <p style="margin: 10px 0; color: #555;">Engineer | Portfolio: <a href="https://frankfru.com" target="_blank" style="color: #d4af37; text-decoration: none;">frankfru.com</a> | GitHub: <a href="https://github.com/chifru19" target="_blank" style="color: #d4af37; text-decoration: none;">chifru19</a> | LinkedIn: <a href="https://www.linkedin.com/in/frank-fru/" target="_blank" style="color: #d4af37; text-decoration: none;">Frank Fru</a></p>
+        </div>
+    </section>
 </body>
 </html>
