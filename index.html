@@ -18,8 +18,14 @@
     <style>
         body { background-color: #f4f7f6; padding: 50px 0; font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #2c3e50; line-height: 1.6; }
         .container { max-width: 900px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        
+        .profile-header-grid { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; margin-bottom: 20px; }
+        .profile-image-container { flex: 0 0 200px; text-align: center; }
+        .profile-image-container img { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; border: 4px solid #3498db; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .profile-text-content { flex: 1; min-width: 250px; }
+
         h1 { color: #2c3e50; border-bottom: 4px solid #3498db; display: inline-block; margin-bottom: 10px; font-weight: 700; }
-        .subtitle { font-size: 1.8rem; color: #7f8c8d; margin-bottom: 20px; font-weight: 300; }
+        .subtitle { font-size: 1.8rem; color: #7f8c8d; margin-bottom: 15px; font-weight: 300; }
         
         .live-status { display: inline-flex; align-items: center; background: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 20px; font-size: 1.1rem; font-weight: 700; border: 1px solid #c8e6c9; margin-bottom: 15px; }
         .pulse { height: 8px; width: 8px; background-color: #2e7d32; border-radius: 50%; display: inline-block; margin-right: 8px; animation: pulse-animation 2s infinite; }
@@ -59,7 +65,7 @@
         
         .credly-btn { background: #e67e22; color: white !important; padding: 12px 25px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: 600; }
         footer { text-align: center; color: #95a5a6; font-size: 1.3rem; margin-top: 50px; }
-        @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } .profile-header-grid { flex-direction: column; text-align: center; } }
     </style>
 </head>
 <body>
@@ -67,8 +73,16 @@
 <div class="container">
     <header>
         <div class="live-status"><span class="pulse"></span> CLOUDFLARE EDGE: SECURE & ACTIVE</div>
-        <h1>Frank Fru</h1>
-        <p class="subtitle">SOC Analyst & DevSecOps Engineer</p>
+        
+        <div class="profile-header-grid">
+            <div class="profile-image-container">
+                <img src="assets/profilepicture.jpeg" alt="Frank Fru - Professional Portrait">
+            </div>
+            <div class="profile-text-content">
+                <h1>Frank Fru</h1>
+                <p class="subtitle">SOC Analyst & DevSecOps Engineer</p>
+            </div>
+        </div>
         
         <div class="badges">
             <img src="https://img.shields.io/badge/Security+-Certified-blue" alt="Security+">
@@ -151,7 +165,6 @@
 
     <h4>🏗️ Featured Project Registry</h4>
     <div class="ecosystem-grid">
-        <a href="https://github.com/chifru19/payg-saas-platform" class="build-card"><h6>PAYG SaaS Platform</h6><p>Smart Meter & MoMo API Backend</p></a>
         <a href="https://github.com/chifru19/GPON-Network-Design" class="build-card"><h6>GPON-Network-Design</h6><p>ITU-T G.984 Fiber Optic Architecture</p></a>
         <a href="https://github.com/chifru19/zero-trust-mesh" class="build-card"><h6>zero-trust-mesh</h6><p>Microservice Isolation & IDS</p></a>
         <a href="https://github.com/chifru19/splunk-soc-lab" class="build-card"><h6>Splunk-SOC-Lab</h6><p>SIEM Threat Hunting Engine</p></a>
